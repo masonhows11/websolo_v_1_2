@@ -58,7 +58,7 @@
 <header class="header container">
     <div class="row pt-2 mt-2 border-bottom border-2">
         <div class="img-holder col-lg-6 d-flex justify-content-center">
-            <img src="./assets/images/man.svg" alt=""/>
+            <img src="{{'images/man.svg'}}" alt=""/>
         </div>
 
         <div class="info col-lg-6 d-flex flex-column justify-content-center">
@@ -114,7 +114,7 @@
 <section class="container about mt-5">
     <div class="row mt-5">
         <div class="about-img col-md-3">
-            <img src="./assets/images/avatar.jpg"
+            <img src="{{'images/avatar/avatar.jpg'}}"
                 alt=""
                 class="img-thumbnail mb-4"/>
         </div>
@@ -342,37 +342,37 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="./assets/images/samples/folio-1.jpg" class="card-img-top" alt="...">
+                    <img src="{{'images/samples/folio-1.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="./assets/images/samples/folio-2.jpg" class="card-img-top" alt="...">
+                    <img src="{{'images/samples/folio-2.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="./assets/images/samples/folio-3.jpg" class="card-img-top" alt="...">
+                    <img src="{{'images/samples/folio-3.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="./assets/images/samples/folio-4.jpg" class="card-img-top" alt="...">
+                    <img src="{{'images/samples/folio-4.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="./assets/images/samples/folio-5.jpg" class="card-img-top" alt="...">
+                    <img src="{{'images/samples/folio-5.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="./assets/images/samples/folio-6.jpg" class="card-img-top" alt="...">
+                    <img src="{{'images/samples/folio-6.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
@@ -408,7 +408,7 @@
                 <div class="carousel-item active">
                     <div class="card testmonial-card border">
                         <div class="card-body">
-                            <img src="./assets/images/avatar/avatar-1.jpg" alt=""/>
+                            <img src="{{'images/avatar/avatar-1.jpg'}}" alt=""/>
                             <p>
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                                 با استفاده از طراحان گرافیک است.
@@ -422,7 +422,7 @@
                 <div class="carousel-item">
                     <div class="card testmonial-card border">
                         <div class="card-body">
-                            <img src="./assets/images/avatar/avatar-2.jpg" alt=""/>
+                            <img src="{{'images/avatar/avatar-2.jpg'}}" alt=""/>
                             <p>
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                                 با استفاده از طراحان گرافیک است.
@@ -436,7 +436,7 @@
                 <div class="carousel-item">
                     <div class="card testmonial-card border">
                         <div class="card-body">
-                            <img src="./assets/images/avatar/avatar-3.jpg" alt=""/>
+                            <img src="{{'images/avatar/avatar-3.jpg'}}" alt=""/>
                             <p>
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                                 با استفاده از طراحان گرافیک است.
@@ -477,7 +477,7 @@
             <div class="col-md-4">
                 <div class="card border mb-4">
                     <img
-                        src="./assets/images/blog/blog-1.jpg"
+                        src="{{'images/blog/blog-1.jpg'}}"
                         alt=""
                         class="card-img-top w-100"/>
                     <div class="card-body d-flex flex-column">
@@ -500,7 +500,7 @@
 
             <div class="col-md-4">
                 <div class="card border mb-4">
-                    <img src="./assets/images/blog/blog-2.jpg"
+                    <img src="{{'images/blog/blog-2.jpg'}}"
                         alt=""
                         class="card-img-top w-100"/>
                     <div class="card-body d-flex flex-column">
@@ -523,7 +523,7 @@
 
             <div class="col-md-4">
                 <div class="card border mb-4">
-                    <img src="./assets/images/blog/blog-3.jpg"
+                    <img src="{{'images/blog/blog-3.jpg'}}"
                         alt=""
                         class="card-img-top w-100"/>
                     <div class="card-body d-flex flex-column">
