@@ -26,7 +26,8 @@
 {{-- hire me --}}
 @include('include.hire_me')
 {{-- contact --}}
-@include('include.contact')
+<livewire:front.contact/>
+{{--@include('include.contact')--}}
 {{-- footer --}}
 @include('include.footer')
 @include('include.scripts')
