@@ -10650,7 +10650,7 @@ body {
 .contact .subtitle,
 .blog .subtitle,
 .clients .subtitle,
-.portolio .subtitle,
+.portfolio .subtitle,
 .skills .subtitle,
 .services .subtitle {
   font-size: 1.3rem;
@@ -10659,7 +10659,7 @@ body {
 .contact .section-title,
 .blog .section-title,
 .clients .section-title,
-.portolio .section-title,
+.portfolio .section-title,
 .skills .section-title,
 .services .section-title {
   font-size: 1.6rem;
@@ -10758,7 +10758,7 @@ body {
   box-shadow: 0 0 10px rgba(255, 122, 87, 0.5);
 }
 
-.portolio .card img {
+.portfolio .card img {
   height: 311px;
 }
 

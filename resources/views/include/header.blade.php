@@ -1,31 +1,55 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">وب سولو</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">خانه</a>
-                </li>
-                @if(Auth::user())
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{ \Illuminate\Support\Facades\Auth::user()->role == 'admin' ? 'admin' : 'user' }}</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ورود</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">ثبت نام</a>
-                    </li>
-                @endif
-            </ul>
+<header class="header container">
+    <div class="row pt-2 mt-2 border-bottom border-2">
+        <div class="img-holder col-lg-6 d-flex justify-content-center">
+            <img src="{{'images/man.svg'}}" alt=""/>
+        </div>
+
+        <div class="info col-lg-6 d-flex flex-column justify-content-center">
+            <div class="personal-info d-flex flex-column justify-content-center mt-4">
+                <h6 class="hello text-center py-2">سلام</h6>
+                <h6 class="name text-center py-2">من نعیم هستم</h6>
+                <p class="specialization text-center py-2">
+                    طراح و توسعه دهنده وب اپلیکیشن
+                </p>
+            </div>
+
+            <div class="buttons d-flex justify-content-center mt-4">
+                <button class="btn btn-hire py-2 px-3 rounded-4 text-center mx-2">
+                    استخدام
+                </button>
+                <button class="btn btn-resume py-2 px-4 rounded-4 text-center mx-2">
+                    رزومه
+                </button>
+            </div>
+
+            <div class="socials mt-4 d-flex flex-row justify-content-center">
+                <a class="social-item" href="javascript:void(0)">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a class="social-item" href="javascript:void(0)">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a class="social-item" href="javascript:void(0)">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
     </div>
-</nav>
+
+    <div class="widget">
+        <div class="widget-item text-center">
+            <h2 class="py-2">0</h2>
+            <p>مشتریان خوشحال</p>
+        </div>
+
+        <div class="widget-item text-center">
+            <h2 class="py-2">0</h2>
+            <p>پروژهای کامل شده</p>
+        </div>
+
+        <div class="widget-item text-center">
+            <h2 class="py-2">0</h2>
+            <p>موفقیت ها</p>
+        </div>
+    </div>
+</header>
