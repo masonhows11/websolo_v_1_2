@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light nav">
     <div class="container">
-        <a class="navbar-brand px-3 py-2 rounded-4 text-white" href="#">وب سولو</a>
+        <a class="navbar-brand px-3 py-2 rounded rounded-3 text-white" href="#">وب سولو</a>
 
         <button class="navbar-toggler"
                 type="button"
