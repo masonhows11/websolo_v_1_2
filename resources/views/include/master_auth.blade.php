@@ -12,7 +12,9 @@
 <body>
 @include('include.navbar')
 @include('include.header')
-@yield('main')
+<section class="main-content">
+    @yield('main_content')
+</section>
 @include('include.footer');
 @include('include.scripts')
 @stack('front_custom_scripts')
