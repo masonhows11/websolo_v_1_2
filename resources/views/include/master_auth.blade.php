@@ -15,6 +15,7 @@
 @yield('main')
 @include('include.footer');
 @include('include.scripts')
+@stack('front_custom_scripts')
 @livewireScripts
 </body>
 </html>
