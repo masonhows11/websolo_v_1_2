@@ -1,0 +1,29 @@
+// Fonts
+
+
+// Variables
+
+
+// Bootstrap
+@import '~bootstrap/dist/css/bootstrap.rtl.min.css';
+
+@font-face {
+    font-family: 'iransansdn';
+    src: url("font/eot/iransansdn.eot") format('opentype');
+    src: url("font/ttf/iransansdn.ttf") format('truetype');
+    src: url("font/woff/iransansdn.woff") format('woff');
+
+}
+
+body{
+    font-family:iransansdn,sans-serif;
+}
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.navbar-nav .nav-item  .nav-link{
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
