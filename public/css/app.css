@@ -10519,7 +10519,14 @@ select {
   vertical-align: middle;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   font-family: vazirRegular, "sans-serif";
 }
 
@@ -10941,6 +10948,11 @@ body {
 .btn-block {
   display: block;
   width: 100%;
+}
+
+.footer-wrapper {
+  height: auto;
+  margin-top: auto;
 }
 
 .page-footer {

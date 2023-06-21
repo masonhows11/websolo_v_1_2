@@ -10,10 +10,11 @@
     @include('include.styles')
 </head>
 <body>
+@include('include.navbar')
 @include('include.header')
 @yield('main')
 @include('include.footer');
-
+@include('include.scripts')
 @livewireScripts
 </body>
 </html>

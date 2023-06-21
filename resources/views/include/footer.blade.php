@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container footer-wrapper">
     <div class="page-footer">
         <div class="row">
             <div class="col-sm-6 d-flex justify-content-center align-items-center">
