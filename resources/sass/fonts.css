@@ -1,0 +1,82 @@
+/* iransans font */
+
+@font-face {
+    font-family: 'iransansdn';
+    src: url("font/eot/iransansdn.eot") format('opentype');
+    src: url("font/ttf/iransansdn.ttf") format('truetype');
+    src: url("font/woff/iransansdn.woff") format('woff');
+
+}
+@font-face {
+	font-family:'iransansbold';
+	src: url("/src/fonts/iransansdnbold.eot")format('opentype');
+	src: url("/src/fonts/iransansdnbold.ttf")format('truetype');
+	src: url("/src/fonts/iransansdnbold.woff")format('woff');
+
+}
+@font-face {
+	font-family:'iransanslight';
+	src: url("/src/fonts/iransansdnlight.eot")format('opentype');
+	src: url("/src/fonts/iransansdnlight.ttf")format('truetype');
+	src: url("/src/fonts/iransansdnlight.woff")format('woff');
+
+}
+
+@font-face {
+	font-family:iransans_num;
+	src: url("/src/fonts/IRANSansDN_Fa_Num.ttf")format('truetype');
+}
+@font-face {
+	font-family:iransans_num_bold;
+	src: url("/src/fonts/IRANSansDN_FaNum-Bold.ttf")format('truetype');
+}
+@font-face {
+	font-family:iransans_num_light;
+	src: url("/src/fonts/IRANSansDN_FaNum_Light.ttf")format('truetype');
+}
+
+/* yekan font */
+
+@font-face {
+    font-family:'yekan';
+    src: url("/src/fonts/Yekan.eot") format('opentype');
+    src: url("/src/fonts/Yekan.ttf")format("truetype"),
+    url("/src/fonts/Yekan.woff")format('woff');
+
+}
+@font-face {
+    font-family:'Yekan-regular';
+    src: url('/src/fonts/yekan-regular.eot')format('opentype');
+    src: url("/src/fonts/yekan-regular.ttf")format("truetype"),
+    url("/src/fonts/yekan-regular.woff")format('woff');
+
+}
+
+@font-face {
+    font-family:'BYekan';
+    src: url('/src/fonts/BYekan.eot')format('opentype');
+    src: url('/src/fonts/BYekan.ttf')format('truetype');
+    src: url('/src/fonts/BYekan.woff')format('woff');
+    font-size: larger;
+}
+
+
+/* vazir font */
+@font-face {
+    font-family:'vazirMedium';
+    src: url("/src/fonts/Vazir-Medium.eot") format('opentype');
+    src: url("/src/fonts/Vazir-Medium.ttf")format("truetype");
+	src: url("/src/fonts/Vazir-Medium.woff2")format('woff2');
+    src: url("/src/fonts/Vazir-Medium.woff")format('woff');
+	font-weight: normal;
+}
+
+@font-face {
+    font-family:'vazirRegular';
+    src: url("/src/fonts/Vazir-Regular.eot") format('opentype');
+    src: url("/src/fonts/Vazir-Regular.ttf")format("truetype");
+	src: url("/src/fonts/Vazir-Regular.woff2")format('woff2');
+    src: url("/src/fonts/Vazir-Regular.woff")format('woff');
+	font-weight: normal;
+}
+

@@ -1,19 +1,17 @@
-// Fonts
-
-
-// Variables
-
 
 // Bootstrap
 @import '~bootstrap/dist/css/bootstrap.rtl.min.css';
 
-@font-face {
-    font-family: 'iransansdn';
-    src: url("font/eot/iransansdn.eot") format('opentype');
-    src: url("font/ttf/iransansdn.ttf") format('truetype');
-    src: url("font/woff/iransansdn.woff") format('woff');
+// import fonts
+@import "fonts.css";
 
-}
+// import fontawesome
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
 
 body{
     font-family:iransansdn,sans-serif;
