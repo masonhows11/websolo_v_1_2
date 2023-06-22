@@ -20,7 +20,7 @@
                 <div class="custom-card card border">
                     <div class="card-body">
                         <i class="fa-solid fa-laptop-code"></i>
-                        <h5>کدنویسی سمت کاربر</h5>
+                        <h5>کدنویسی فرنت اند</h5>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 <div class="custom-card card border">
                     <div class="card-body">
                         <i class="fa-solid fa-code"></i>
-                        <h5>برنامه نویسی سمت سرور</h5>
+                        <h5>برنامه نویسی بک اند</h5>
                     </div>
                 </div>
             </div>

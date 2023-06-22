@@ -13,6 +13,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="#">خانه</a>
@@ -40,18 +41,18 @@
             <ul class="navbar-nav auth-link me-auto mb-2">
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user"></i>پنل کاربری</a>
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user"></i><span>پنل کاربری</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-arrow-up-left-from-circle"></i>خروج</a>
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-arrow-up-left-from-circle"></i><span>خروج</span></a>
                     </li>
                 @else
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user-plus"></i>ثبت نام</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid px-2 fa-right-to-bracket"></i>ورود</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user-plus"></i><span>ثبت نام</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-right-to-bracket"></i><span>ورود</span></a>
+                    </li>
                 @endauth
             </ul>
         </div>

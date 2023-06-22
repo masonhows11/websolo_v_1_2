@@ -10527,7 +10527,7 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  font-family: vazirRegular, "sans-serif";
+  font-family: iransansdn, "sans-serif";
 }
 
 .navbar .nav-item .nav-link {
@@ -10540,7 +10540,7 @@ body {
 .auth-link .nav-item .fa-arrow-up-left-from-circle,
 .auth-link .nav-item .fa-user-plus,
 .auth-link .nav-item .fa-right-to-bracket {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .auth-link .nav-item .fa-user:hover,
@@ -11037,6 +11037,9 @@ body {
     line-height: 29px;
     text-align: center;
   }
+  .auth-link i {
+    display: none;
+  }
 }
 @media screen and (max-width: 992px) {
   .about .about-introduce {
@@ -11068,6 +11071,22 @@ body {
   .clients .carousel-control-prev,
   .clients .carousel-control-next {
     display: none;
+  }
+  .contact .contact-header p {
+    line-height: 30px;
+  }
+  .navbar .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+  .auth-link .nav-item span {
+    display: none;
+  }
+  .navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  .auth-link .nav-item {
+    margin: 0 7px 0 7px;
   }
 }
 
