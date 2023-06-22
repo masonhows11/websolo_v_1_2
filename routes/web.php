@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\Auth\ChangePasswordController;
 use App\Http\Controllers\Auth\EmailVerifyPromptController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\RemoveAccountController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserDashboard\EditEmailController;
+use App\Http\Controllers\UserDashboard\UserDashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,4 +38,21 @@ Route::get('/emailVerify/{id}/{code}', [VerifyEmailController::class, 'verifyEma
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+});
+
+
+
+Route::middleware(['web', 'auth', 'verifyUser'])->group(function () {
+
+    Route::get('/dashboard', [UserDashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/edit/profile', [UserDashboardController::class, 'editProfile'])->name('edit.profile');
+    Route::post('/update/profile', [UserDashboardController::class, 'updateProfile'])->name('update.profile');
+
+    Route::get('/edit/email-form', [EditEmailController::class, 'editEmailForm'])->name('edit.email.form');
+    Route::post('/edit/email', [EditEmailController::class, 'editEmail'])->name('edit.email');
+    Route::get('/verify/edit-email/{$id}{$code}', [EditEmailController::class, 'verifyEditEmail'])->name('verify.edit.email');
+
+    Route::get('/change/password/form',[ChangePasswordController::class,'create'])->name('change.password.form');
+    Route::post('/change/password',[ChangePasswordController::class,'store'])->name('change.password');
+    Route::get('/delete/account',[RemoveAccountController::class,'destroy'])->name('delete.account');
 });
