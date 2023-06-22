@@ -17,30 +17,42 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">خانه</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="">خدمات</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="">نمونه کارها</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="">مشتریان</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="">بلاگ</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#">درباره ما</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="#">تماس با ما</a>
                 </li>
+            </ul>
+
+            <ul class="navbar-nav me-auto mb-2">
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user"></i>پنل کاربری</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-arrow-up-left-from-circle"></i>خروج</a>
+                    </li>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user-plus"></i>ثبت نام</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-solid px-2 fa-right-to-bracket"></i>ورود</a>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>
