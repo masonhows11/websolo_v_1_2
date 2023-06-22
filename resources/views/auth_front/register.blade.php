@@ -6,7 +6,7 @@
     <div class="container register-section">
 
         <div class="alert-section mt-2">
-            @include('front.include.alert')
+            @include('include.alert')
         </div>
 
         <div class="row d-flex justify-content-center mb-5 mt-2">

@@ -11,7 +11,6 @@
 </head>
 <body>
 @include('include.navbar')
-@include('include.header')
 <section class="main-content">
     @yield('main_content')
 </section>
