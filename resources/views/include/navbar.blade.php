@@ -40,17 +40,17 @@
             <ul class="navbar-nav auth-link me-auto mb-2">
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid px-3 fa-user"></i>پنل کاربری</a>
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user"></i>پنل کاربری</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid px-3 fa-arrow-up-left-from-circle"></i>خروج</a>
+                        <a class="nav-link" href="#"><i class="fa-solid px-2 fa-arrow-up-left-from-circle"></i>خروج</a>
                     </li>
                 @else
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid px-3 fa-user-plus"></i>ثبت نام</a>
+                    <a class="nav-link" href="#"><i class="fa-solid px-2 fa-user-plus"></i>ثبت نام</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa-solid px-3 fa-right-to-bracket"></i>ورود</a>
+                    <a class="nav-link" href="#"><i class="fa-solid px-2 fa-right-to-bracket"></i>ورود</a>
                 </li>
                 @endauth
             </ul>
