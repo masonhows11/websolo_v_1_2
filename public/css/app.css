@@ -11037,8 +11037,11 @@ body {
     line-height: 29px;
     text-align: center;
   }
-  .auth-link i {
+  .auth-link .nav-item .nav-link i {
     display: none;
+  }
+  .auth-link .nav-item .nav-link span {
+    display: block;
   }
 }
 @media screen and (max-width: 992px) {

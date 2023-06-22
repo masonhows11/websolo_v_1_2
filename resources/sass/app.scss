@@ -761,8 +761,12 @@ body {
         text-align: center;
     }
 
-    .auth-link i{
-        display: none;
+
+    .auth-link .nav-item .nav-link i{
+       display: none;
+    }
+    .auth-link .nav-item .nav-link span{
+        display:block;
     }
 
 }
@@ -817,12 +821,9 @@ body {
         display: flex;
         align-items: center;
     }
-    .navbar .navbar-nav .nav-item{
-
-    }
     .auth-link .nav-item {
         margin:0 7px 0 7px;
-
     }
 
 }
+
