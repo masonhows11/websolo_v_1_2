@@ -18,16 +18,15 @@
 {{-- skills --}}
 @include('include.skills')
 {{-- portfolio --}}
-@include('include.portfolio')
+<livewire:front.protfolio/>
 {{-- clients --}}
-@include('include.clients')
+<livewire:front.clients/>
 {{-- blog --}}
-@include('include.blog')
+<livewire:front.blog/>
 {{-- hire me --}}
 @include('include.hire_me')
 {{-- contact --}}
 <livewire:front.contact/>
-{{--@include('include.contact')--}}
 {{-- footer --}}
 @include('include.footer')
 @include('include.scripts')
