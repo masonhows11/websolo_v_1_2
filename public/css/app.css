@@ -10540,7 +10540,14 @@ body {
 .auth-link .nav-item .fa-arrow-up-left-from-circle,
 .auth-link .nav-item .fa-user-plus,
 .auth-link .nav-item .fa-right-to-bracket {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+.auth-link .nav-item .fa-user:hover,
+.auth-link .nav-item .fa-arrow-up-left-from-circle:hover,
+.auth-link .nav-item .fa-right-to-bracket:hover,
+.auth-link .nav-item .fa-user-plus:hover {
+  color: tomato;
 }
 
 .navbar-brand {
