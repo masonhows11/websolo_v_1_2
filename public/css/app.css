@@ -10536,6 +10536,13 @@ body {
   color: black;
 }
 
+.auth-link .nav-item .fa-user,
+.auth-link .nav-item .fa-arrow-up-left-from-circle,
+.auth-link .nav-item .fa-user-plus,
+.auth-link .nav-item .fa-right-to-bracket {
+  font-size: 1.3rem;
+}
+
 .navbar-brand {
   font-weight: bold;
   font-size: 1.6rem;
@@ -10851,7 +10858,7 @@ body {
 
 .contact {
   border-radius: 0.3rem;
-  border: 1px solid 1px;
+  border: 1px solid #f8f9fa;
   box-shadow: 1px 2px 6px rgba(173, 181, 189, 0.5);
   padding: 5px 30px 20px 25px;
   max-width: 1000px;
@@ -10861,7 +10868,7 @@ body {
 
 .contact-body {
   border-radius: 0.5rem;
-  border: 1px solid 1px;
+  border: 1px solid #f8f9fa;
   box-shadow: 1px 2px 6px rgba(173, 181, 189, 0.5);
   background: #fff;
   -webkit-border-radius: 0.5rem;
@@ -10887,8 +10894,6 @@ body {
   display: block;
   width: 40px;
   font-size: 16px;
-  color: primary;
-  width: 37px;
   height: 37px;
   border-radius: 50%;
   border: 1px solid #ff7a57;
