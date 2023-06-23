@@ -1,8 +1,8 @@
 <x-mail::message>
 
-    <x-header::panel>
+    <x-mail::panel>
         ایمیل فعال سازی حساب کاربری
-    </x-header::panel>
+    </x-mail::panel>
 
     <x-mail::panel>
          کاربر عزیز :{{ $user->name }}
