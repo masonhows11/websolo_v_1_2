@@ -34,13 +34,13 @@ class VerifyRegisterUserEmail extends Mailable
     /**
      * Get the message envelope.
      *
-     * @return \Illuminate\Mail\Mailables\Envelope
+     * @return Envelope
      */
     public function envelope()
     {
         return new Envelope(
             //subject: 'Verify Register User Email',
-         from : new Adddress('admin_websolo@mail.ir','websolo.ir'),
+         from : new Address('admin_websolo@mail.ir','websolo.ir'),
           subject : 'verify Email New User',
         );
     }
@@ -48,12 +48,12 @@ class VerifyRegisterUserEmail extends Mailable
     /**
      * Get the message content definition.
      *
-     * @return \Illuminate\Mail\Mailables\Content
+     * @return Content
      */
     public function content()
     {
         return new Content(
-            view: 'emails.verify_email_new_user.blade',
+            view: 'emails.verify_email_new_user',
         );
     }
 

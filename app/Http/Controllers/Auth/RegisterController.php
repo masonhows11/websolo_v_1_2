@@ -42,7 +42,7 @@ class RegisterController extends Controller
             'password.confirmed' => 'رمز عبور و تکرار آن یکسان نیستند.',
         ]);
         try {
-            $code = Str::random();
+            $code = Str::random(6);
             $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
