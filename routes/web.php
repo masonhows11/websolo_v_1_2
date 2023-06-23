@@ -25,13 +25,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 // authentication & authorize
-Route::get('/login-form', [LoginController::class, 'loginForm'])->name('login.form');
-Route::post('/login', [LoginController::class, 'login'])->name('login');//->middleware(['throttle:3,1']);
+Route::get('/login', [LoginController::class, 'loginForm'])->name('login.form');
+Route::post('/login-user', [LoginController::class, 'login'])->name('login');//->middleware(['throttle:3,1']);
 
-Route::get('/register-form', [RegisterController::class, 'registerForm'])->name('register.form');
-Route::post('/register', [RegisterController::class, 'register'])->name('register');
+Route::get('/register', [RegisterController::class, 'registerForm'])->name('register.form');
+Route::post('/register-user', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/verify-email', [VerifyEmailController::class, 'verifyEmail'])->name('verify.email');
+Route::get('/verify',[]);
 
 Route::get('/verify-email-prompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('verify.email.prompt');
 

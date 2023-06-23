@@ -6,7 +6,6 @@ use App\Events\RegisterUserEvent;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
@@ -51,8 +50,7 @@ class RegisterController extends Controller
             ]);
             RegisterUserEvent::dispatch($user,$code);
             session()->flash('success','ایمیل فعال سازی با موفقبت ارسال شد.');
-            session()->put('newEmail',$user->email);
-            return redirect()->route('verify.email');
+            return redirect()->route('verify.email.form');
         } catch (\Exception $ex) {
             return $ex->getMessage();
         }
