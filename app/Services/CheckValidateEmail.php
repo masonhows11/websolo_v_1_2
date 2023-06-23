@@ -22,7 +22,7 @@ class CheckValidateEmail
                 if($expired == 1 ){
                     return false;
                 }
-                $user->code_verified_at = Date::now();
+                $user->email_verified_at = Date::now();
                 $user->save();
                 return true;
             }

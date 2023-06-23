@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('password')->nullable();
             $table->string('mobile')->nullable();
             $table->string('code')->nullable();
-            $table->timestamp('code_verified_at')->nullable();
             $table->string('image_path')->nullable();
             $table->tinyInteger('banned')->default(0);
             $table->rememberToken();
