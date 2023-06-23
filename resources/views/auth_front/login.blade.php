@@ -21,14 +21,16 @@
                     <div class="col-xl-10 col-lg-10 col-md-10 border border-2  rounded-3 py-4 px-4 login-form">
                         <form action="{{ route('login') }}" method="post">
                             @csrf
+
                             <div class="mb-3 mt-3">
                                 <label for="email" class="form-label">ایمیل</label>
-                                <input type="email" class="@error('emails') is-invalid @enderror form-control" id="email"
+                                <input type="email" class="@error('email') is-invalid @enderror form-control" id="email"
                                        name="email">
                             </div>
-                            @error('emails')
+                            @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
+
 
                             <div class="mb-3">
                                 <label for="pwd" class="form-label">رمز عبور</label>
@@ -39,11 +41,13 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
 
+
                             <div class="form-check mb-3">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" name="remember"> منو فراموش نکن !
                                 </label>
                             </div>
+
                             <button type="submit" class="btn btn-login w3-flat-alizarin rounded-3">ورود</button>
                         </form>
                     </div>

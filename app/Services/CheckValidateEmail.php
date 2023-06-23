@@ -3,9 +3,7 @@
 namespace App\Services;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\DB;
 use App\Models\User;
 class CheckValidateEmail
 {
@@ -28,7 +26,7 @@ class CheckValidateEmail
             }
             return false;
         }catch (\Exception $ex){
-            return view('errors_custom.validation_error');
+            return view('errors_custom.validation_error',['error'=>$ex->getMessage()]);
         }
     }
 

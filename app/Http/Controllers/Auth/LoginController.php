@@ -35,25 +35,25 @@ class LoginController extends Controller
             $user = User::where('emails', $request->email)->first();
 
             if ($user && $user->email_verified_at == null) {
-                $code = Str::random();
+
+                $code = Str::random(6);
                 $user->code = $code;
                 $user->save();
-                $encrypted = Crypt::encryptString($code);
-                RegisterUserEvent::dispatch($user, $encrypted);
-                session()->flash('success', 'ایمیل فعال سازی با موفقبت ارسال شد');
-                session()->put('newEmail', $user->email);
-                return redirect()->route('emails.verify.prompt');
+                RegisterUserEvent::dispatch($user, $code);
+                session()->flash('success', 'ایمیل فعال سازی با موفقبت ارسال شد.');
+                return redirect()->route('verify.email');
             }
             if (!$user) {
-                return redirect()->back()->with('error', 'کاربری با مشخصات وارد شده وجود ندارد');
+                return redirect()->back()->with('error', 'کاربری با مشخصات وارد شده وجود ندارد.');
             }
+
             if (Auth::attempt(['emails' => $request->email, 'password' => $request->password], $request->remember)) {
                 return redirect()->route('home');
             } else {
-                return redirect()->back()->with('error', 'نام کاربری با رمز عبور صحیح نمی باشد');
+                return redirect()->back()->with('error', 'نام کاربری با رمز عبور صحیح نمی باشد.');
             }
         } catch (\Exception $ex) {
-            return view('errors_custom.general_error');
+            return view('errors_custom.login_error',['error'=>$ex->getMessage()]);
 
         }
 
