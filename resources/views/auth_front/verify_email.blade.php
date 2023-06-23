@@ -14,6 +14,15 @@
 
                 <form action="{{ route('verify') }}" method="post" class="d-flex flex-column py-4">
                     @csrf
+
+                    <div class="mb-3 mt-3">
+                        <label for="code" class="form-label">نام کاربری</label>
+                        <input type="text" class="@error('code') is-invalid @enderror form-control" id="code" name="code">
+                    </div>
+                    @error('code)
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
                     <div class="d-flex flex-column">
                         <div>
                             <h5 class="text-center py-3">کاربر گرامی به سایت وب سولو خوش آمدید.</h5>

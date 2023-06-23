@@ -19,4 +19,6 @@ class VerifyEmailController extends Controller
         return $request;
 
     }
+
+
 }

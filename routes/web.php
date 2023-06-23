@@ -34,8 +34,8 @@ Route::post('/register-user', [RegisterController::class, 'register'])->name('re
 Route::get('/verify-email', [VerifyEmailController::class, 'verifyEmail'])->name('verify.email');
 Route::post('/verify', [VerifyEmailController::class, 'verify'])->name('verify');
 
-Route::get('/resend-email-prompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('resend.email.prompt');
-Route::post('/resend-email', [VerifyEmailController::class, 'resendEmailVerify'])->name('resend.email');
+Route::get('/resend-email-prompt', [EmailVerifyPromptController::class, 'resendEmailPrompt'])->name('resend.email.prompt');
+Route::post('/resend-email', [EmailVerifyPromptController::class, 'resendEmail'])->name('resend.email');
 
 
 Route::middleware(['auth'])->group(function () {
