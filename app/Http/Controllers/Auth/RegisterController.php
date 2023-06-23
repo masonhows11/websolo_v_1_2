@@ -21,7 +21,7 @@ class RegisterController extends Controller
     {
         $request->validate([
             'name' =>
-                ['required', 'unique:users', 'min:5', 'max:20'],
+                ['required', 'unique:users', 'min:4', 'max:20'],
             'email' =>
                 ['required', 'unique:users', 'email'],
             'password' =>
@@ -29,12 +29,12 @@ class RegisterController extends Controller
         ], $messages = [
             'name.required' => 'نام کاربری الزامی است.',
             'name.unique' => 'نام کاربری تکراری است.',
-            'name.min' => 'حداقل ۶ کاراکتر باشد.',
+            'name.min' => 'حداقل ۴ کاراکتر باشد.',
             'name.max' => 'حداکثر ۲۰ کاراکتر باشد.',
 
             'email.required' => 'ایمیل الزامی است.',
             'email.unique' => 'ایمیل تکراری است.',
-            'email.email' => 'ایمیل معتبر نیست.',
+            'email.emails' => 'ایمیل معتبر نیست.',
 
             'password.required' => 'رمز عبور الزامی است.',
             'password.min' => 'حداقل ۶ کاراکتر.',
@@ -52,7 +52,7 @@ class RegisterController extends Controller
             RegisterUserEvent::dispatch($user,$code);
             session()->flash('success','ایمیل فعال سازی با موفقبت ارسال شد.');
             session()->put('newEmail',$user->email);
-            return redirect()->route('email.verify.prompt');
+            return redirect()->route('emails.verify.prompt');
         } catch (\Exception $ex) {
             return $ex->getMessage();
         }

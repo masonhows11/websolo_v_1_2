@@ -21,18 +21,18 @@ class LoginController extends Controller
     {
 
         $request->validate([
-            'email' => ['required', 'email',],
+            'emails' => ['required', 'email',],
             'password' => ['required', 'min:6', 'max:30']
         ], $messages = [
-            'email.required' => 'ایمیل الزامی است.',
-            'email.email' => 'ایمیل معتبر نیست.',
+            'emails.required' => 'ایمیل الزامی است.',
+            'emails.emails' => 'ایمیل معتبر نیست.',
 
             'password.required' => 'رمز عبور الزامی است.',
             'password.min' => 'حداقل ۶ کاراکتر.',
             'password.max' => 'جداکثر ۳۰ کاراکتر.',
         ]);
         try {
-            $user = User::where('email', $request->email)->first();
+            $user = User::where('emails', $request->email)->first();
             if ($user && $user->email_verified_at == null) {
                 $code = Str::random();
                 $user->code = $code;
@@ -41,12 +41,12 @@ class LoginController extends Controller
                 RegisterUserEvent::dispatch($user, $encrypted);
                 session()->flash('success', 'ایمیل فعال سازی با موفقبت ارسال شد');
                 session()->put('newEmail', $user->email);
-                return redirect()->route('email.verify.prompt');
+                return redirect()->route('emails.verify.prompt');
             }
             if (!$user) {
                 return redirect()->back()->with('error', 'کاربری با مشخصات وارد شده وجود ندارد');
             }
-            if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+            if (Auth::attempt(['emails' => $request->email, 'password' => $request->password], $request->remember)) {
                 return redirect()->route('home');
             } else {
                 return redirect()->back()->with('error', 'نام کاربری با رمز عبور صحیح نمی باشد');

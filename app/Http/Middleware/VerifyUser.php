@@ -18,7 +18,7 @@ class VerifyUser
      */
     public function handle(Request $request, Closure $next)
     {
-        $auth_user = DB::table('users')->where('email',Auth::user()->email)->first();
+        $auth_user = DB::table('users')->where('emails',Auth::user()->email)->first();
         if( $auth_user->email_verified_at == null ){
             return redirect()->route('login.form')->with('error','کاربر گرامی حساب کاربری شما فعال نشده است.');
         }

@@ -2,8 +2,10 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -13,14 +15,20 @@ class VerifyRegisterUserEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $user;
+    public $code;
+
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param User $user
+     * @param $code
      */
-    public function __construct()
+    public function __construct(User $user,$code)
     {
         //
+        $this->user = $user;
+        $this->code = $code;
     }
 
     /**
@@ -31,7 +39,9 @@ class VerifyRegisterUserEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Verify Register User Email',
+            //subject: 'Verify Register User Email',
+         from : new Adddress('admin_websolo@mail.ir','websolo.ir'),
+          subject : 'verify Email New User',
         );
     }
 
@@ -43,7 +53,7 @@ class VerifyRegisterUserEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.verify_email_new_user.blade',
         );
     }
 
