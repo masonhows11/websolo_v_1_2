@@ -21,18 +21,18 @@ class LoginController extends Controller
     {
 
         $request->validate([
-            'emails' => ['required', 'email',],
+            'email' => ['required', 'email',],
             'password' => ['required', 'min:6', 'max:30']
         ], $messages = [
             'emails.required' => 'ایمیل الزامی است.',
-            'emails.emails' => 'ایمیل معتبر نیست.',
+            'email.email' => 'ایمیل معتبر نیست.',
 
             'password.required' => 'رمز عبور الزامی است.',
             'password.min' => 'حداقل ۶ کاراکتر.',
             'password.max' => 'جداکثر ۳۰ کاراکتر.',
         ]);
         try {
-            $user = User::where('emails', $request->email)->first();
+            $user = User::where('email', $request->email)->first();
 
             if ($user && $user->email_verified_at == null) {
 
@@ -47,7 +47,7 @@ class LoginController extends Controller
                 return redirect()->back()->with('error', 'کاربری با مشخصات وارد شده وجود ندارد.');
             }
 
-            if (Auth::attempt(['emails' => $request->email, 'password' => $request->password], $request->remember)) {
+            if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
                 return redirect()->route('home');
             } else {
                 return redirect()->back()->with('error', 'نام کاربری با رمز عبور صحیح نمی باشد.');

@@ -41,7 +41,7 @@
             <ul class="navbar-nav auth-link me-auto mb-2">
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid px-2 fa-user"></i><span>پنل کاربری</span></a>
+                        <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid px-2 fa-user"></i><span>{{ \Illuminate\Support\Facades\Auth::user()->name  }}</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"><i class="fa-solid px-2 fa-arrow-up-left-from-circle"></i><span>خروج</span></a>

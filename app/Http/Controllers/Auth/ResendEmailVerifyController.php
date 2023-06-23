@@ -18,11 +18,11 @@ class ResendEmailVerifyController extends Controller
     public function resendEmail(Request $request){
 
         $request->validate([
-            'email' => ['required', 'email'],
+            'email' => ['required','email'],
 
         ], $messages = [
             'email.required' => 'ایمیل الزامی است.',
-            'email.emails' => 'ایمیل معتبر نیست.',
+            'email.email' => 'ایمیل معتبر نیست.',
         ]);
 
         try {

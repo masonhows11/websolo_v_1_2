@@ -8,4 +8,7 @@ use Illuminate\Http\Request;
 class UserDashboardController extends Controller
 {
     //
+    public function dashboard(){
+        return 'dashboard';
+    }
 }
