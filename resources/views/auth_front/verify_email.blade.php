@@ -16,7 +16,7 @@
                     @csrf
 
                     <div class="mb-3 mt-3">
-                        <label for="code" class="form-label">نام کاربری</label>
+                        <label for="code" class="form-label">کد فعال سازی</label>
                         <input type="text" class="@error('code') is-invalid @enderror form-control" id="code" name="code">
                     </div>
                     @error('code')
@@ -24,13 +24,11 @@
                     @enderror
 
                     <div class="d-flex flex-column">
-                        <div>
-                            <h5 class="text-center py-3">کاربر گرامی به سایت وب سولو خوش آمدید.</h5>
-                            <p>ثبت نام شما با موفقیت انجام شد.برای فعال سازی حساب کاربری خود،کد فعال سازی ارسالی به ایمیل خود را وارد کنید.</p>
+                        <div class="my-3">
+                            <p class="text-center">کد فعال سازی ارسالی به ایمیل خود را وارد کنید.</p>
                         </div>
-                        <div>
-                            <a href="{{ route('resend.email.prompt') }}">در صورت دریافت نکردن ایمیل روی لینک <span class="text-dark">ارسال مجدد کلیک کنید.</span></a>
-                            <p>با تشکر.</p>
+                        <div class="my-3">
+                            <p class="text-center"> در صورت دریافت نکردن ایمیل روی <a href="{{ route('resend.email.prompt') }}"> لینک ارسال مجدد </a> کلیک کنید.</p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-5">

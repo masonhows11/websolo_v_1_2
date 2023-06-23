@@ -51,7 +51,7 @@ class VerifyEmailNewUser extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'emails.VerifyEmailNewUser',
+            view : 'emails.VerifyEmailNewUser',
         );
     }
 
