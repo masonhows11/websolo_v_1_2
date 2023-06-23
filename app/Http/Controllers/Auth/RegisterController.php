@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class RegisterController extends Controller
@@ -48,11 +49,7 @@ class RegisterController extends Controller
                 'password' => Hash::make($request->password),
                 'code' => $code
             ]);
-            $encrypted = Crypt::encryptString($code);
-            // step one
-            // for execute event
-            // run RegisterUserEvent with $user argument
-            RegisterUserEvent::dispatch($user,$encrypted);
+            RegisterUserEvent::dispatch($user,$code);
             session()->flash('success','ایمیل فعال سازی با موفقبت ارسال شد.');
             session()->put('newEmail',$user->email);
             return redirect()->route('email.verify.prompt');
