@@ -4,31 +4,31 @@ namespace App\Services;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\User;
 class CheckValidateEmail
 {
 
 
-    public static function CheckLink($id,$code)
+    public static function validateCode($email,$code)
     {
 
 
         try {
-            $decrypted = Crypt::decryptString($code);
-            $user = DB::table('users')
-                ->where('code',$decrypted)
-                ->where('id',$id)->first();
+            $user = User::where(['code'=>$code,'email'=>$email])->first();
             if ($user){
-                $expired = Carbon::parse($user->updated_at)->addMinutes(2)->isPast();
+                $expired = Carbon::parse($user->updated_at)->addMinutes(1)->isPast();
                 if($expired == 1 ){
-                    return 'link not valid';
+                    return false;
                 }
-                return 'link is valid';
+                $user->code_verified_at = Date::now();
+                $user->save();
+                return true;
             }
-            return 'user not found';
+            return false;
         }catch (\Exception $ex){
-            return 'link is broken';
+            return view('errors_custom.validation_error');
         }
     }
 

@@ -21,7 +21,7 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     <div class="mb-3 mt-3">
-                        <button type="submit" class="btn btn-outline-secondary">ارسال ایمیل</button>
+                        <button type="submit" class="btn btn-outline-secondary">ارسال ایمیل فعال سازی</button>
                     </div>
                 </form>
             </div>
