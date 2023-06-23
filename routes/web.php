@@ -31,10 +31,12 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');//->midd
 Route::get('/register-form', [RegisterController::class, 'registerForm'])->name('register.form');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::get('/emailVerifyPrompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('emails.verify.prompt');
-Route::post('/resendVerifyEmail', [VerifyEmailController::class, 'resendEmailVerify'])->name('resend.verify.emails');
+Route::get('/emailVerify', [VerifyEmailController::class, 'verifyEmail'])->name('email.verify');
 
-Route::get('/emailVerify/{id}/{code}', [VerifyEmailController::class, 'verifyEmail'])->name('emails.verify');
+Route::get('/emailVerifyPrompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('email.verify.prompt');
+Route::post('/resendVerifyEmail', [VerifyEmailController::class, 'resendEmailVerify'])->name('resend.verify.email');
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

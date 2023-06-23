@@ -23,7 +23,7 @@ class SendEmailRegisterUserListener
     /**
      * Handle the event.
      *
-     * @param  object  $event
+     * @param RegisterUserEvent $event
      * @return void
      */
     public function handle(RegisterUserEvent $event)

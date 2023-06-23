@@ -39,7 +39,7 @@ class VerifyEmailNewUser extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Verify Email New User',
+            subject: 'تایید ایمیل کاربر جدید',
         );
     }
 
