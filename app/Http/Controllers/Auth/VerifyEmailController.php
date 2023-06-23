@@ -13,7 +13,10 @@ class VerifyEmailController extends Controller
         return view('auth_front.verify_email');
     }
 
-    public function verify(){
-        
+    public function verify(Request $request)
+    {
+
+        return $request;
+
     }
 }

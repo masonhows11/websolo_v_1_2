@@ -32,18 +32,15 @@ Route::get('/register', [RegisterController::class, 'registerForm'])->name('regi
 Route::post('/register-user', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/verify-email', [VerifyEmailController::class, 'verifyEmail'])->name('verify.email');
-Route::get('/verify',[]);
+Route::post('/verify', [VerifyEmailController::class, 'verify'])->name('verify');
 
-Route::get('/verify-email-prompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('verify.email.prompt');
-
-Route::post('/resend-verify-email', [VerifyEmailController::class, 'resendEmailVerify'])->name('resend.verify.email');
-
+Route::get('/resend-email-prompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('resend.email.prompt');
+Route::post('/resend-email', [VerifyEmailController::class, 'resendEmailVerify'])->name('resend.email');
 
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
-
 
 
 Route::middleware(['web', 'auth', 'verifyUser'])->group(function () {
@@ -56,7 +53,7 @@ Route::middleware(['web', 'auth', 'verifyUser'])->group(function () {
     Route::post('/edit/emails', [EditEmailController::class, 'editEmail'])->name('edit.emails');
     Route::get('/verify/edit-emails/{$id}{$code}', [EditEmailController::class, 'verifyEditEmail'])->name('verify.edit.emails');
 
-    Route::get('/change/password/form',[ChangePasswordController::class,'create'])->name('change.password.form');
-    Route::post('/change/password',[ChangePasswordController::class,'store'])->name('change.password');
-    Route::get('/delete/account',[RemoveAccountController::class,'destroy'])->name('delete.account');
+    Route::get('/change/password/form', [ChangePasswordController::class, 'create'])->name('change.password.form');
+    Route::post('/change/password', [ChangePasswordController::class, 'store'])->name('change.password');
+    Route::get('/delete/account', [RemoveAccountController::class, 'destroy'])->name('delete.account');
 });
