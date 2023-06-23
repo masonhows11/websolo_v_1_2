@@ -38,12 +38,16 @@ Route::get('/resend-email-prompt', [ResendEmailVerifyController::class, 'resendE
 Route::post('/resend-email', [ResendEmailVerifyController::class, 'resendEmail'])->name('resend.email');
 
 
-Route::middleware(['auth'])->group(function () {
+//Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::middleware(['auth_front','verifyUser'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 
-Route::middleware(['web', 'auth', 'verifyUser'])->group(function () {
+
+
+Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 
     Route::get('/dashboard', [UserDashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/edit/profile', [UserDashboardController::class, 'editProfile'])->name('edit.profile');
