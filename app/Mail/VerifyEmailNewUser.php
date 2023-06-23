@@ -5,15 +5,15 @@ namespace App\Mail;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class VerifyRegisterUserEmail extends Mailable
+class VerifyEmailNewUser extends Mailable
 {
     use Queueable, SerializesModels;
+
 
     public $user;
     public $code;
@@ -39,9 +39,7 @@ class VerifyRegisterUserEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            //subject: 'Verify Register User Email',
-         from : new Address('admin_websolo@mail.ir','websolo.ir'),
-          subject : 'verify Email New User',
+            subject: 'Verify Email New User',
         );
     }
 
@@ -53,7 +51,7 @@ class VerifyRegisterUserEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.verify_email_new_user',
+            markdown: 'emails.VerifyEmailNewUser',
         );
     }
 

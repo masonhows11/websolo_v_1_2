@@ -3,7 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\RegisterUserEvent;
-use App\Mail\VerifyRegisterUserEmail;
+use App\Mail\VerifyEmailNewUser;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
@@ -29,6 +29,6 @@ class SendEmailRegisterUserListener
     public function handle(RegisterUserEvent $event)
     {
         //
-        Mail::to($event->user->email)->send(new VerifyRegisterUserEmail($event->user,$event->code));
+        Mail::to($event->user->email)->send(new VerifyEmailNewUser($event->user,$event->code));
     }
 }
