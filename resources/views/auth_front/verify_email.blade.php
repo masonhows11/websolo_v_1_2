@@ -16,6 +16,14 @@
                     @csrf
 
                     <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">ایمیل</label>
+                        <input type="email" class="@error('email') is-invalid @enderror form-control" id="email" name="email">
+                    </div>
+                    @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+                    <div class="mb-3 mt-3">
                         <label for="code" class="form-label">کد فعال سازی</label>
                         <input type="text" class="@error('code') is-invalid @enderror form-control" id="code" name="code">
                     </div>
