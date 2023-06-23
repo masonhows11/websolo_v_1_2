@@ -33,6 +33,7 @@ class LoginController extends Controller
         ]);
         try {
             $user = User::where('emails', $request->email)->first();
+
             if ($user && $user->email_verified_at == null) {
                 $code = Str::random();
                 $user->code = $code;

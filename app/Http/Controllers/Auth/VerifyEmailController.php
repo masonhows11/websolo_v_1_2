@@ -32,7 +32,7 @@ class VerifyEmailController extends Controller
         try {
             $is_validate = CheckValidateEmail::validateCode($request->email, $request->code);
             if ($is_validate == true) {
-                session()->flash('error', 'حساب کاربری شما با موفقیت فعال شد.');
+                session()->flash('success', 'حساب کاربری شما با موفقیت فعال شد.');
                 return redirect()->route('login.form');
             }
             session()->flash('error', 'کد فعال سازی معتبر نمی باشد.');

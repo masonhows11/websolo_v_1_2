@@ -51,7 +51,7 @@
 
         <div class="mail-body">
             <div>
-                <p><span>کاربر عزیز  : </span><span>{{ $user->name }}</span></p>
+                <p><span>{{ $user->name }}</span><span> :  کاربر عزیز </span></p>
             </div>
             <div>
                 <p><span> {{ $code  }}</span><span> : کد فعال سازی </span></p>

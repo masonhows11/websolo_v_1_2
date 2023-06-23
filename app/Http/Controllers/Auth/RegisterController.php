@@ -52,7 +52,7 @@ class RegisterController extends Controller
             session()->flash('success','ایمیل فعال سازی با موفقبت ارسال شد.');
             return redirect()->route('verify.email');
         } catch (\Exception $ex) {
-            return view('errors_custom.register_error',['data'=>$ex->getMessage()]);
+            return view('errors_custom.register_error',['error'=>$ex->getMessage()]);
         }
     }
 }
