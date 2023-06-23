@@ -33,7 +33,7 @@
 
                             <div class="mb-3 mt-3">
                                 <label for="email" class="form-label">ایمیل</label>
-                                <input type="email" class="@error('email') is_invalid @enderror form-control" id="email"  name="email" value="{{ old('email') }}">
+                                <input type="email" class="@error('email') is-invalid @enderror form-control" id="email"  name="email" value="{{ old('email') }}">
                             </div>
                             @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
@@ -52,7 +52,7 @@
                                 <input type="password" class="@error('password') is-invalid @enderror form-control" id="pwd-confirm" name="password_confirmation">
                             </div>
 
-                            <button type="submit" class="btn btn-register  w3-flat-alizarin rounded-3">عضویت</button>
+                            <button type="submit" class="btn btn-register  w3-flat-alizarin rounded-3">ثبت نام</button>
                         </form>
                     </div>
                 </div>
