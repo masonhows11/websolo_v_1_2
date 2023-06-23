@@ -7,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> {{ config('app.name') }}</title>
     <style>
+        body{
+            background:#F7F7F7;
+        }
         .container{
             display: flex;
+            justify-content: center;
             flex-direction: column;
         }
         .mail-header h2{
@@ -29,6 +33,13 @@
         .mail-footer p{
             text-align: center;
         }
+        .mail-body , .mail-footer{
+            border: 2px solid #DFE3EE;
+            border-radius: 5px;
+        }
+        .mail-body , .mail-footer {
+            margin:10px;
+        }
     </style>
 </head>
 <body>
@@ -40,10 +51,10 @@
 
         <div class="mail-body">
             <div>
-                <p>کاربر عزیز :{{ $user->name }}</p>
+                <p><span>کاربر عزیز  : </span><span>{{ $user->name }}</span></p>
             </div>
             <div>
-                <p>کد فعال سازی : {{ $code  }}</p>
+                <p><span> {{ $code  }}</span><span> : کد فعال سازی </span></p>
             </div>
         </div>
 
