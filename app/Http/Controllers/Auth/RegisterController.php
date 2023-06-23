@@ -52,7 +52,7 @@ class RegisterController extends Controller
             RegisterUserEvent::dispatch($user,$code);
             session()->flash('success','ایمیل فعال سازی با موفقبت ارسال شد.');
             session()->put('newEmail',$user->email);
-            return redirect()->route('emails.verify.prompt');
+            return redirect()->route('verify.email');
         } catch (\Exception $ex) {
             return $ex->getMessage();
         }

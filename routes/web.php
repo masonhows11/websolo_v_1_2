@@ -31,9 +31,10 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');//->midd
 Route::get('/register-form', [RegisterController::class, 'registerForm'])->name('register.form');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::get('/email-Verify', [VerifyEmailController::class, 'verifyEmail'])->name('email.verify');
+Route::get('/verify-email', [VerifyEmailController::class, 'verifyEmail'])->name('verify.email');
 
-Route::get('/email-verify-prompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('email.verify.prompt');
+Route::get('/verify-email-prompt', [EmailVerifyPromptController::class, 'verifyEmailPrompt'])->name('verify.email.prompt');
+
 Route::post('/resend-verify-email', [VerifyEmailController::class, 'resendEmailVerify'])->name('resend.verify.email');
 
 
