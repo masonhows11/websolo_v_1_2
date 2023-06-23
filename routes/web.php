@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\ChangePasswordController;
-use App\Http\Controllers\Auth\EmailVerifyPromptController;
+use App\Http\Controllers\Auth\ResendEmailVerifyController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\RemoveAccountController;
@@ -34,8 +34,8 @@ Route::post('/register-user', [RegisterController::class, 'register'])->name('re
 Route::get('/verify-email', [VerifyEmailController::class, 'verifyEmail'])->name('verify.email');
 Route::post('/verify', [VerifyEmailController::class, 'verify'])->name('verify');
 
-Route::get('/resend-email-prompt', [EmailVerifyPromptController::class, 'resendEmailPrompt'])->name('resend.email.prompt');
-Route::post('/resend-email', [EmailVerifyPromptController::class, 'resendEmail'])->name('resend.email');
+Route::get('/resend-email-prompt', [ResendEmailVerifyController::class, 'resendEmailPrompt'])->name('resend.email.prompt');
+Route::post('/resend-email', [ResendEmailVerifyController::class, 'resendEmail'])->name('resend.email');
 
 
 Route::middleware(['auth'])->group(function () {

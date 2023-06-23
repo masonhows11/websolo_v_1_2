@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class EmailVerifyPromptController extends Controller
+class ResendEmailVerifyController extends Controller
 {
     public function resendEmailPrompt(){
 

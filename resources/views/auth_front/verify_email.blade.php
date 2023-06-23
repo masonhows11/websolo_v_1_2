@@ -19,7 +19,7 @@
                         <label for="code" class="form-label">نام کاربری</label>
                         <input type="text" class="@error('code') is-invalid @enderror form-control" id="code" name="code">
                     </div>
-                    @error('code)
+                    @error('code')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
 
