@@ -934,7 +934,25 @@ body {
     padding:4px;
 
 }
-// about
+// about single
+.about-single {
+    font-family: vazirRegular, "sans-serif";
+}
+.about-single .about-description{
+    line-height: 35px;
+}
+.about-single .about-title{
+    font-size:1rem;
+    font-weight: 600;
+}
+.about-sec-two h1,
+.about-sec-one h1{
+    font-weight:600;
+}
+.about-sec-one p{
+    font-size: 1.1rem;
+}
+
 
 
 
@@ -1022,6 +1040,13 @@ body {
         display:block;
     }
 
+    .about-sec-one p{
+        line-height: 35px;
+    }
+    about-sec-four h5{
+        line-height: 34px;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -1076,6 +1101,10 @@ body {
     }
     .auth-link .nav-item {
         margin:0 7px 0 7px;
+    }
+
+    .about-sec-one p{
+        line-height: 35px;
     }
 
 }

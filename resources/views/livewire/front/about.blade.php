@@ -2,7 +2,7 @@
     @section('page_title')
         درباره ما
     @endsection
-    <div class="container">
+    <div class="container about-single">
 
         <div class="about row mt-5">
 
@@ -25,75 +25,57 @@
 
         </div>
 
-        <div class="row d-flex  my-5  border border-1   rounded-3">
+        <div class="row mt-5 d-flex flex-column about-sec-one  border border-1   rounded-3">
 
-            <div class="col about-sec-one">
-
-                <div class="">
-                    <h1 class="we-title">وب سولو</h1>
-                </div>
-
-                <div class="">
-                    <div class="we-description">
-                        <h3 class="text-center">درباره :</h3>
-                        <p>وبکده یک سایت یا یک جامعه کوچک از دنیای بزرگ برنامه نویسی شاخه توسعه و طراحی وب سایت یا وب
-                            اپلیکیشن و سایر تکنولوژی های وابسته به این شاخه است.</p>
-                    </div>
-                </div>
-
+            <div class="col">
+                <h1 class="text-center h2 py-3">وب سولو</h1>
+            </div>
+            <div class="col py-4">
+                <p class="text-center py-2">وب سولو وب سایت یا یک جامعه کوچک از دنیای بزرگ برنامه نویسی شاخه توسعه و
+                    طراحی وب سایت یا وب اپلیکیشن و سایر تکنولوژی های وابسته به این شاخه است.</p>
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center my-5 about-sec-two ">
-            <div class="d-flex flex-row">
-                <p class="d-flex align-self-center">اهداف وب سولو</p>
+
+        <div class="row mt-5 d-flex justify-content-center  about-sec-two ">
+            <div class="">
+                <h1 class="text-center h4">اهداف وب سولو</h1>
             </div>
         </div>
 
-        <div class="row py-5 about-sec-three">
-            <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
-                <div class="col d-flex flex-row">
-                    <i class="fas fa-fire-alt ms-2"></i><h5 class="ms-2">ایجاد بسترهای مناسب جهت کسب و کارهای انلاین
-                        :</h5>
-                </div>
-                <div class="col">
-                    <p>
-                        تیم وبکده با صرف کمترین هزینه به جهت هر چه بهتر دیده شدن محصولات فعالان اقتصادی و خدمات شرکت های
-                        مشتری محور خدمات ارائه می نماید. تیم وبکده آماده ارائه جدیدترین خدمات در حوزه طراحی و توسعه سایت
-                        و
-                        اپلیکیشین های موبایل می باشد.
-                    </p>
-                </div>
+
+        <div class="row mt-5 d-flex flex-column about-sec-three">
+            <div class="col py-3">
+                <h5 class="text-center about-title">ایجاد بسترهای مناسب جهت کسب و کارهای انلاین</h5>
             </div>
 
+            <div class="col py-2">
+                <p class="text-center  about-description">تیم وب سولو با صرف کمترین هزینه به جهت هر چه بهتر دیده شدن محصولات فعالان اقتصادی و خدمات شرکت های
+                    مشتری محور خدمات ارائه می نماید. تیم وبکده آماده ارائه جدیدترین خدمات در حوزه طراحی و توسعه سایت و
+                    اپلیکیشین های موبایل می باشد.
+                </p>
+            </div>
         </div>
 
 
-        <div class="row py-5 about-sec-four">
-            <div class="row row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
-                <div class="col d-flex flex-row">
-                    <i class="fas fa-fire-alt ms-2"></i><h5 class="ms-2">ارائه آموزش های لازم و نکات کاربردی در زمینه
-                        توسعه
-                        وب سایت :</h5>
+        <div class="row mt-5 d-flex flex-column about-sec-four">
+                <div class="col py-2">
+                    <h5 class="text-center about-title">ارائه آموزش های لازم و نکات کاربردی:</h5>
                 </div>
-                <div class="col">
-                    <p>
-                        بخش دیگری از سایت به آموزش اختصاص داده شده است.
-                    </p>
-                    <p>
+                <div class="col py-2 ">
+                    <p class="text-center  about-description">
                         در این بخش تلاش می کنیم آموزش لازم و کاربردی در زمینه های برنامه نویسی و توصعه وب سایت (web
                         development & programming) و موبایل (mobile development)
                         و طراحی کاربری (ui.ux) را به صورت مفهومی و به زبانی ساده برای علاقه مندان ارائه نماییم.
-                        ما سعی میکنیم از طریق گسترش علم برنامه نویسی ولو از شاخه توسعه وب دریچه های جدیدی ازاین علم را
+                        ما سعی میکنیم از طریق گسترش علم برنامه نویسی ولو از شاخه توسعه وب دریچه های جدیدی از این علم را
                         به
                         روی همگان باز کنیم.
                     </p>
                 </div>
-            </div>
         </div>
+
 
     </div>
 
 
-</div>
 </div>

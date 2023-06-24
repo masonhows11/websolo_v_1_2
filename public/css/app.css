@@ -11224,6 +11224,28 @@ body {
   padding: 4px;
 }
 
+.about-single {
+  font-family: vazirRegular, "sans-serif";
+}
+
+.about-single .about-description {
+  line-height: 35px;
+}
+
+.about-single .about-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about-sec-two h1,
+.about-sec-one h1 {
+  font-weight: 600;
+}
+
+.about-sec-one p {
+  font-size: 1.1rem;
+}
+
 @media screen and (max-width: 576px) {
   .contact .contact-header p {
     line-height: 25px;
@@ -11292,6 +11314,12 @@ body {
   .auth-link .nav-item .nav-link span {
     display: block;
   }
+  .about-sec-one p {
+    line-height: 35px;
+  }
+  about-sec-four h5 {
+    line-height: 34px;
+  }
 }
 @media screen and (max-width: 992px) {
   .about .about-introduce {
@@ -11339,6 +11367,9 @@ body {
   }
   .auth-link .nav-item {
     margin: 0 7px 0 7px;
+  }
+  .about-sec-one p {
+    line-height: 35px;
   }
 }
 
