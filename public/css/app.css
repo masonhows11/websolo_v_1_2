@@ -10630,6 +10630,14 @@ body {
   font-family: iransansdn, "sans-serif";
 }
 
+.navbar-nav .dropdown .nav-link {
+  padding: 2px 2px;
+}
+
+.navbar-nav .dropdown .dropdown-menu li {
+  padding: 2px 0;
+}
+
 .navbar .nav-item .nav-link {
   font-size: 1.1rem;
   font-weight: 500;

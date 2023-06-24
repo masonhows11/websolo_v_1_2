@@ -40,11 +40,16 @@
 
             <ul class="navbar-nav auth-link me-auto mb-2">
                 @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid px-2 fa-user"></i><span>{{ \Illuminate\Support\Facades\Auth::user()->name  }}</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('logout') }}"><i class="fa-solid px-2 fa-arrow-up-left-from-circle"></i><span>خروج</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="{{ route('dashboard') }}">
+                            <img src="{{ asset('/images/avatar/avatar-64.png') }}" width="46" height="46" alt="user-image">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('dashboard') }}">{{ \Illuminate\Support\Facades\Auth::user()->name  }}</a></li>
+                            <li><a class="dropdown-item" href="#">پنل کاربری</a></li>
+                            <li><a class="dropdown-item" href="#">علاقه مندی ها</a></li>
+                            <li><a class="dropdown-item" href="{{ route('logout') }}">خروج</a></li>
+                        </ul>
                     </li>
                 @else
                     <li class="nav-item">
