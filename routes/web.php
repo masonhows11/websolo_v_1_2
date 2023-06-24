@@ -4,12 +4,13 @@
 use App\Http\Controllers\Auth\ResendEmailVerifyController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserDashboard\EditEmailController;
-use App\Http\Controllers\UserDashboard\UserDashboardController;
+
+use App\Http\Livewire\Front\About;
+use App\Http\Livewire\Front\ContactSingle;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,9 +40,11 @@ Route::get('/resend-email-prompt', [ResendEmailVerifyController::class, 'resendE
 Route::post('/resend-email', [ResendEmailVerifyController::class, 'resendEmail'])->name('resend.email');
 
 
-//Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/about-us',About::class)->name('about');
+Route::get('/contact-us',ContactSingle::class)->name('contact');
 
 Route::middleware(['web','auth_front','verifyUser'])->group(function () {
+
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 

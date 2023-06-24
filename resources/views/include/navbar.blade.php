@@ -31,10 +31,10 @@
                     <a class="nav-link" href="">بلاگ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">درباره ما</a>
+                    <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">تماس با ما</a>
+                    <a class="nav-link" href="{{ route('contact') }}">تماس با ما</a>
                 </li>
             </ul>
 
@@ -46,7 +46,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('dashboard') }}">{{ \Illuminate\Support\Facades\Auth::user()->name  }}</a></li>
-                            <li><a class="dropdown-item" href="#">پنل کاربری</a></li>
+                            <li><a class="dropdown-item" href="{{ route('dashboard') }}">پنل کاربری</a></li>
                             <li><a class="dropdown-item" href="#">علاقه مندی ها</a></li>
                             <li><a class="dropdown-item" href="{{ route('logout') }}">خروج</a></li>
                         </ul>
