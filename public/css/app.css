@@ -10769,7 +10769,8 @@ body {
 
 .about .subtitle,
 .introduce {
-  font-size: 1.2rem;
+  font-family: vazirRegular, "sans-serif";
+  font-size: 1.1rem;
 }
 
 .about .introduce {
@@ -11005,7 +11006,7 @@ body {
   margin-top: 10px;
 }
 
-.contact .contact-infor .item i {
+.contact .contact-info .item i {
   display: block;
   width: 40px;
   font-size: 16px;
@@ -11019,26 +11020,26 @@ body {
   margin-right: 15px;
 }
 
-.contact .contact-infor .item div {
+.contact .contact-info .item div {
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 25px;
   flex-grow: 1;
 }
 
-.contact .contact-infor .item div h5 {
+.contact .contact-info .item div h5 {
   margin-bottom: 10px;
   opacity: 0.9;
 }
 
-.contact .contact-infor .item div p {
+.contact .contact-info .item div p {
   opacity: 0.7;
   font-size: 15px;
   margin-bottom: 4px;
 }
 
 .contact p {
+  font-family: vazirRegular, "sans-serif";
   font-size: 1rem;
-  font-weight: 600;
 }
 
 .btn-custom-primary {
@@ -11265,6 +11266,7 @@ body {
   .about .about-introduce .introduce {
     font-size: 1.1rem;
     line-height: 29px;
+    font-family: vazirRegular, "sans-serif";
     text-align: center;
   }
   .services .section-title {
