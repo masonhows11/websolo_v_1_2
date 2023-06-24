@@ -11106,6 +11106,123 @@ body {
   height: 100px;
 }
 
+.dash_menu_right_side .user-image-profile {
+  height: auto;
+  border: #bdc3c7 2px solid;
+  background-color: #ffffff;
+}
+
+.dash_menu_right_side .user-profile-menu {
+  height: auto;
+  border: #bdc3c7 2px solid;
+  background-color: #ffffff;
+}
+
+.info_dash_left_side {
+  border: #bdc3c7 2px solid;
+  background: #FFFFFF;
+  height: auto;
+}
+
+.user-dashboard-section {
+  margin: 5rem 0 5rem 0;
+}
+
+.user-dashboard-section .user-profile-menu li {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.user-dashboard-section .user-profile-menu li a {
+  text-decoration: none;
+  color: #66757F;
+}
+
+.user-image-profile .user-avatar img {
+  height: 100px;
+  width: 100px;
+}
+
+.user-image-profile .user-name p {
+  font-family: "RobotoMono-Medium", Tahoma, sans-serif;
+}
+
+.user-profile-menu .fa-heart,
+.user-profile-menu .fa-message,
+.user-profile-menu .fa-history,
+.user-profile-menu .fa-info-circle,
+.user-profile-menu .fa-sign-out,
+.user-profile-menu .fa-home-user,
+.user-profile-menu .fa-envelope {
+  font-size: 1.3rem;
+}
+
+.user-profile-menu .fa-heart {
+  color: #ff6347;
+}
+
+.user-profile-menu .fa-message {
+  color: #2196F3;
+}
+
+.user-profile-menu .fa-history {
+  color: #607d8b;
+}
+
+.user-profile-menu .fa-info-circle {
+  color: #0dcaf0;
+}
+
+.user-profile-menu .fa-sign-out {
+  color: #f44336;
+}
+
+.user-profile-menu .fa-trash {
+  color: tomato;
+}
+
+.user-profile-menu .fa-envelope {
+  color: #75ff0d;
+}
+
+.dash-index-header {
+  border-bottom: #2196F3 2px solid;
+}
+
+.dash-index-header h6 {
+  color: #2196F3;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.dash-index-info-title {
+  background: #2196F3;
+  display: inline-block;
+  color: white;
+  border: 2px solid;
+  border-radius: 7px;
+  width: 200px;
+}
+
+.dash-index-info .row {
+  border: #bdc3c7 2px solid;
+  border-radius: 5px;
+  padding: 8px 10px 8px 0;
+}
+
+.userAvatarFile input {
+  display: block;
+  width: 200px;
+}
+
+.userAvatarFile button {
+  background: transparent;
+  cursor: pointer;
+  border: 2px #ff6347 solid;
+  border-radius: 5px;
+  padding: 4px;
+}
+
 @media screen and (max-width: 576px) {
   .contact .contact-header p {
     line-height: 25px;
