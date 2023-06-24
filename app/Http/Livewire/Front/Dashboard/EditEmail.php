@@ -9,10 +9,12 @@ class EditEmail extends Component
 {
 
     public $user;
+    public $email;
 
     public function mount(){
 
         $this->user = Auth::user();
+        $this->email = $this->user->email;
     }
 
 
