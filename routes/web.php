@@ -11,6 +11,9 @@ use App\Http\Livewire\Front\About;
 use App\Http\Livewire\Front\ContactSingle;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
 
+use App\Http\Livewire\Front\Dashboard\EditEmail;
+use App\Http\Livewire\Front\Dashboard\EditPassword;
+use App\Http\Livewire\Front\Dashboard\EditProfile;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,5 +57,8 @@ Route::middleware(['web','auth_front','verifyUser'])->group(function () {
 Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/edit-email', EditEmail::class)->name('edit.email');
+    Route::get('/edit-password',EditPassword::class)->name('edit.password');
+    Route::get('/edit-profile',EditProfile::class)->name('edit.profile');
 
 });
