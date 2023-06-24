@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class EditPassword extends Component
 {
+
     public function render()
     {
         return view('livewire.front.dashboard.edit-password')
