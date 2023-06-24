@@ -22,6 +22,10 @@ class EditProfile extends Component
       $this->last_name = $this->name->last_name;
     }
 
+    public function save(){
+
+    }
+
     public function render()
     {
         return view('livewire.front.dashboard.edit-profile')

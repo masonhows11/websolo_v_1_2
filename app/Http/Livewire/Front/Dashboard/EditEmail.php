@@ -17,6 +17,9 @@ class EditEmail extends Component
         $this->email = $this->user->email;
     }
 
+    public function save(){
+
+    }
 
     public function render()
     {
