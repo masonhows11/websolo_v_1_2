@@ -24,7 +24,7 @@ class RegisterController extends Controller
             'email' =>
                 ['required', 'unique:users', 'email'],
             'password' =>
-                ['required', 'min:6', 'max:30', 'confirmed']
+                ['required', 'min:6', 'max:20', 'confirmed']
         ], $messages = [
             'name.required' => 'نام کاربری الزامی است.',
             'name.unique' => 'نام کاربری تکراری است.',
@@ -37,7 +37,7 @@ class RegisterController extends Controller
 
             'password.required' => 'رمز عبور الزامی است.',
             'password.min' => 'حداقل ۶ کاراکتر.',
-            'password.max' => 'جداکثر ۳۰ کاراکتر.',
+            'password.max' => 'جداکثر ۲۰ کاراکتر.',
             'password.confirmed' => 'رمز عبور و تکرار آن یکسان نیستند.',
         ]);
         try {

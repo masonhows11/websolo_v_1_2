@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="profile-alert">
-                    @include('front.include.alert')
+                    @include('include.alert')
                 </div>
 
                 <div class="row my-3">
@@ -57,7 +57,7 @@
                         <div class="mb-3">
                             <label for="pwd-confirm" class="form-label">تکرار رمز عبور جدید</label>
                             <input type="password"
-                                   wire:model.defer="confirm_password"
+                                   wire:model.defer="password_confirmation"
                                    class="form-control @error('confirm_password') is-invalid @enderror"
                                    id="pwd-confirm">
                         </div>
