@@ -173,6 +173,7 @@ input,
 select {
     vertical-align: middle;
 }
+
 // color flat ui
 .w3-flat-turquoise {
     color: #fff !important;
@@ -284,14 +285,17 @@ body {
     display: flex;
     height: 100%;
     flex-direction: column;
-    font-family:iransansdn,"sans-serif";
+    font-family: iransansdn, "sans-serif";
 }
-.navbar-nav .dropdown .nav-link{
+
+.navbar-nav .dropdown .nav-link {
     padding: 2px 2px;
 }
-.navbar-nav .dropdown .dropdown-menu li{
+
+.navbar-nav .dropdown .dropdown-menu li {
     padding: 2px 0;
 }
+
 .navbar .nav-item .nav-link {
     font-size: 1.1rem;
     font-weight: 500;
@@ -304,10 +308,11 @@ body {
 .auth-link .nav-item .fa-right-to-bracket {
     font-size: 1.1rem;
 }
+
 .auth-link .nav-item .fa-user:hover,
 .auth-link .nav-item .fa-arrow-up-left-from-circle:hover,
 .auth-link .nav-item .fa-right-to-bracket:hover,
-.auth-link .nav-item .fa-user-plus:hover{
+.auth-link .nav-item .fa-user-plus:hover {
     color: tomato;
 }
 
@@ -741,7 +746,7 @@ body {
 }
 
 .contact p {
-    font-family:vazirRegular, "sans-serif";
+    font-family: vazirRegular, "sans-serif";
     font-size: 1rem;
 
 }
@@ -799,16 +804,18 @@ body {
     color: #ffffff;
     font-weight: lighter !important;
 }
-.login-form ,
-.register-form ,
-.login-form-title ,
-.register-form-title{
-    border-color:#bdc3c7;
+
+.login-form,
+.register-form,
+.login-form-title,
+.register-form-title {
+    border-color: #bdc3c7;
 }
 
-.profile-alert{
+.profile-alert {
     height: 70px;
 }
+
 .alert-section {
     height: 100px;
 }
@@ -848,9 +855,9 @@ body {
     color: #66757F;
 }
 
-.user-image-profile .user-avatar img {
-    height: 100px;
-    width: 100px;
+.user-avatar .user-img img {
+    height: 130px;
+    width: 130px;
 
 }
 
@@ -888,9 +895,11 @@ body {
 .user-profile-menu .fa-sign-out {
     color: #f44336;
 }
-.user-profile-menu .fa-trash{
-    color:tomato;
+
+.user-profile-menu .fa-trash {
+    color: tomato;
 }
+
 .user-profile-menu .fa-envelope {
     color: #75ff0d;
 }
@@ -922,8 +931,8 @@ body {
 }
 
 .userAvatarFile input {
-    display:block;
-    width:200px;
+    display: block;
+    width: 200px;
 }
 
 .userAvatarFile button {
@@ -934,26 +943,29 @@ body {
     //padding:4px;
 
 }
+
 // about single
 .about-single {
     font-family: vazirRegular, "sans-serif";
 }
-.about-single .about-description{
+
+.about-single .about-description {
     line-height: 35px;
 }
-.about-single .about-title{
-    font-size:1rem;
+
+.about-single .about-title {
+    font-size: 1rem;
     font-weight: 600;
 }
+
 .about-sec-two h1,
-.about-sec-one h1{
-    font-weight:600;
+.about-sec-one h1 {
+    font-weight: 600;
 }
-.about-sec-one p{
+
+.about-sec-one p {
     font-size: 1.1rem;
 }
-
-
 
 
 // media query
@@ -1033,17 +1045,17 @@ body {
     }
 
 
-    .auth-link .nav-item .nav-link i{
-       display: none;
+    .auth-link .nav-item .nav-link i {
+        display: none;
     }
-    .auth-link .nav-item .nav-link span{
-        display:block;
+    .auth-link .nav-item .nav-link span {
+        display: block;
     }
 
-    .about-sec-one p{
+    .about-sec-one p {
         line-height: 35px;
     }
-    about-sec-four h5{
+    about-sec-four h5 {
         line-height: 34px;
     }
 
@@ -1086,13 +1098,13 @@ body {
         display: none;
     }
 
-    .contact .contact-header p{
+    .contact .contact-header p {
         line-height: 30px;
     }
-    .navbar .navbar-nav .nav-link{
+    .navbar .navbar-nav .nav-link {
         font-size: 1rem;
     }
-    .auth-link .nav-item span{
+    .auth-link .nav-item span {
         display: none;
     }
     .navbar .navbar-nav {
@@ -1100,10 +1112,10 @@ body {
         align-items: center;
     }
     .auth-link .nav-item {
-        margin:0 7px 0 7px;
+        margin: 0 7px 0 7px;
     }
 
-    .about-sec-one p{
+    .about-sec-one p {
         line-height: 35px;
     }
 

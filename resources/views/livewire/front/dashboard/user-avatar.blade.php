@@ -2,6 +2,7 @@
     <div class="row user-avatar d-flex flex-column">
 
         <form wire:submit.prevent="save">
+
             <div class="user-img mt-2 d-flex justify-content-center">
                 @if($avatar)
                     <img src="{{ $avatar->temporaryUrl() }}" alt="user-avatar" class="rounded avatar-previewer">
@@ -32,6 +33,7 @@
                 </span>
                 @enderror
             </div>
+
         </form>
     </div>
 </div>

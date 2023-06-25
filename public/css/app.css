@@ -11139,9 +11139,9 @@ body {
   color: #66757F;
 }
 
-.user-image-profile .user-avatar img {
-  height: 100px;
-  width: 100px;
+.user-avatar .user-img img {
+  height: 130px;
+  width: 130px;
 }
 
 .user-image-profile .user-name p {
