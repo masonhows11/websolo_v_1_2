@@ -19,14 +19,11 @@
 
             <div class="d-flex  flex-column my-2 userAvatarFile">
                 <div class="my-3 text-center mx-auto">
-                    <label for="avatarFile" class="text-center">
-                        انتخاب عکس
-                    </label>
                     <input type="file" class="" name="avatarFile" wire:model="avatar">
                 </div>
 
                 <div class="mx-auto  text-center my-3">
-                    <button type="submit">آپلود عکس</button>
+                    <button type="submit" class="btn btn-secondary">آپلود عکس</button>
                 </div>
 
                 @error('avatar')

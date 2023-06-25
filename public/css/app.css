@@ -11216,14 +11216,6 @@ body {
   width: 200px;
 }
 
-.userAvatarFile button {
-  background: transparent;
-  cursor: pointer;
-  border: 2px #ff6347 solid;
-  border-radius: 5px;
-  padding: 4px;
-}
-
 .about-single {
   font-family: vazirRegular, "sans-serif";
 }
