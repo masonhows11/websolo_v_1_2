@@ -16,7 +16,7 @@
                         <li class=""><i class="fa fa-info-circle me-3"></i><a href="{{ route('edit.profile') }}">ویرایش اطلاعات کاربری</a></li>
                         <li class=""><i class="fa fa-envelope me-3"></i><a href="{{ route('edit.email') }}">ویرایش  آدرس ایمیل</a></li>
                         <li class=""><i class="fa fa-refresh me-3"></i><a href="{{ route('edit.password') }}">تغییر رمز عبور</a></li>
-                        <li class=""><i class="fa fa-trash me-3"></i><a href="">حذف حساب کاربری</a></li>
+                        <li class=""><i class="fa fa-trash me-3"></i><a href="{{ route('delete.account') }}">حذف حساب کاربری</a></li>
                         <li class=""><i class="far fa-heart me-3"></i><a href="#">لیست علاقه مندی ها</a></li>
                         <li class=""><i class="far fa-message me-3"></i><a href="#">پیغام ها</a></li>
                         <li class=""><i class="fa fa-history me-3"></i><a href="#">بازدید های اخیر</a></li>
