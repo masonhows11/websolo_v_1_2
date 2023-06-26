@@ -53,7 +53,7 @@ Route::middleware(['web','auth_front','verifyUser'])->group(function () {
 
 
 
-
+// profile
 Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 
     Route::get('/dashboard', Dashboard::class)->name('dashboard');

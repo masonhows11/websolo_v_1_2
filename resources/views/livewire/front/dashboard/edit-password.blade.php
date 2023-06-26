@@ -57,9 +57,15 @@
                         <div class="mb-3">
                             <label for="pwd-confirm" class="form-label">تکرار رمز عبور جدید</label>
                             <input type="password"
-                                   wire:model.defer="password_confirmation"
+                                   wire:model.defer="confirm_password"
                                    class="form-control @error('confirm_password') is-invalid @enderror"
                                    id="pwd-confirm">
+
+                            @error('confirm_password')
+                            <div class="alert alert-danger my-2">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
 
                         <div>

@@ -3,12 +3,14 @@
 namespace App\Http\Livewire\Front\Dashboard;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
 class EditPassword extends Component
 {
 
     public $user;
+    public $email;
     public $old_password;
     public $new_password;
     public $confirm_password;
@@ -16,6 +18,7 @@ class EditPassword extends Component
     public function mount()
     {
         $this->user = Auth::user();
+        $this->email = $this->user->email;
     }
 
     protected function rules()
@@ -23,7 +26,9 @@ class EditPassword extends Component
         return [
             'email' => ['required', 'exists:users', 'email'],
             'old_password' => ['required', 'min:6', 'max:20'],
-            'new_password' => ['required', 'min:6', 'max:20','confirmed']
+            'new_password' => ['required', 'min:6', 'max:20'],
+            'confirm_password' => ['required','same:new_password' ,'min:6', 'max:20']
+
         ];
     }
 
@@ -42,13 +47,21 @@ class EditPassword extends Component
         'new_password.max:20' => 'حداکثر ۲۰ کاراکتر باشد.',
         'new_password.confirm' => 'رمز عبور و تکرار آن یکسان نیستند.',
 
+        'confirm_password.required' => 'تکرار رمز عبور الزامی است.',
+        'confirm_password.min:6' => 'حداقل ۶ کاراکتر وارد کنید.',
+        'confirm_password.max:20' => 'حداکثر ۲۰ کاراکتر باشد.',
+
     ];
 
     public function save()
     {
         $this->validate();
 
-        
+        if(Hash::check($this->old_password,$this->user->password)){
+            dd('old pass ok');
+        }
+        dd('old pass not ok');
+
 
     }
 
