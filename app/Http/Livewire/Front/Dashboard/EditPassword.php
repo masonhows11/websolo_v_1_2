@@ -50,6 +50,7 @@ class EditPassword extends Component
         'confirm_password.required' => 'تکرار رمز عبور الزامی است.',
         'confirm_password.min:6' => 'حداقل ۶ کاراکتر وارد کنید.',
         'confirm_password.max:20' => 'حداکثر ۲۰ کاراکتر باشد.',
+        'confirm_password.same' => 'رمز عبور جدید و تکرار ان یکسان نیستند.',
 
     ];
 
@@ -59,7 +60,7 @@ class EditPassword extends Component
 
         if(!Hash::check($this->old_password,$this->user->password)){
             session()->flash('error','رمز عبور فعلی صحیح نمی باشد.');
-
+            return redirect()->back();
         }
 
 
