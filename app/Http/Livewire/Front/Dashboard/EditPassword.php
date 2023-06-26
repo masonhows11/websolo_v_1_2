@@ -57,10 +57,11 @@ class EditPassword extends Component
     {
         $this->validate();
 
-        if(Hash::check($this->old_password,$this->user->password)){
-            dd('old pass ok');
+        if(!Hash::check($this->old_password,$this->user->password)){
+            session()->flash('error','رمز عبور فعلی صحیح نمی باشد.');
+
         }
-        dd('old pass not ok');
+
 
 
     }
