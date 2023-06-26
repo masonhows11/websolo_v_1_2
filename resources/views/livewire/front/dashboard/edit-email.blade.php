@@ -7,7 +7,7 @@
 
             <div class="row my-3">
                 <form wire:submit.prevent="save">
-                    @csrf
+
                     <div class="dash-index-info-title mt-3 mb-5 py-2 px-3">
                         ایمیل کاربر
                     </div>

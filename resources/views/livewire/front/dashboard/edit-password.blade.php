@@ -15,7 +15,6 @@
 
                 <div class="row my-3">
                     <form wire:submit.prevent="save">
-                        @csrf
                         <div class="mb-3">
                             <label for="user-email" class="form-label">ایمیل</label>
                             <input type="text"

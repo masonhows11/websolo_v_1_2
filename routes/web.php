@@ -14,7 +14,11 @@ use App\Http\Livewire\Front\Dashboard\Dashboard;
 use App\Http\Livewire\Front\Dashboard\EditEmail;
 use App\Http\Livewire\Front\Dashboard\EditPassword;
 use App\Http\Livewire\Front\Dashboard\EditProfile;
+use App\Http\Livewire\Front\Dashboard\DeleteAccount;
+
+
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +64,6 @@ Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
     Route::get('/edit-email', EditEmail::class)->name('edit.email');
     Route::get('/edit-password',EditPassword::class)->name('edit.password');
     Route::get('/edit-profile',EditProfile::class)->name('edit.profile');
+    Route::get('/delete-account',DeleteAccount::class)->name('delete.account');
 
 });
