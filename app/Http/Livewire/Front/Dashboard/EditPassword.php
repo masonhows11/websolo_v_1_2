@@ -58,10 +58,23 @@ class EditPassword extends Component
     {
         $this->validate();
 
-        if(!Hash::check($this->old_password,$this->user->password)){
-            session()->flash('error','رمز عبور فعلی صحیح نمی باشد.');
-            return redirect()->back();
+        try {
+            if(!Hash::check($this->old_password,$this->user->password)){
+                session()->flash('error','رمز عبور فعلی صحیح نمی باشد.');
+                return redirect()->back();
+            }
+
+            $this->user->password = Hash::make($this->new_password);
+            $this->user->save();
+            Auth::logout();
+            session()->invalidate();
+            session()->regenerateToken();
+            session()->flash('success','تغییر رمز عبور با موفقیت انجام شد.');
+            return  redirect('')->route('login.form');
+        }catch (\Exception $ex){
+            return view('errors_custom.general_error',['error'=>$ex->getMessage()]);
         }
+
 
 
 
