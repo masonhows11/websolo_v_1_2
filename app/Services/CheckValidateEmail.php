@@ -13,18 +13,21 @@ class CheckValidateEmail
     {
 
 
+
+
+        $status = null;
         try {
             $user = User::where(['code'=>$code,'email'=>$email])->first();
             if ($user){
-                $expired = Carbon::parse($user->updated_at)->addMinutes(3)->isPast();
+                $expired = Carbon::parse($user->updated_at)->addMinutes(1)->isPast();
                 if($expired == 1 ){
-                    return false;
+                    return $status = 0;
                 }
                 $user->email_verified_at = Date::now();
                 $user->save();
-                return true;
+                return $status = 1;
             }
-            return false;
+            return $status = 2;
         }catch (\Exception $ex){
             return view('errors_custom.validation_error',['error'=>$ex->getMessage()]);
         }
