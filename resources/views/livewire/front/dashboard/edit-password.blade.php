@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="profile-alert">
-                    @include('include.alert')
+                    @include('alert.alert')
                 </div>
 
                 <div class="row my-3">

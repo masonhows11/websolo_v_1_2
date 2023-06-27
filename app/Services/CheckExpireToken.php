@@ -15,11 +15,8 @@ class CheckExpireToken
     public static function checkAdminToken($code,$mobile)
     {
         try {
-            $admin = Admin::where('mobile',$mobile)
-                ->where('code',$code)
-                ->first();
-            $expired = Carbon::parse($admin->updated_at)->addMinutes(1)
-                ->isPast();
+            $admin = Admin::where('mobile',$mobile)->where('code',$code)->first();
+            $expired = Carbon::parse($admin->updated_at)->addMinutes(1)->isPast();
             if($expired){
                 return false;
             }

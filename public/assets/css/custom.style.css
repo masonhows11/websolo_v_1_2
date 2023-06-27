@@ -1,0 +1,293 @@
+/* general styles */
+.attribute-list .fa-trash,
+.list-brand-category .fa-trash,
+.list-brands .fa-trash,
+.list-specification .fa-trash,
+.admin-lng-list .fa-trash,
+.admin-tag-list .fa-trash,
+.admin-list-roles .fa-trash,
+.admin-list-users .fa-trash {
+    color: tomato;
+    font-size: 1.3rem;
+}
+.attribute-list .fa-edit,
+.list-brands .fa-edit,
+.list-specification .fa-edit,
+.admin-lng-list .fa-edit,
+.admin-tag-list .fa-edit,
+.admin-list-roles .fa-edit {
+    color: lightskyblue;
+    font-size: 1.3rem;
+}
+
+.alert-profile {
+    height: 50px;
+}
+
+.admin-logo-login {
+    font-family: "IRANSansWeb", Sans-Serif;
+    font-size: 2rem;
+    color: dodgerblue;
+}
+
+.alert-dive {
+    height: 150px;
+}
+
+.validate-mobile-admin-form .timer {
+
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+}
+
+.aside-logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/**********  admin profile section  **************/
+.userAvatarFile input {
+    display: none;
+}
+
+.userAvatarFile label {
+    cursor: pointer;
+    border: 2px #ff6347 solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.userAvatarFile label:hover {
+    border: 2px #ff6347 solid;
+}
+
+.admin-profile-info .image-content img {
+    height: 200px;
+    width: 200px;
+}
+
+/************ sidebar section */
+.menu-item .menu-title {
+    font-size: 1.1rem;
+}
+
+/************ users section */
+/************ admins section */
+.admin-list-users .list-content {
+    height: auto;
+}
+
+.admin-list-users .list-content table tr th {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.admin-list-users .fa-trash {
+    color: tomato;
+    font-size: 1.2rem;
+}
+
+.admin-list-roles .custom-active,
+.admin-list-users .list-content .custom-active {
+    padding: 2px 0;
+    color: seagreen;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.admin-list-roles .custom-deactive,
+.admin-list-users .list-content .custom-deactive {
+    padding: 2px 0;
+    color: tomato;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/************ category section */
+.sample-section-create label,
+.tag-section-create label,
+.no-article p,
+.no-tag p,
+.article-section-create label,
+.article-section-create #button-image,
+.category-section-index .no-categories p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.no-categories,
+.category-content {
+    margin-top: 38px;
+}
+
+.category-content ul li {
+    list-style: none;
+}
+
+.item-category .fa-cut {
+    color: darkslategray;
+    font-size: 1.5rem;
+}
+
+.list-specific .fa-list-ul {
+    font-size: 1.5rem;
+    color: lightgreen;
+}
+
+.item-category .item-category-title {
+    width: 200px;
+    margin: auto 0;
+}
+
+.item-category-actions {
+    margin: auto 0;
+}
+
+.category-section-create label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.tag-section-index .fa-edit,
+.article-section-index .fa-edit,
+.item-category-actions .fa-edit {
+    color: deepskyblue;
+    font-size: 1.4rem;
+}
+
+.tag-section-index .fa-trash,
+.article-section-index .fa-trash,
+.item-category-actions .fa-trash {
+    font-size: 1.4rem;
+    color: tomato;
+}
+
+.item-category-actions .fa-unlink {
+    font-size: 1.3rem;
+    color: tomato;
+}
+
+/************ article section index */
+/*********** tag section */
+/************ article comment section*/
+.wk-article-card-body .desc {
+    text-align: justify;
+    direction: rtl;
+    padding: 5px;
+    font-size: 15px;
+
+}
+
+.wk-article-img-card {
+    width: 100%;
+}
+
+.wk-article-img-card img {
+    width: 100%;
+    height: 270px;
+}
+
+.wk-article-card-body {
+    background: #ecf0f1;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+}
+
+.wk-article-card-title h5 {
+    margin-right: 5px;
+}
+
+.wk-article-card-footer a.continue:hover {
+    color: #2196F3;
+}
+
+/************ list comment sample & article  */
+.post-card-section .comment-post-title p {
+    font-size: 1.5rem;
+}
+
+.post-card-section .card img {
+    height: 270px;
+}
+
+.post-card-section .card-body p {
+    font-size: 1.2rem;
+}
+
+/********** category specification */
+.list-category-specification .col-lg-10 {
+    height: auto;
+}
+
+.category-list-spec-title {
+    border-bottom: 2px solid #000000;
+}
+
+/********** attribute */
+.attribute-list .attribute-count {
+    background-color: white;
+}
+.attribute-list thead th{
+    font-size:1.1rem;
+}
+
+/************ media query */
+@media screen and (max-width: 300px) {
+    .article-footer-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-op {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .article-op a {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .article-footer-card {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .article-op {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .category-section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .article-footer-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-footer-card .article-op {
+        margin: auto;
+    }
+
+    .article-op {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .article-op a {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+

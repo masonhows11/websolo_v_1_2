@@ -31,6 +31,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// for create storage link on real host
+Route::get('/storage-link', function () {
+    symlink(storage_path('app/public'), $_SERVER['DOCUMENT_ROOT'] . '/storage');
+});
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 // authentication & authorize
@@ -66,4 +71,16 @@ Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
     Route::get('/edit-profile',EditProfile::class)->name('edit.profile');
     Route::get('/delete-account',DeleteAccount::class)->name('delete.account');
 
+});
+
+
+// admin routes
+
+Route::prefix('admin')->group(function () {
+
+    Route::get('/login/form', [AdminAuthController::class, 'loginAdminForm'])->name('admin.login.form');
+    Route::post('/login', [AdminAuthController::class, 'loginAdmin'])->name('admin.login');
+    Route::get('/validate/mobile/form', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.mobile.form');
+    Route::post('/validate/mobile', [AdminValidateController::class, 'validateMobile'])->name('admin.validate.mobile');
+    Route::post('/resend/code', [AdminValidateController::class, 'resendCode'])->name('admin.resend.code');
 });
