@@ -27,6 +27,10 @@ class ResendEmailVerifyController extends Controller
 
         try {
             $user = User::where('email',$request->email)->first();
+            if (!$user){
+                session()->flash('error','ایمیل وارد شده وجود ندارد.');
+                return  redirect()->back();
+            }
 
             $code = Str::random(6);
             $user->code = $code;

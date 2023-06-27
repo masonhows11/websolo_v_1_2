@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Front\Dashboard;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 use Livewire\Component;
 
 class EditPassword extends Component
@@ -27,7 +28,7 @@ class EditPassword extends Component
             'email' => ['required', 'exists:users', 'email'],
             'old_password' => ['required', 'min:6', 'max:20'],
             'new_password' => ['required', 'min:6', 'max:20'],
-            'confirm_password' => ['required','same:new_password' ,'min:6', 'max:20']
+            'confirm_password' => ['required','same:new_password' ,Password::min(8)->letters()->mixedCase()->numbers()->symbols(), 'max:20']
 
         ];
     }
@@ -51,6 +52,7 @@ class EditPassword extends Component
         'confirm_password.min:6' => 'حداقل ۶ کاراکتر وارد کنید.',
         'confirm_password.max:20' => 'حداکثر ۲۰ کاراکتر باشد.',
         'confirm_password.same' => 'رمز عبور جدید و تکرار ان یکسان نیستند.',
+        'password.password' => 'رمز عبور شامل حداقل یک حرف  بزرگ و یک حرف کوچک ، اعداد ، نماد مثل * / . ',
 
     ];
 

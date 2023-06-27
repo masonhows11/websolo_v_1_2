@@ -26,7 +26,7 @@ class VerifyEmailController extends Controller
 
             'email.required' => 'ایمیل الزامی است.',
             'email.unique' => 'ایمیل تکراری است.',
-            'email.emails' => 'ایمیل معتبر نیست.',
+            'email.email' => 'ایمیل معتبر نیست.',
         ]);
 
         try {

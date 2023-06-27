@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -24,7 +25,7 @@ class RegisterController extends Controller
             'email' =>
                 ['required', 'unique:users', 'email'],
             'password' =>
-                ['required', 'min:6', 'max:20', 'confirmed']
+                ['required', 'confirmed' ,'max:20',Password::min(8)->letters()->mixedCase()->numbers()->symbols()]
         ], $messages = [
             'name.required' => 'نام کاربری الزامی است.',
             'name.unique' => 'نام کاربری تکراری است.',
@@ -36,9 +37,10 @@ class RegisterController extends Controller
             'email.emails' => 'ایمیل معتبر نیست.',
 
             'password.required' => 'رمز عبور الزامی است.',
-            'password.min' => 'حداقل ۶ کاراکتر.',
+            'password.min' => 'حداقل ۸ کاراکتر.',
             'password.max' => 'جداکثر ۲۰ کاراکتر.',
             'password.confirmed' => 'رمز عبور و تکرار آن یکسان نیستند.',
+            'password.password' => 'رمز عبور شامل حداقل یک حرف  بزرگ و یک حرف کوچک ، اعداد ، نماد مثل * / . ',
         ]);
         try {
             $code = Str::random(6);
