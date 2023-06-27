@@ -10,6 +10,18 @@ use Illuminate\Support\Facades\Mail;
 
 class SendEmailRegisterUserListener
 {
+
+    //  use InteractsWithQueue;
+    
+    //    public $connection = 'sqs';
+    //
+    //    public $queue = 'send_user_email_reg';
+    //
+    //
+    //    public $delay = 10;
+    //
+    //    public $tries = 3;
+
     /**
      * Create the event listener.
      *
@@ -20,6 +32,7 @@ class SendEmailRegisterUserListener
         //
     }
 
+
     /**
      * Handle the event.
      *
@@ -29,6 +42,6 @@ class SendEmailRegisterUserListener
     public function handle(RegisterUserEvent $event)
     {
         //
-        Mail::to($event->user->email)->send(new VerifyEmailNewUser($event->user,$event->code));
+        Mail::to($event->user->email)->send(new VerifyEmailNewUser($event->user, $event->code));
     }
 }
