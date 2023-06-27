@@ -13,7 +13,7 @@ class LoginController extends Controller
 {
     public function loginForm()
     {
-        return view('auth_front.login');
+        return view('front.auth_front.login');
     }
 
     public function login(Request $request)

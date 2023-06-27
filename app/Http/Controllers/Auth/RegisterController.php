@@ -14,7 +14,7 @@ class RegisterController extends Controller
 {
     public function registerForm()
     {
-        return view('auth_front.register');
+        return view('front.auth_front.register');
     }
 
     public function register(Request $request)
