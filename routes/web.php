@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Http\Controllers\Admin\Auth\AdminAuthController;
+use App\Http\Controllers\Admin\Auth\AdminValidateController;
 use App\Http\Controllers\Auth\ResendEmailVerifyController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -78,9 +80,9 @@ Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 
 Route::prefix('admin')->group(function () {
 
-    Route::get('/login/form', [AdminAuthController::class, 'loginAdminForm'])->name('admin.login.form');
+    Route::get('/login-form', [AdminAuthController::class, 'loginAdminForm'])->name('admin.login.form');
     Route::post('/login', [AdminAuthController::class, 'loginAdmin'])->name('admin.login');
-    Route::get('/validate/mobile/form', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.mobile.form');
-    Route::post('/validate/mobile', [AdminValidateController::class, 'validateMobile'])->name('admin.validate.mobile');
-    Route::post('/resend/code', [AdminValidateController::class, 'resendCode'])->name('admin.resend.code');
+    Route::get('/validate-email/form', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.email.form');
+    Route::post('/validate-email', [AdminValidateController::class, 'validateMobile'])->name('admin.validate.email');
+    Route::post('/resend-email', [AdminValidateController::class, 'resendCode'])->name('admin.resend.email');
 });
