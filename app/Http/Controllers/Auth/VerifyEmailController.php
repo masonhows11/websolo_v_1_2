@@ -11,7 +11,7 @@ class VerifyEmailController extends Controller
     //
     public function verifyEmail()
     {
-        return view('auth_front.verify_email');
+        return view('front.auth_front.verify_email');
     }
 
     public function verify(Request $request)
