@@ -20,7 +20,7 @@
                         <li class=""><i class="far fa-heart me-3"></i><a href="#">لیست علاقه مندی ها</a></li>
                         <li class=""><i class="far fa-message me-3"></i><a href="#">پیغام ها</a></li>
                         <li class=""><i class="fa fa-history me-3"></i><a href="#">بازدید های اخیر</a></li>
-                        <li class=""><i class="fa fa-sign-out me-3"></i><a href="">خروج</a></li>
+                        <li class=""><i class="fa fa-sign-out me-3"></i><a href="{{ route('logout') }}">خروج</a></li>
                     </ul>
                 </div>
 
