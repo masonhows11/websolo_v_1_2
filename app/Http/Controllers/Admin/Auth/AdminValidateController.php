@@ -15,7 +15,7 @@ class AdminValidateController extends Controller
 
     public function validateMobileForm()
     {
-        return view('auth_dash.validate');
+        return view('admin.auth_admin.validate');
     }
 
     public function validateMobile(Request $request)

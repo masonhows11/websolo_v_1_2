@@ -14,7 +14,7 @@ class AdminAuthController extends Controller
 
     public function loginAdminForm()
     {
-        return view('auth_dash.login');
+        return view('admin.auth_admin.login');
     }
 
     public function loginAdmin(Request $request){

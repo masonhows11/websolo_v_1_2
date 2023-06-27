@@ -7,7 +7,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-lg-10 col-md-10 my-2 alert-dive ">
-                @include('auth_dash.alert')
+                @include('alert.alert')
             </div>
         </div>
 
