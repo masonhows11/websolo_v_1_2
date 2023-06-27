@@ -1,4 +1,4 @@
-@extends('include.master_front')
+@extends('front.include.master_front')
 @section('main_content')
     <div class="container">
         <div class="row row-cols-xxl-2 row-cols-xl-2   row-cols-1 user-dashboard-section">

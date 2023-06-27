@@ -4,19 +4,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ env('APP_NAME') }}</title>
-    @include('include.styles')
+    @include('front.include.styles')
 </head>
 <body>
 {{-- navbar --}}
-@include('include.navbar')
+@include('front.include.navbar')
 {{-- header --}}
-@include('include.header')
+@include('front.include.header')
 {{-- about --}}
-@include('include.about')
+@include('front.include.about')
 {{-- services --}}
-@include('include.services')
+@include('front.include.services')
 {{-- skills --}}
-@include('include.skills')
+@include('front.include.skills')
 {{-- portfolio --}}
 <livewire:front.protfolio/>
 {{-- clients --}}
@@ -24,12 +24,12 @@
 {{-- blog --}}
 <livewire:front.blog/>
 {{-- hire me --}}
-@include('include.hire_me')
+@include('front.include.hire_me')
 {{-- contact --}}
 <livewire:front.contact/>
 {{-- footer --}}
-@include('include.footer')
-@include('include.scripts')
+@include('front.include.footer')
+@include('front.include.scripts')
 </body>
 </html>
 

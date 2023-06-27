@@ -7,18 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('page_title')</title>
     @livewireStyles
-    @include('include.styles')
+    @include('front.include.styles')
 </head>
 <body>
-@include('include.navbar')
-{{--@include('include.header')--}}
+@include('front.include.navbar')
 <section class="main-content">
     @yield('main_content')
 </section>
-@include('include.footer');
-@include('include.scripts')
+@include('front.include.footer');
+@include('front.include.scripts')
 @stack('front_custom_scripts')
 @livewireScripts
 </body>
 </html>
-

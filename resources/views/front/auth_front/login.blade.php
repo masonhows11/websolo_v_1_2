@@ -1,4 +1,4 @@
-@extends('include.master_auth')
+@extends('front.include.master_auth')
 @section('page_title')
     ورود
 @endsection
