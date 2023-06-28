@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28e0e84e2fec3f99460e243d8af65837",
+    "content-hash": "916e3fc44f4409d0b3e8ab32b97a4bf3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2599,6 +2599,107 @@
             "time": "2023-02-25T19:38:58+00:00"
         },
         {
+            "name": "pishran/laravel-persian-slug",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pishran/laravel-persian-slug.git",
+                "reference": "2ed3b9cbf77131d0044a74da82003be12f390f8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pishran/laravel-persian-slug/zipball/2ed3b9cbf77131d0044a74da82003be12f390f8a",
+                "reference": "2ed3b9cbf77131d0044a74da82003be12f390f8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0",
+                "pishran/persian-slug": "^1.0",
+                "spatie/laravel-sluggable": "^2.0|^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pishran\\LaravelPersianSlug\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farid Aghili",
+                    "email": "farid@pishranit.ir",
+                    "homepage": "https://www.faridaghili.ir",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Creates Persian slugs for Eloquent models.",
+            "homepage": "https://github.com/pishran/laravel-persian-slug",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "persian",
+                "slug"
+            ],
+            "support": {
+                "issues": "https://github.com/pishran/laravel-persian-slug/issues",
+                "source": "https://github.com/pishran/laravel-persian-slug/tree/v2.2.2"
+            },
+            "time": "2023-01-10T16:54:52+00:00"
+        },
+        {
+            "name": "pishran/persian-slug",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pishran/persian-slug.git",
+                "reference": "55bee490d45b77034ed04ecfe0adb1c15cde35fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pishran/persian-slug/zipball/55bee490d45b77034ed04ecfe0adb1c15cde35fa",
+                "reference": "55bee490d45b77034ed04ecfe0adb1c15cde35fa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.2|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/persian-slug.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farid Aghili",
+                    "email": "farid@pishranit.ir",
+                    "homepage": "https://www.faridaghili.ir",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate a URL friendly slug from a given string.",
+            "homepage": "https://github.com/pishran/persian-slug",
+            "keywords": [
+                "persian",
+                "slug",
+                "string",
+                "url"
+            ],
+            "support": {
+                "issues": "https://github.com/pishran/persian-slug/issues",
+                "source": "https://github.com/pishran/persian-slug/tree/v1.2.1"
+            },
+            "time": "2023-01-10T16:55:09+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "2.0.2",
             "source": {
@@ -3344,6 +3445,224 @@
                 }
             ],
             "time": "2023-04-12T17:08:32+00:00"
+        },
+        {
+            "name": "spatie/laravel-sluggable",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-sluggable.git",
+                "reference": "041af2533fe2206715e9a4a9cad2cab6cb796655"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/041af2533fe2206715e9a4a9cad2cab6cb796655",
+                "reference": "041af2533fe2206715e9a4a9cad2cab6cb796655",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.0|^9.0|^10.0",
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23|^7.0|^8.0",
+                "pestphp/pest": "^1.20",
+                "spatie/laravel-translatable": "^5.0|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Sluggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate slugs when saving Eloquent models",
+            "homepage": "https://github.com/spatie/laravel-sluggable",
+            "keywords": [
+                "laravel-sluggable",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-sluggable/tree/3.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-05-29T09:42:35+00:00"
+        },
+        {
+            "name": "staudenmeir/eloquent-has-many-deep-contracts",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts.git",
+                "reference": "f9589acaaf25f55f38c6dd9d6c1caa6ff62addf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/eloquent-has-many-deep-contracts/zipball/f9589acaaf25f55f38c6dd9d6c1caa6ff62addf6",
+                "reference": "f9589acaaf25f55f38c6dd9d6c1caa6ff62addf6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "php": "^8.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\EloquentHasManyDeepContracts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Contracts for staudenmeir/eloquent-has-many-deep",
+            "support": {
+                "issues": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts/issues",
+                "source": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts/tree/v1.0"
+            },
+            "time": "2022-09-12T18:34:56+00:00"
+        },
+        {
+            "name": "staudenmeir/laravel-adjacency-list",
+            "version": "v1.12.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/laravel-adjacency-list.git",
+                "reference": "0f599fcce45f9e2aa6bb57c76309286609efb5d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/laravel-adjacency-list/zipball/0f599fcce45f9e2aa6bb57c76309286609efb5d7",
+                "reference": "0f599fcce45f9e2aa6bb57c76309286609efb5d7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "php": "^8.0.2",
+                "staudenmeir/eloquent-has-many-deep-contracts": "^1.0",
+                "staudenmeir/laravel-cte": "^1.6"
+            },
+            "require-dev": {
+                "barryvdh/laravel-ide-helper": "^2.12",
+                "doctrine/dbal": "^3.3",
+                "mockery/mockery": "^1.5",
+                "nesbot/carbon": "^2.62.1",
+                "phpunit/phpunit": "^9.5",
+                "staudenmeir/eloquent-has-many-deep": "^1.17.2"
+            },
+            "suggest": {
+                "barryvdh/laravel-ide-helper": "Provide type hints for attributes and relations."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\LaravelAdjacencyList\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Recursive Laravel Eloquent relationships with CTEs",
+            "support": {
+                "issues": "https://github.com/staudenmeir/laravel-adjacency-list/issues",
+                "source": "https://github.com/staudenmeir/laravel-adjacency-list/tree/v1.12.5"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/JonasStaudenmeir",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-06-20T17:37:48+00:00"
+        },
+        {
+            "name": "staudenmeir/laravel-cte",
+            "version": "v1.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/laravel-cte.git",
+                "reference": "05a1d5c00452658e0ddd5db27b18a8e26fa1bd69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/laravel-cte/zipball/05a1d5c00452658e0ddd5db27b18a8e26fa1bd69",
+                "reference": "05a1d5c00452658e0ddd5db27b18a8e26fa1bd69",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "php": "^8.0.2"
+            },
+            "require-dev": {
+                "nesbot/carbon": "^2.62.1",
+                "orchestra/testbench": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Staudenmeir\\LaravelCte\\DatabaseServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\LaravelCte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Laravel queries with common table expressions",
+            "support": {
+                "issues": "https://github.com/staudenmeir/laravel-cte/issues",
+                "source": "https://github.com/staudenmeir/laravel-cte/tree/v1.6.3"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/JonasStaudenmeir",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-11-25T21:49:28+00:00"
         },
         {
             "name": "symfony/console",

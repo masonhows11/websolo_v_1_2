@@ -105,6 +105,8 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 });
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
+
     Route::get('/profile', AdminProfile::class)->name('profile');
     Route::get('/change/email', AdminEmail::class)->name('change.email');
+
 });
