@@ -10,7 +10,8 @@
             <div class="col-xl-5 col-lg-5 col-md-5">
                 <form wire:submit.prevent="editMobile">
                     <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">{{ $name }}</label>
+                        <label for="name" class="form-label">کاربر ادمین</label>
+                        <input type="text"  class="form-control" value="{{ $name }}" readonly>
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="email" class="form-label">ایمیل:</label>

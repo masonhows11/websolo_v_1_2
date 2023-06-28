@@ -82,7 +82,7 @@ class AdminProfile extends Component
                 }
             }
             $admin->image_path = $image_name_save;
-        }
+       }
 
         $admin->name = $this->name;
         $admin->first_name = $this->first_name;

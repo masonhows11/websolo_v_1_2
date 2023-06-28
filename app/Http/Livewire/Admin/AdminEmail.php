@@ -39,6 +39,7 @@ class AdminEmail extends Component
     {
         $this->validate();
         $code = GenerateToken::generateToken();
+
         try {
             $admin = Auth::user();
             $admin->email = $this->email;
