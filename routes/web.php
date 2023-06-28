@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
 use App\Http\Controllers\Auth\ResendEmailVerifyController;
@@ -99,7 +99,7 @@ Route::prefix('admin')->group(function () {
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
 
-    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
     Route::get('/logOut', [AdminAuthController::class, 'logOut'])->name('logout');
 
 });
