@@ -22,15 +22,14 @@ class AdminAuthController extends Controller
 
         $request->validate([
             'email' => ['required','exists:admins,email'],
-            'password' =>
-                ['required','max:20',Password::min(8)->letters()->mixedCase()->numbers()->symbols()]
+            'password' => ['required','max:20',Password::min(8)->letters()->mixedCase()->numbers()->symbols()]
         ],$messages =[
             'email.required' => 'ایمیل خود را وارد کنید',
             'email.exists' => 'کاربری با ایمیل وارد شده وجود ندارد',
 
             'password.required' => 'رمز عبور الزامی است.',
             'password.min' => 'حداقل ۸ کاراکتر.',
-            'password.max' => 'جداکثر ۲۰ کاراکتر.',
+            'password.max' => 'حداکثر ۲۰ کاراکتر.',
             'password.password' => 'رمز عبور شامل حداقل یک حرف  بزرگ و یک حرف کوچک ، اعداد ، نماد مثل * / . ',
 
         ]);
