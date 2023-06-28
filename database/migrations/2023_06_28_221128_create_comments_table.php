@@ -30,10 +30,7 @@ return new class extends Migration
                 ->on('samples')
                 ->references('id')
                 ->onDelete('cascade');
-            $table->unsignedBigInteger('training_id')->nullable();
-            $table->foreign('training_id')
-                ->on('trainings')
-                ->references('id');
+
             $table->text('body');
             $table->tinyInteger('approved')->default(false);
             $table->timestamps();

@@ -32,11 +32,6 @@ return new class extends Migration
                 ->on('samples')
                 ->onDelete('cascade');
 
-            $table->unsignedBigInteger('training_id')->nullable();
-            $table->foreign('training_id')
-                ->references('id')
-                ->on('trainings')
-                ->onDelete('cascade');
 
             $table->boolean('like');
             $table->timestamps();
