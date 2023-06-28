@@ -7,6 +7,7 @@ use App\Models\Admin;
 use App\Services\GenerateToken;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Password;
 
 class AdminAuthController extends Controller
 {
@@ -20,10 +21,18 @@ class AdminAuthController extends Controller
     public function loginAdmin(Request $request){
 
         $request->validate([
-            'mobile' => ['required','exists:admins,mobile',new MobileValidationRule],
+            'email' => ['required','exists:admins,email'],
+            'password' =>
+                ['required','max:20',Password::min(8)->letters()->mixedCase()->numbers()->symbols()]
         ],$messages =[
-            'mobile.exists' => 'کاربری با شماره موبایل وارد شده وجود ندارد',
-            'mobile.required' => 'شماره موبایل خود را وارد کنید',
+            'email.required' => 'ایمیل خود را وارد کنید',
+            'email.exists' => 'کاربری با ایمیل وارد شده وجود ندارد',
+
+            'password.required' => 'رمز عبور الزامی است.',
+            'password.min' => 'حداقل ۸ کاراکتر.',
+            'password.max' => 'جداکثر ۲۰ کاراکتر.',
+            'password.password' => 'رمز عبور شامل حداقل یک حرف  بزرگ و یک حرف کوچک ، اعداد ، نماد مثل * / . ',
+
         ]);
 
         try {
