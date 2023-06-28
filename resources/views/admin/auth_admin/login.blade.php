@@ -1,4 +1,4 @@
-@extends('auth_dash.layout')
+@extends('admin.auth_admin.layout')
 @section('dash_auth_title')
     ورود پنل مدیریت
 @endsection

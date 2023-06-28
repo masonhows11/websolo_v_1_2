@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="#" />
-    @include('auth_dash.header')
+    @include('admin.auth_admin.header')
 </head>
 <body>
 @yield('dash_auth_content')
-@include('auth_dash.footer')
+@include('admin.auth_admin.footer')
 @stack('custom_scripts')
 </body>
 </html>
