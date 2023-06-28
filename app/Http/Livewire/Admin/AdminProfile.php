@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -12,6 +13,7 @@ class AdminProfile extends Component
 
     use WithFileUploads;
 
+    public $info;
     public $name;
     public $first_name;
     public $last_name;
@@ -20,11 +22,11 @@ class AdminProfile extends Component
 
     public function mount()
     {
-        $info = Auth::guard('admin')->user();
-        $this->name = $info->name;
-        $this->first_name = $info->first_name;
-        $this->last_name = $info->last_name;
-        $this->email = $info->email;
+        $this->info = Auth::guard('admin')->user();
+        $this->name = $this->info->name;
+        $this->first_name = $this->info->first_name;
+        $this->last_name = $this->info->last_name;
+        $this->email = $this->info->email;
 
     }
 
@@ -32,19 +34,11 @@ class AdminProfile extends Component
     {
         return [
             'image_path' =>
-                ['nullable','mimes:png,jpg,jpeg', 'max:1999', 'dimensions:min_width=300,min_height=300'],
-            'name' =>
-                ['required', 'min:3', 'max:20', Rule::unique('admins')
-                    ->ignore(Auth::guard('admin')->id())],
-            'first_name' =>
-                ['required', 'min:3', 'max:20', Rule::unique('admins')
-                    ->ignore(Auth::guard('admin')->id())],
-            'last_name' =>
-                ['required', 'min:3', 'max:20', Rule::unique('admins')
-                    ->ignore(Auth::guard('admin')->id())],
-            'email' =>
-                ['nullable','email', Rule::unique('admins')
-                    ->ignore(Auth::guard('admin')->id())],
+                ['nullable', 'mimes:png,jpg,jpeg', 'max:1999', 'dimensions:min_width=300,min_height=300'],
+            'name' => ['required', 'min:3', 'max:20', Rule::unique('admins')->ignore(Auth::guard('admin')->id())],
+            'first_name' => ['required', 'min:3', 'max:20', Rule::unique('admins')->ignore(Auth::guard('admin')->id())],
+            'last_name' => ['required', 'min:3', 'max:20', Rule::unique('admins')->ignore(Auth::guard('admin')->id())],
+            'email' => ['nullable', 'email', Rule::unique('admins')->ignore(Auth::guard('admin')->id())],
         ];
     }
 
@@ -71,12 +65,13 @@ class AdminProfile extends Component
             'email.email' => 'ایمیل وارد شده معتبر نمی باشد',
             'email.unique' => 'ایمیل وارد شده تکراری است',
         ];
+
     public function update()
     {
         $this->validate();
         $admin = Auth::guard('admin')->user();
 
-        if($this->image_path != null){
+        if ($this->image_path != null) {
             // create image name
             $image_name_save = 'UIMG' . date('YmdHis') . uniqid('', true) . '.jpg';
             // save image with given name
@@ -94,15 +89,16 @@ class AdminProfile extends Component
         $admin->last_name = $this->last_name;
         $admin->email = $this->email;
         $admin->save();
-        session()->flash('success','بروز رسانی با موفقیت انجام شد.');
+        session()->flash('success', 'بروز رسانی با موفقیت انجام شد.');
         return redirect()->to('/admin/profile');
 
 
     }
+
     public function render()
     {
         return view('livewire.admin.admin-profile')
             ->extends('admin.include.master')
-            ->section('admin_main')->with(['admin'=>$this->info]);
+            ->section('admin_main')->with(['admin' => $this->info]);
     }
 }

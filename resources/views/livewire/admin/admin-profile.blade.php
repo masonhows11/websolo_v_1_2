@@ -78,7 +78,7 @@
                         </div>
                         <div class="form-group my-5 d-flex justify-content-between">
                             <button type="submit" class="btn btn-success">ویرایش اطلاعات</button>
-                            <a href="{{  route('admin.change.mobile') }}" class="btn btn-success">تغییر شماره موبایل</a>
+                            <a href="{{  route('admin.change.email') }}" class="btn btn-success">ویرایش ایمیل</a>
                             <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">بازگشت</a>
                         </div>
                     </div>
