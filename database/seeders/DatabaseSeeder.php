@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
 
@@ -45,5 +47,45 @@ class DatabaseSeeder extends Seeder
 
         $role_admin = Role::create(['guard_name' => 'admin', 'name' => 'admin']);
         $admin->assignRole($role_admin);
+
+
+        $users = [
+            [
+                'name' => 'nicky',
+                'first_name' => 'nick',
+                'last_name' => 'wilson',
+                'email' => 'nicky.wilson21@gmail.com',
+                'password' => Hash::make('1289..//**'),
+                'mobile' => '09917230929',
+            ],
+            [
+                'name' => 'Mary',
+                'first_name' => 'maria',
+                'last_name' => 'watson',
+                'email' => 'mary.watson90@gmail.com',
+                'password' => Hash::make('1289..//**'),
+                'mobile' => '09917230925',
+            ],
+            [
+                'name' => 'John97',
+                'first_name' => 'John',
+                'last_name' => 'marston',
+                'email' => 'john.marston1870@gmail.com',
+                'password' => Hash::make('1289..//**'),
+                'mobile' => '09917230922',
+            ],
+            [
+                'name' => 'David',
+                'first_name' => 'David120',
+                'last_name' => 'Bombal',
+                'email' => 'david.bombal11@gmail.com',
+                'password' => Hash::make('1289..//**'),
+                'mobile' => '09917230911',
+            ],
+
+        ];
+        foreach ($users as $user) {
+            User::create($user);
+        }
     }
 }
