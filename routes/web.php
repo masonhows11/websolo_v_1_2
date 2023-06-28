@@ -2,16 +2,18 @@
 
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\AdminEmail;
-use App\Http\Controllers\Admin\AdminProfile;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
 use App\Http\Controllers\Auth\ResendEmailVerifyController;
+
+
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
 
+use App\Http\Livewire\Admin\AdminEmail;
+use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Front\About;
 use App\Http\Livewire\Front\ContactSingle;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
@@ -103,6 +105,6 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 });
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
-    Route::get('/profile', [AdminProfile::class,'index'])->name('profile');
-    Route::get('/change/email', [AdminEmail::class,'index'])->name('change.mobile');
+    Route::get('/profile', AdminProfile::class)->name('profile');
+    Route::get('/change/email', AdminEmail::class)->name('change.email');
 });
