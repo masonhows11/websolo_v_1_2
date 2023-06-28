@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('first_name')->nullable()->unique();
+            $table->string('last_name')->nullable()->unique();
+            $table->string('email')->unique()->nullable();
+            $table->string('mobile')->unique();
+            $table->string('code')->nullable();
+            $table->string('image_path')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('mobile_verified_at')->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }
