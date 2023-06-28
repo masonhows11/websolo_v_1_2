@@ -2,6 +2,8 @@
 
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminEmail;
+use App\Http\Controllers\Admin\AdminProfile;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
 use App\Http\Controllers\Auth\ResendEmailVerifyController;
@@ -93,9 +95,14 @@ Route::prefix('admin')->group(function () {
 
 
 
-Route::prefix('admin')->name('admin.')->middleware(['web', 'auth:admin', 'verifyAdmin', 'role:admin|admin'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('/logOut', [AdminAuthController::class, 'logOut'])->name('logout');
 
+});
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
+    Route::get('/profile', [AdminProfile::class,'index'])->name('profile');
+    Route::get('/change/email', [AdminEmail::class,'index'])->name('change.mobile');
 });
