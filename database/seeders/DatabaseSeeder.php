@@ -30,7 +30,8 @@ class DatabaseSeeder extends Seeder
             'last_name' => 'soltany',
             'mobile' => '09917230927',
             'email' => 'mason.hows11@gmail.com',
-            'email_verified_at' => Carbon::now(),
+            'password' => Hash::make('Ns1289..//**')
+            // 'email_verified_at' => Carbon::now(),
             //'token'=>  mt_rand(111111,999999),
             //'email_verified_at' => Carbon::now(),
         ]);
@@ -40,7 +41,8 @@ class DatabaseSeeder extends Seeder
             'last_name' => 'james',
             'mobile' => '09172890423',
             'email' => 'joe.james@gmail.com',
-            'email_verified_at' => Carbon::now(),
+            'password' => Hash::make('Ns1289..//**')
+            // 'email_verified_at' => Carbon::now(),
             //'token'=>  mt_rand(111111,999999),
             //'token_verified_at' => Carbon::now(),
         ]);

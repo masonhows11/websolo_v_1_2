@@ -85,8 +85,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'loginAdminForm'])->name('admin.login.form');
     Route::post('/login', [AdminAuthController::class, 'loginAdmin'])->name('admin.login');
 
-    Route::get('/validate-email/form', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.email.form');
+    Route::get('/validate-email', [AdminValidateController::class, 'validateMobileForm'])->name('admin.validate.email.form');
     Route::post('/validate-email', [AdminValidateController::class, 'validateMobile'])->name('admin.validate.email');
+
     Route::post('/resend-email', [AdminValidateController::class, 'resendCode'])->name('admin.resend.email');
 });
 

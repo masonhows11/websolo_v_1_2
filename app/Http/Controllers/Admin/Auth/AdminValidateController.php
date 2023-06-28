@@ -22,13 +22,13 @@ class AdminValidateController extends Controller
     {
 
         $request->validate([
-            'mobile' => ['required', 'exists:admins', new MobileValidationRule],
+            'email' => ['required', 'exists:admins'],
             'code' => ['required', 'digits:6']
         ], $messages = [
-            'mobile.exists' => 'کاربری با شماره موبایل وارد شده وجود ندارد',
-            'mobile.required' => 'شماره موبایل خود را وارد کنید',
+            'email.exists' => 'کاربری با ایمیل وارد شده وجود ندارد',
+            'email.required' => 'ایمیل خود را وارد کنید',
             'code.required' => 'کد فعال سازی را وارد کنید',
-            'code.digits' => 'کد فعال سازی باید معتبر نمی باشد',
+            'code.digits' => 'کد فعال سازی  معتبر نمی باشد',
         ]);
 
         $validated = CheckExpireToken::checkAdminToken($request->code, $request->mobile);

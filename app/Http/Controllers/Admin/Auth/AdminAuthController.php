@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Notifications\AdminAuthNotification;
 use App\Services\GenerateToken;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,35 +19,28 @@ class AdminAuthController extends Controller
         return view('admin.auth_admin.login');
     }
 
-    public function loginAdmin(Request $request){
+    public function loginAdmin(Request $request)
+    {
 
         $request->validate([
-            'email' => ['required','exists:admins,email'],
-            'password' => ['required','max:20',Password::min(8)->letters()->mixedCase()->numbers()->symbols()]
-        ],$messages =[
+            'email' => ['required', 'exists:admins,email'],
+        ], $messages = [
             'email.required' => 'ایمیل خود را وارد کنید',
             'email.exists' => 'کاربری با ایمیل وارد شده وجود ندارد',
-
-            'password.required' => 'رمز عبور الزامی است.',
-            'password.min' => 'حداقل ۸ کاراکتر.',
-            'password.max' => 'حداکثر ۲۰ کاراکتر.',
-            'password.password' => 'رمز عبور شامل حداقل یک حرف  بزرگ و یک حرف کوچک ، اعداد ، نماد مثل * / . ',
-
         ]);
 
         try {
             $code = GenerateToken::generateToken();
-            $admin = Admin::where('mobile',$request->mobile)->first();
+            $admin = Admin::where('email', $request->email)->first();
             $admin->code = $code;
             $admin->save();
-            session(['admin_mobile'=>$admin->mobile]);
 
-            // $admin->notify(new AdminAuthNotification($admin));
 
-            session()->flash('success', 'کد فعال سازی به شماره موبایل ارسال شد');
-            return redirect()->route('admin.validate.mobile.form');
-        }catch (\Exception $ex)
-        {
+            $admin->notify(new AdminAuthNotification($admin->email,$code));
+
+            session()->flash('success', 'کد فعال سازی به ایمیل ارسال شد');
+            return redirect()->route('admin.validate.email.form');
+        } catch (\Exception $ex) {
             return $ex->getMessage();
         }
     }
