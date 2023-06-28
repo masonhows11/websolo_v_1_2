@@ -18,8 +18,8 @@ class VerifyAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        $auth_admin = DB::table('admins')->where('mobile',Auth::guard('admin')->user()->mobile)->first();
-        if( $auth_admin->code_verified_at == null )
+        $auth_admin = DB::table('admins')->where('email',Auth::guard('admin')->user()->email)->first();
+        if( $auth_admin->email_verified_at == null )
         {
             return  redirect()->route('admin.login.form')
                 ->with(['error','کاربر گرامی ابتدا وارد سایت شوید.']);

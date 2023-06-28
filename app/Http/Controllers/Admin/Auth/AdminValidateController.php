@@ -27,6 +27,7 @@ class AdminValidateController extends Controller
         ], $messages = [
             'email.exists' => 'کاربری با ایمیل وارد شده وجود ندارد',
             'email.required' => 'ایمیل خود را وارد کنید',
+
             'code.required' => 'کد فعال سازی را وارد کنید',
             'code.digits' => 'کد فعال سازی  معتبر نمی باشد',
         ]);
@@ -34,16 +35,13 @@ class AdminValidateController extends Controller
         $validated = CheckExpireToken::checkAdminToken($request->code, $request->email);
         if ($validated == false) {
             session()->flash('error', 'کد فعال سازی معتبر نمی باشد');
-            session()->forget('admin_mobile');
             return redirect()->route('admin.login.form');
         }
-        if ($admin = Admin::where(['mobile' => $request->mobile, 'code' => $request->code])->first()) {
+        if ($admin = Admin::where(['email' => $request->email, 'code' => $request->code])->first()) {
             Auth::guard('admin')->login($admin, $request->remember);
-            session()->forget('admin_mobile');
-            session()->flash('success', 'Admin login successfully');
+            session()->flash('success', 'ورود موفقیت آمیز بود.');
             return redirect()->route('admin.dashboard');
         }
-        session()->forget('admin_mobile');
         return redirect()->route('admin.login.form');
     }
 
