@@ -1,6 +1,6 @@
 @extends('admin.auth_admin.layout')
 @section('dash_auth_title')
-    تایید شماره موبایل
+    تایید ایمیل
 @endsection
 @section('dash_auth_content')
     <div class="container">
@@ -15,7 +15,7 @@
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
                 <h3 class="mb-12 admin-logo-login">
                     {{-- <img alt="Logo" src="#" class="h-40px"/>--}}
-                    دیلی شاپ
+                    وب سولو
                 </h3>
                 <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto admin-validate-form">
                     <form action="{{ route('admin.validate.email') }}" method="post" class="form w-100 mb-10"

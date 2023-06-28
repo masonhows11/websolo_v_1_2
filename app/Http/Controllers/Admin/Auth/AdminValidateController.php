@@ -31,7 +31,7 @@ class AdminValidateController extends Controller
             'code.digits' => 'کد فعال سازی  معتبر نمی باشد',
         ]);
 
-        $validated = CheckExpireToken::checkAdminToken($request->code, $request->mobile);
+        $validated = CheckExpireToken::checkAdminToken($request->code, $request->email);
         if ($validated == false) {
             session()->flash('error', 'کد فعال سازی معتبر نمی باشد');
             session()->forget('admin_mobile');

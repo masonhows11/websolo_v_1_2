@@ -41,7 +41,7 @@ class AdminAuthController extends Controller
             session()->flash('success', 'کد فعال سازی به ایمیل ارسال شد');
             return redirect()->route('admin.validate.email.form');
         } catch (\Exception $ex) {
-            return $ex->getMessage();
+            return view('errors_custom.login_error',['error'=>$ex->getMessage()]);
         }
     }
 
