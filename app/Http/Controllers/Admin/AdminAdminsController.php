@@ -15,8 +15,9 @@ class AdminAdminsController extends Controller
         return view('admin.admins.index',['admins'=>$admin]);
     }
 
-    public function delete(){
+    public function delete(Request $request){
 
+     return $request->id;
     }
 
     public function deactivateAdmin(){
