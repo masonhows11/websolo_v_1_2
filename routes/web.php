@@ -115,8 +115,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/admins-list',[AdminAdminsController::class,'index'])->name('admins.list');
-    Route::get('/admin-delete/{id}',[AdminAdminsController::class,'delete'])->name('admin.delete');
-    Route::post('/admin-deactivate/{id}',[AdminAdminsController::class,'deactivateAdmin'])->name('admin.deactivate');
+    Route::get('/admins-list',)->name('admins.list');
+
 
 });
