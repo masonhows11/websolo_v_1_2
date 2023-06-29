@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Admin\AdminAdminsController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
@@ -114,6 +115,6 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/users-list')->name('users.list');
+    Route::get('/users-list',[AdminAdminsController::class,'index'])->name('users.list');
 
 });

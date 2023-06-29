@@ -7,7 +7,7 @@
 @endsection
 @section('admin_main')
 @endsection
-@push('scripts')
+@push('dash_custom_scripts')
     <script>
         @if(session()->has('success'))
         Toastify({
