@@ -34,7 +34,7 @@
                                     </td>
                                 @else
                                     <td class="my-2">
-                                        <a href="#" class="my-2"><i class="fa fa-trash my-2"></i></a>
+                                        <a href="#" class="my-2"><i class="fa fa-trash my-4"></i></a>
                                     </td>
                                 @endif
                                 @if($admin->hasRole('admin'))
