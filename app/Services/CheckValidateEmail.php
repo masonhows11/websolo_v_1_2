@@ -19,7 +19,7 @@ class CheckValidateEmail
         try {
             $user = User::where(['code'=>$code,'email'=>$email])->first();
             if ($user){
-                $expired = Carbon::parse($user->updated_at)->addMinutes(1)->isPast();
+                $expired = Carbon::parse($user->updated_at)->addMinutes(3)->isPast();
                 if($expired == 1 ){
                     return $status = 0;
                 }

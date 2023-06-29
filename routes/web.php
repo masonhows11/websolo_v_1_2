@@ -4,9 +4,9 @@
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
+
+
 use App\Http\Controllers\Auth\ResendEmailVerifyController;
-
-
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -108,5 +108,12 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
     Route::get('/profile', AdminProfile::class)->name('profile');
     Route::get('/change/email', AdminEmail::class)->name('change.email');
+
+});
+
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/users-list')->name('users.list');
 
 });
