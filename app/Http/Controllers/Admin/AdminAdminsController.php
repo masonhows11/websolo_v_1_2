@@ -11,9 +11,15 @@ class AdminAdminsController extends Controller
     //
     public function index()
     {
-
         $admin = Admin::all();
         return view('admin.admins.index',['admins'=>$admin]);
+    }
+
+    public function delete(){
+
+    }
+
+    public function deactivateAdmin(){
 
     }
 }
