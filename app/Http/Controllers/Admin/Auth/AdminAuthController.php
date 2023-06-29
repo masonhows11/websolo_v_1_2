@@ -49,7 +49,7 @@ class AdminAuthController extends Controller
     {
         $admin = Auth::guard('admin')->user();
         $admin->code = null;
-        $admin->code_verified_at = null;
+        $admin->email_verified_at = null;
         $admin->remember_token = null;
         $admin->save();
         Auth::guard('admin')->logout();
