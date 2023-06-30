@@ -3,7 +3,7 @@
         تخصیص مجوزها
     @endsection
     @section('breadcrumb')
-        {{ Breadcrumbs::render('admin.perms.assign.users') }}
+       {{-- {{ Breadcrumbs::render('admin.perms.assign.users') }}--}}
     @endsection
     <div class="container">
         <div class="row admin-list-users d-flex justify-content-center align-content-center align-items-center">
