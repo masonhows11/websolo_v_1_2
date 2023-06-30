@@ -35,27 +35,33 @@ class AdminRoles extends Component
     public function storeRole()
     {
         $this->validate();
-        if ($this->edit_mode == false) {
-            try {
+
+
+        try {
+
+            if ($this->edit_mode == false) {
+
                 Role::create(['name' => $this->name]);
                 $this->dispatchBrowserEvent('show-result',
                     ['type' => 'success',
-                        'message' => 'نقش مورد نظر با موفقیت ایجاد شد']);
+                        'message' => 'ذخیره سازی با موفقیت انجام شد.']);
                 $this->name = '';
-            } catch (\Exception $ex) {
-                return view('errors_custom.model_store_error');
+
+            } elseif ($this->edit_mode == true) {
+                DB::table('roles')
+                    ->where('id', $this->role_id)
+                    ->update(['name' => $this->name]);
+                $this->name = '';
+                $this->edit_mode = false;
+                $this->dispatchBrowserEvent('show-result',
+                    ['type' => 'success',
+                        'message' => 'بروز رسانی با موفقیت انجام شد.']);
+
             }
-        } elseif ($this->edit_mode == true) {
-            DB::table('roles')
-                ->where('id', $this->role_id)
-                ->update(['name' => $this->name]);
-            $this->name = '';
-            $this->edit_mode = false;
-            $this->dispatchBrowserEvent('show-result',
-                ['type' => 'success',
-                    'message' => 'نقش مورد نظر با موفقیت یروز رسانی شد']);
-            // session()->flash('success', 'نقش مورد نظر با موفقیت بروز رسانی شد');
+        } catch (\Exception $ex) {
+            return view('errors_custom.model_store_error');
         }
+        return null;
     }
 
 
@@ -75,19 +81,24 @@ class AdminRoles extends Component
             Role::destroy($this->delete_id);
             $this->dispatchBrowserEvent('show-result',
                 ['type' => 'success',
-                    'message' => 'رکورد با موفقیت حذف شد']);
+                    'message' => 'رکورد با موفقیت حذف شد.']);
         } catch (\Exception $ex) {
-           return view('errors_custom.model_not_found');
+            return view('errors_custom.model_not_found');
         }
         return null;
     }
 
     public function editRole($id)
     {
-        $this->edit_mode = true;
-        $role = DB::table('roles')->where('id', $id)->first();
-        $this->name = $role->name;
-        $this->role_id = $role->id;
+        try {
+            $this->edit_mode = true;
+            $role = DB::table('roles')->where('id', $id)->first();
+            $this->name = $role->name;
+            $this->role_id = $role->id;
+        } catch (\Exception $ex) {
+            return view('errors_custom.model_not_found');
+        }
+        return null;
     }
 
     public function render()

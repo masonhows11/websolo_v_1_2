@@ -126,7 +126,7 @@
                     </span>
                     <div class="menu-sub menu-sub-accordion">
                         <div class="menu-item">
-                            <a class="menu-link" href="{{--{{ route('admin.roles') }}--}}">
+                            <a class="menu-link" href="{{ route('admin.roles') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -134,7 +134,7 @@
                             </a>
                         </div>
                         <div class="menu-item">
-                            <a class="menu-link" href="{{--{{ route('admin.perms') }}--}}">
+                            <a class="menu-link" href="{{ route('admin.perms') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>

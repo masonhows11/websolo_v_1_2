@@ -38,7 +38,7 @@ class AdminPerms extends Component
                 Permission::create(['name' => $this->name]);
                 $this->dispatchBrowserEvent('show-result',
                     ['type'=>'success',
-                        'message'=>'مجوز مورد نظر با موفقیت ایجاد شد']);
+                        'message'=>'ذخیره سازی با موفقیت انجام شد.']);
                 $this->name = '';
             }
             elseif ($this->edit_mode == true)
@@ -50,7 +50,7 @@ class AdminPerms extends Component
                 $this->edit_mode = false;
                 $this->dispatchBrowserEvent('show-result',
                     ['type'=>'success',
-                        'message'=>'مجوز مورد نظر با موفقیت بروز رسانی شد']);
+                        'message'=>'بروز رسانی با موفقیت انجام شد.']);
             }
         } catch (\Exception $ex) {
             return view('errors_custom.model_store_error');
@@ -73,7 +73,7 @@ class AdminPerms extends Component
             Permission::destroy($this->delete_id);
             $this->dispatchBrowserEvent('show-result',
                 ['type' => 'success',
-                    'message' => 'رکورد با موفقیت حذف شد']);
+                    'message' => 'رکورد با موفقیت حذف شد.']);
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
         }
@@ -89,7 +89,7 @@ class AdminPerms extends Component
             $this->name = $perm->name;
             $this->perm_id = $perm->id;
         }catch (\Exception $ex){
-            return view('errors_custom.model_store_error');
+            return view('errors_custom.model_not_found');
         }
         return null;
     }

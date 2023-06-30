@@ -3,7 +3,7 @@
         مجوزها
     @endsection
     @section('breadcrumb')
-        {{ Breadcrumbs::render('admin.perms') }}
+{{--        {{ Breadcrumbs::render('admin.perms') }}--}}
     @endsection
     <div class="container">
 
