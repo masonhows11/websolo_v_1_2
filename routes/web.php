@@ -21,6 +21,8 @@ use App\Http\Livewire\Admin\AdminPerms;
 use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Admin\AdminRoles;
 use App\Http\Livewire\Admin\AdminUsers;
+use App\Http\Livewire\Admin\ListUsersForPerm;
+use App\Http\Livewire\Admin\ListUsersForRole;
 use App\Http\Livewire\Front\About;
 use App\Http\Livewire\Front\ContactSingle;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
