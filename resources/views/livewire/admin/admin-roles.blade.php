@@ -44,8 +44,8 @@
                     @isset($roles)
                         @foreach($roles as $role)
                             <tr class="text-center">
-                                <td>{{ $role->id }}</td>
-                                <td>{{ $role->name }}</td>
+                                <td><p class="my-3">{{ $role->id }}</p></td>
+                                <td><p class="my-3">{{ $role->name }}</p></td>
                                 @if($role->name == 'admin')
                                     <td>
                                         <div class="custom-deactive">

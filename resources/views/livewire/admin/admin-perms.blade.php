@@ -43,8 +43,8 @@
                     @isset($perms)
                         @foreach($perms as $perm)
                             <tr class="text-center">
-                                <td class="my-3">{{ $perm->id }}</td>
-                                <td class="my-3">{{ $perm->name }}</td>
+                                <td ><p class="my-3">{{ $perm->id }}</p></td>
+                                <td ><p class="my-3">{{ $perm->name }}</p></td>
                                 <td class="my-3">
                                     <a href="javascript:void(0)" class="btn btn-danger"
                                        wire:click.prevent="deleteConfirmation({{ $perm->id }})">
