@@ -3,7 +3,7 @@
     تخصیص مجوز
 @endsection
 @section('breadcrumb')
-    {{ Breadcrumbs::render('admin.perms.assign') }}
+   {{-- {{ Breadcrumbs::render('admin.perms.assign') }}--}}
 @endsection
 @section('admin_main')
 
