@@ -15,7 +15,9 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\Admin\AdminAdmins;
 use App\Http\Livewire\Admin\AdminEmail;
+use App\Http\Livewire\Admin\AdminPerms;
 use App\Http\Livewire\Admin\AdminProfile;
+use App\Http\Livewire\Admin\AdminRoles;
 use App\Http\Livewire\Admin\AdminUsers;
 use App\Http\Livewire\Front\About;
 use App\Http\Livewire\Front\ContactSingle;
@@ -120,5 +122,32 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
     Route::get('/admins-list',AdminAdmins::class)->name('admins.list');
     Route::get('/user-list',AdminUsers::class)->name('users.list');
 
+});
+
+// crud roles & perms
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+    Route::get('/roles', AdminRoles::class)->name('roles');
+    Route::get('/perms', AdminPerms::class)->name('perms');
+});
+
+// assign roles
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/roles/list/users', ListUsersForRole::class)->name('role.list.users');
+    Route::get('/roles/assign/form', [AdminRoleAssignController::class, 'create'])->name('roles.assign.form');
+    Route::post('/roles/assign', [AdminRoleAssignController::class, 'store'])->name('roles.assign');
 
 });
+
+// assign perms
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/perms/list/users', ListUsersForPerm::class)->name('perm.list.users');
+    Route::get('/perms/assign/form', [AdminPermAssignController::class, 'create'])->name('perms.assign.form');
+    Route::post('/perms/assign', [AdminPermAssignController::class, 'store'])->name('perms.assign');
+
+});
+
