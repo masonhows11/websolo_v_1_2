@@ -16,6 +16,7 @@
                     <tr class="text-center">
                         <th>شناسه</th>
                         <th>نام کاربری</th>
+                        <th>ایمیل</th>
                         <th>حذف</th>
                         <th>وضعیت</th>
                     </tr>
@@ -27,6 +28,7 @@
                             <tr class="text-center">
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
                                     <td class="my-3">
                                         <a href="javascript:void(0)" class="btn btn-danger"
                                            wire:click.prevent="deleteConfirmation({{ $user->id }})">
