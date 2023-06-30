@@ -13,6 +13,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
 
+use App\Http\Livewire\Admin\AdminAdmins;
 use App\Http\Livewire\Admin\AdminEmail;
 use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Front\About;
@@ -115,7 +116,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/admins-list',)->name('admins.list');
+    Route::get('/admins-list',AdminAdmins::class)->name('admins.list');
 
 
 });
