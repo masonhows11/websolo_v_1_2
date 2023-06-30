@@ -155,3 +155,26 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 });
 
+// crud articles
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+
+
+});
+
+// crud samples
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+
+
+});
+
+// management comments
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+
+
+});
