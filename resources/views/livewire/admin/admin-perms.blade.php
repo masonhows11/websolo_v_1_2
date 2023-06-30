@@ -43,17 +43,18 @@
                     @isset($perms)
                         @foreach($perms as $perm)
                             <tr class="text-center">
-                                <td>{{ $perm->id }}</td>
-                                <td>{{ $perm->name }}</td>
-                                <td class="mb-3">
-                                    <a href="javascript:void(0)"
+                                <td class="my-3">{{ $perm->id }}</td>
+                                <td class="my-3">{{ $perm->name }}</td>
+                                <td class="my-3">
+                                    <a href="javascript:void(0)" class="btn btn-danger"
                                        wire:click.prevent="deleteConfirmation({{ $perm->id }})">
-                                        <i class="fa fa-trash"></i>
+                                        {{ __('messages.delete_model') }}
                                     </a>
                                 </td>
-                                <td class="mb-3">
-                                    <a href="javascript:void(0)" wire:click="editPerm({{ $perm->id }})">
-                                        <i class="fa fa-edit"></i>
+                                <td class="my-3">
+                                    <a href="javascript:void(0)" class="btn btn-success"
+                                       wire:click="editPerm({{ $perm->id }})">
+                                       {{ __('messages.edit_model') }}
                                     </a>
                                 </td>
                             </tr>

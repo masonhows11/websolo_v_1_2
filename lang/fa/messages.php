@@ -9,4 +9,6 @@ return [
     'active' => 'فعال',
     'deactivate' => 'غیر فعال',
     'not_defined' => 'تعریف نشده',
+    'delete_model' => 'حذف',
+    'edit_model' => 'ویرایش'
 ];

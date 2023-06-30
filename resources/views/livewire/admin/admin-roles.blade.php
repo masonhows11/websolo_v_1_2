@@ -59,14 +59,15 @@
                                     </td>
                                 @else
                                     <td class="">
-                                        <a href="javascript:void(0)"
+                                        <a href="javascript:void(0)" class="btn btn-danger"
                                            wire:click.prevent="deleteConfirmation({{ $role->id }})">
-                                            <i class="fa fa-trash"></i>
+                                           {{ __('messages.delete_model') }}
                                         </a>
                                     </td>
                                     <td class="">
-                                        <a href="javascript:void(0)" wire:click="editRole({{ $role->id }})">
-                                            <i class="fa fa-edit"></i>
+                                        <a href="javascript:void(0)" class="btn btn-success"
+                                           wire:click="editRole({{ $role->id }})">
+                                            {{ __('messages.edit_model') }}
                                         </a>
                                     </td>
                                 @endif
