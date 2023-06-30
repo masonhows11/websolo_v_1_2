@@ -32,13 +32,13 @@
                                     <td class="my-3">
                                         <a href="javascript:void(0)" class="btn btn-danger"
                                            wire:click.prevent="deleteConfirmation({{ $user->id }})">
-                                             حذف
+                                            {{ __('messages.delete_model') }}
                                         </a>
                                     </td>
                                     <td class="my-3">
                                         <a href="#" wire:click.prevent="activeUser({{ $user->id }})" class="btn
-                                        {{ $user->banned == 0 ? 'btn-success' : 'btn-danger' }} btn-sm my-3">
-                                            {{ $user->banned == 0 ? 'فعال' : 'غیر فعال' }}
+                                        {{ $user->banned == 0 ? 'btn-success' : 'btn-danger' }}">
+                                            {{ $user->banned == 0 ?   __('messages.active')   :  __('messages.deactivate') }}
                                         </a>
                                     </td>
                             </tr>
