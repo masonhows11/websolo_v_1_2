@@ -3,6 +3,8 @@
 
 use App\Http\Controllers\Admin\AdminAdminsController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminPermAssignController;
+use App\Http\Controllers\Admin\AdminRoleAssignController;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
 
