@@ -14,6 +14,7 @@ class AdminAdmins extends Component
     public $delete_id;
     public $stateUser = true;
 
+
     // step 1 : confirm delete alert
     public function deleteConfirmation($id)
     {

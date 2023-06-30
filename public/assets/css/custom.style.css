@@ -97,8 +97,8 @@
     font-size: 1.1rem;
 }
 
-.admin-list-roles .custom-deactive,
-.admin-list-users .list-content .custom-deactive {
+.admin-list-roles .custom-deactivate,
+.admin-list-users .list-content .custom-deactivate {
     padding: 2px 0;
     color: tomato;
     font-weight: bold;

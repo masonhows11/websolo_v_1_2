@@ -30,30 +30,23 @@
                                     <div>{{ $admin->name }}</div>
                                 </td>
                                 @if($admin->hasRole('admin'))
-                                    <td>
-                                        <div class="custom-deactive">
+                                    <td class="custom-deactivate">
                                             دسترسی ندارید
-                                        </div>
                                     </td>
-                                    <td>
-                                        <div class="custom-deactive">
+                                    <td class="custom-deactivate">
                                             دسترسی ندارید
-                                        </div>
                                     </td>
                                 @else
                                     <td>
-                                        <div>
-                                            <a href="javascript:void(0)"
-                                               wire:click.prevent="deleteConfirmation({{ $admin->id }})">
-                                                <i class="fa fa-trash"></i>
-                                            </a>
-                                        </div>
+                                        <a href="javascript:void(0)" class="btn btn-danger" wire:click.prevent="deleteConfirmation({{ $admin->id }})">
+                                                حذف
+                                        </a>
                                     </td>
-                                    <td>
-                                        <div class="rounded
-                                        {{ $admin->code_verified_at == null ? 'custom-deactive' : 'custom-active' }}">
-                                            {{ $admin->code_verified_at == null ? __('messages.deactive') : __('messages.active') }}
-                                        </div>
+                                    <td >
+                                        <a href="javascript:void(0)" class="{{ $admin->email_verified_at == null ? 'btn btn-danger' : 'btn btn-success' }}">
+                                            {{ $admin->email_verified_at == null ? __('messages.deactivate') : __('messages.active') }}
+                                        </a>
+
                                     </td>
                                 @endif
                             </tr>
