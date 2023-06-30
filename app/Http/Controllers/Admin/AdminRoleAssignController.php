@@ -15,7 +15,7 @@ class AdminRoleAssignController extends Controller
         try {
             $user = Admin::findOrFail($request->user_id);
             $roles = Role::all();
-            return view('admin.role_assign_management.role_assign_management')
+            return view('admin.role_assign_management.role_assign')
                 ->with(['user' => $user, 'roles' => $roles]);
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
@@ -27,9 +27,9 @@ class AdminRoleAssignController extends Controller
         try {
             $user = Admin::findOrFail($request->id);
             $user->syncRoles($request->roles);
-            session()->flash('success','تخصیص با موفقیت انجام شد');
-            return  redirect()->back();
-        }catch (\Exception $ex){
+            session()->flash('success', 'تخصیص با موفقیت انجام شد');
+            return redirect()->back();
+        } catch (\Exception $ex) {
             return view('errors_custom.model_store_error');
         }
     }

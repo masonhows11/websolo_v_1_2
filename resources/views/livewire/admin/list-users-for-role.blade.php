@@ -7,7 +7,6 @@
     @endsection
     <div class="container">
         <div class="row admin-list-users d-flex justify-content-center align-content-center align-items-center">
-
             <div class="col-xl-7 col-lg-7 col-md-7 bg-white rounded-3 list-content">
                 <table class="table">
                     <thead>
@@ -21,11 +20,11 @@
                     @isset($users)
                         @foreach($users as $user)
                             <tr class="text-center">
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td class="mb-3">
+                                <td><p class="my-3">{{ $user->id }}</p></td>
+                                <td><p class="my-3">{{ $user->name }}</p></td>
+                                <td class="my-3">
                                     <a href="{{ route('admin.roles.assign.form',['user_id'=>$user->id]) }}"
-                                       class="btn btn-primary btn-sm mb-3">
+                                       class="btn btn-primary my-3">
                                         تخصیص نقش
                                     </a>
                                 </td>

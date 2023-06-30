@@ -82,11 +82,10 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
-
-.admin-list-users .fa-trash {
-    color: tomato;
-    font-size: 1.2rem;
+.admin-list-users tbody tr td{
+    font-size: 1.1rem;
 }
+
 
 .admin-list-roles .custom-active,
 .admin-list-users .list-content .custom-active {

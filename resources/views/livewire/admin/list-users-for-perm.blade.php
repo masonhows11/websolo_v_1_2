@@ -20,11 +20,11 @@
                     @isset($users)
                         @foreach($users as $user)
                             <tr class="text-center">
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td class="mb-3">
+                                <td><p class="my-3">{{ $user->id }}</p></td>
+                                <td><p class="my-3">{{ $user->name }}</p></td>
+                                <td class="my-3">
                                     <a href="{{ route('admin.perms.assign.form',['user_id'=>$user->id]) }}"
-                                       class="btn btn-primary  btn-sm mb-3">
+                                       class="btn btn-primary  my-3">
                                         تخصیص مجوز
                                     </a>
                                 </td>

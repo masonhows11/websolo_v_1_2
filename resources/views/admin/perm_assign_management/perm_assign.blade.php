@@ -20,7 +20,7 @@
                             <input type="text" class="form-control" value="{{ $user->name }}" readonly id="user">
                         </div>
                     </div>
-                    <label for="role-name" class="form-label me-5">نام نقش :</label>
+                    <label for="role-name" class="form-label me-5">نام مجوز :</label>
                     @foreach($perms as $perm)
                         <div class="form-check my-5 form-check-inline">
                             <label class="form-check-label">{{ $perm->name }}</label>
