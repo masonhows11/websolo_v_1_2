@@ -96,7 +96,7 @@
                         @else
                             @endrole
                             <div class="menu-item">
-                                <a class="menu-link" href="{{--{{ route('admin.users') }}--}}">
+                                <a class="menu-link" href="{{ route('admin.users.list') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
