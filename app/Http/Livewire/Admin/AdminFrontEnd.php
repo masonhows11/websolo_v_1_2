@@ -51,8 +51,9 @@ class AdminFrontEnd extends Component
                 FrontEnd::create([
                     'title_persian' => $this->title_persian,
                     'title_english' => $this->title_english]);
-                session()
-                    ->flash('success', 'تگ مورد نظر با موفقیت ایجاد شد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'ذخیره سازی با موفقیت انجام شد.']);
                 $this->title_persian = '';
                 $this->title_english = '';
             } catch (\Exception $ex) {
@@ -68,8 +69,9 @@ class AdminFrontEnd extends Component
             $this->title_persian = '';
             $this->title_english = '';
             $this->edit_mode = false;
-            session()
-                ->flash('success', 'بروز رسانی با موفقیت انجام شذ');
+            $this->dispatchBrowserEvent('show-result',
+                ['type'=>'success',
+                    'message'=>'بروز رسانی با موفقیت انجام شد.']);
         }
     }
 
@@ -85,7 +87,9 @@ class AdminFrontEnd extends Component
     {
         try {
             FrontEnd::destroy($this->delete_id);
-            session()->flash('success', 'زبان مورد نظر با موفقیت حذف شد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type' => 'success',
+                    'message' => 'رکورد با موفقیت حذف شد.']);
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
         }

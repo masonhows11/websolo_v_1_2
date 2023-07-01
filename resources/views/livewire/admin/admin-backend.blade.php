@@ -4,22 +4,7 @@
     @endsection
     <div class="container-fluid">
 
-        <div class="row d-flex justify-content-center admin-category-alert">
-            @if(session()->has('success'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-success alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('success') }}</strong>
-                </div>
-            @endif
-            @if(session()->has('error'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-danger alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('error') }}</strong>
-                </div>
-            @endif
-        </div>
+
         <div class="row d-flex justify-content-center admin-back-end">
 
             <div class="col-xl-4 col-lg-4 col-md-4">
@@ -107,5 +92,26 @@
                 }
             });
         })
+    </script>
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        window.addEventListener('show-result', ({detail: {type, message}}) => {
+            Toast.fire({
+                icon: type,
+                title: message
+            })
+        })
+
     </script>
 @endpush
