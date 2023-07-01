@@ -50,9 +50,9 @@
                     @isset($front_ends)
                         @foreach($front_ends as $lng)
                             <tr class="text-center">
-                                <td><p class="my-2">{{ $lng->id }}</p></td>
-                                <td><p class="my-2">{{ $lng->title_persian }}</p></td>
-                                <td><p class="my-2">{{ $lng->title_english }}</p></td>
+                                <td><p class="my-3">{{ $lng->id }}</p></td>
+                                <td><p class="my-3">{{ $lng->title_persian }}</p></td>
+                                <td><p class="my-3">{{ $lng->title_english }}</p></td>
                                 <td class="my-2">
                                     <a href="javascript:void(0)" class="btn btn-danger my-2"
                                        wire:click.prevent="deleteConfirmation({{ $lng->id }})">
@@ -60,7 +60,8 @@
                                     </a>
                                 </td>
                                 <td class="my-2">
-                                    <a href="javascript:void(0)" wire:click.prevent="editFront({{ $lng->id }})" class="btn btn-success my-2">
+                                    <a href="javascript:void(0)" class="btn btn-success my-2"
+                                       wire:click.prevent="editFront({{ $lng->id }})" >
                                         {{ __('messages.edit_model') }}
                                     </a>
                                 </td>
