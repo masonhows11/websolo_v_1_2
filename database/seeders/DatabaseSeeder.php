@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\BackEnd;
+use App\Models\FrontEnd;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -89,5 +92,79 @@ class DatabaseSeeder extends Seeder
         foreach ($users as $user) {
             User::create($user);
         }
+
+        $back_ends = [
+            [
+
+                'title_persian' => 'لاراول',
+                'title_english' => 'laravel',
+            ],
+            [
+                'title_persian' => 'دجنگو',
+                'title_english' => 'Django',
+            ],
+            [
+                'title_persian' => 'فلسک',
+                'title_english' => 'flask',
+            ],
+            [
+                'title_persian' => 'نود جی اس',
+                'title_english' => 'node-js',
+            ],
+        ];
+
+        $front_ends = [
+            [
+
+                'title_persian' => 'لاراول بلید',
+                'title_english' => 'laravel',
+            ],
+            [
+                'title_persian' => 'ری اکت جی اس',
+                'title_english' => 'react-js',
+            ],
+            [
+                'title_persian' => 'ویو جی اس',
+                'title_english' => 'vue-js',
+            ],
+            [
+                'title_persian' => 'لایووایر',
+                'title_english' => 'livewire',
+            ],
+        ];
+        
+        $tags = [
+            [
+                'title_persian' => 'لاراول',
+                'title_english' => 'laravel',
+            ],
+            [
+                'title_persian' => 'ری اکت جی اس',
+                'title_english' => 'react-js',
+            ],
+            [
+                'title_persian' => 'ویو جی اس',
+                'title_english' => 'vue-js',
+            ],
+            [
+                'title_persian' => 'لایووایر',
+                'title_english' => 'livewire',
+            ],
+            [
+                'title_persian' => 'سی اس اس',
+                'title_english' => 'css',
+            ],
+        ];
+
+        foreach ($back_ends as $lng) {
+            BackEnd::create($lng);
+        }
+        foreach ($front_ends as $lng) {
+            FrontEnd::create($lng);
+        }
+        foreach ($tags as $tag) {
+            Tag::create($tag);
+        }
+
     }
 }
