@@ -67,17 +67,17 @@
                     @isset($back_ends)
                         @foreach($back_ends as $lng)
                             <tr class="text-center">
-                                <td>{{ $lng->id }}</td>
-                                <td>{{ $lng->title_persian }}</td>
-                                <td class="mb-3">
-                                    <a href="javascript:void(0)"
+                                <td><p class="my-2">{{ $lng->id }}</p></td>
+                                <td><p class="my-2">{{ $lng->title_persian }}</p></td>
+                                <td class="my-2">
+                                    <a href="javascript:void(0)" class="btn btn-danger my-2"
                                        wire:click.prevent="deleteConfirmation({{ $lng->id }})">
-                                        <i class="fa fa-trash"></i>
+                                        {{ __('messages.delete_model') }}
                                     </a>
                                 </td>
-                                <td class="mb-3">
-                                    <a href="javascript:void(0)" wire:click.prevent="editBack({{ $lng->id }})" class="btn btn-sm mb-3">
-                                        <i class="fa fa-edit"></i>
+                                <td class="my-2">
+                                    <a href="javascript:void(0)" wire:click.prevent="editBack({{ $lng->id }})" class="btn btn-success my-2">
+                                        {{ __('messages.edit_model') }}
                                     </a>
                                 </td>
                             </tr>
