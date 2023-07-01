@@ -51243,7 +51243,7 @@ tinymce.IconManager.add('default', {
       };
       editor.ui.registry.addToggleButton('codesample', {
         icon: 'code-sample',
-        tooltip: 'Insert/edit code sample',
+        tooltip: 'Insert/edit code samples',
         onAction: onAction,
         onSetup: function (api) {
           var nodeChangeHandler = function () {
@@ -51256,7 +51256,7 @@ tinymce.IconManager.add('default', {
         }
       });
       editor.ui.registry.addMenuItem('codesample', {
-        text: 'Code sample...',
+        text: 'Code samples...',
         icon: 'code-sample',
         onAction: onAction
       });
