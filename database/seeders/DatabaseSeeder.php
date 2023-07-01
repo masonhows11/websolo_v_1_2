@@ -132,7 +132,7 @@ class DatabaseSeeder extends Seeder
                 'title_english' => 'livewire',
             ],
         ];
-        
+
         $tags = [
             [
                 'title_persian' => 'لاراول',
