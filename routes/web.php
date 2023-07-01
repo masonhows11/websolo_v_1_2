@@ -18,7 +18,9 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\Admin\AdminAdmins;
+use App\Http\Livewire\Admin\AdminBackEnd;
 use App\Http\Livewire\Admin\AdminEmail;
+use App\Http\Livewire\Admin\AdminFrontEnd;
 use App\Http\Livewire\Admin\AdminPerms;
 use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Admin\AdminRoles;
@@ -156,6 +158,18 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
     Route::post('/perms-assign', [AdminPermAssignController::class, 'store'])->name('perms.assign');
 
 });
+
+
+// backEnd
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
+    Route::get('/back-end/index', AdminBackEnd::class)->name('back-ends');
+});
+// frontEnd
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
+    Route::get('/front-end/index', AdminFrontEnd::class)->name('front-ends');
+});
+
+
 // crud samples
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){

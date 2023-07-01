@@ -102,9 +102,9 @@ class AdminBackEnd extends Component
     }
     public function render()
     {
-        return view('livewire.admin.admin-back-end')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
+        return view('livewire.admin.admin-backend')
+            ->extends('admin.include.master')
+            ->section('admin_main')
             ->with(['back_ends'=>BackEnd::paginate(10)]);
     }
 }
