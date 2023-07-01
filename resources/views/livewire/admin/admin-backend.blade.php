@@ -10,7 +10,7 @@
             <div class="col-xl-4 col-lg-4 col-md-4">
                 <form wire:submit.prevent="storeBack">
                     <div class="mb-3 mt-3">
-                        <label for="title_persian" class="form-label">نام زبان ( فارسی ) :</label>
+                        <label for="title_persian" class="form-label">نام زبان ( فارسی )</label>
                         <input type="text" wire:model.lazy="title_persian"
                                class="form-control"
                                id="title_persian">
@@ -21,7 +21,7 @@
                     </div>
                     @enderror
                     <div class="mb-3 mt-3">
-                        <label for="title_english" class="form-label">نام زبان ( انگلیسی ) :</label>
+                        <label for="title_english" class="form-label">نام زبان ( انگلیسی )</label>
                         <input type="text"   wire:model.lazy="title_english"
                                class="form-control title_english"
                                id="title_english">
