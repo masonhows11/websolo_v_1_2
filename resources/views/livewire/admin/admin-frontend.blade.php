@@ -20,8 +20,8 @@
                     @enderror
                     <div class="mb-3 mt-3">
                         <label for="name" class="form-label">نام زبان ( انگلیسی ) :</label>
-                        <input type="text" wire:model.lazy="title_english"
-                               class="form-control"
+                        <input type="text"    wire:model.lazy="title_english"
+                               class="form-control title_english"
                                id="name">
                     </div>
                     @error('title_english')
@@ -40,7 +40,8 @@
                     <thead>
                     <tr class="text-center">
                         <th>شناسه</th>
-                        <th>نام تگ</th>
+                        <th>نام زبان</th>
+                        <th>نام زبان (enlish)</th>
                         <th>ویرایش</th>
                         <th>حذف</th>
                     </tr>
@@ -51,6 +52,7 @@
                             <tr class="text-center">
                                 <td><p class="my-2">{{ $lng->id }}</p></td>
                                 <td><p class="my-2">{{ $lng->title_persian }}</p></td>
+                                <td><p class="my-2">{{ $lng->title_english }}</p></td>
                                 <td class="my-2">
                                     <a href="javascript:void(0)" class="btn btn-danger my-2"
                                        wire:click.prevent="deleteConfirmation({{ $lng->id }})">

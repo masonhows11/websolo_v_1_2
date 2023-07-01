@@ -10,10 +10,10 @@
             <div class="col-xl-4 col-lg-4 col-md-4">
                 <form wire:submit.prevent="storeBack">
                     <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">نام زبان ( فارسی ) :</label>
+                        <label for="title_persian" class="form-label">نام زبان ( فارسی ) :</label>
                         <input type="text" wire:model.lazy="title_persian"
                                class="form-control"
-                               id="name">
+                               id="title_persian">
                     </div>
                     @error('title_persian')
                     <div class="alert alert-danger my-2">
@@ -21,10 +21,10 @@
                     </div>
                     @enderror
                     <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">نام زبان ( انگلیسی ) :</label>
-                        <input type="text" wire:model.lazy="title_english"
-                               class="form-control"
-                               id="name">
+                        <label for="title_english" class="form-label">نام زبان ( انگلیسی ) :</label>
+                        <input type="text"   wire:model.lazy="title_english"
+                               class="form-control title_english"
+                               id="title_english">
                     </div>
                     @error('title_english')
                     <div class="alert alert-danger my-2">
@@ -44,6 +44,7 @@
                     <tr class="text-center">
                         <th>شناسه</th>
                         <th>نام زبان</th>
+                        <th>نام زبان (enlish)</th>
                         <th>ویرایش</th>
                         <th>حذف</th>
                     </tr>
@@ -54,6 +55,7 @@
                             <tr class="text-center">
                                 <td><p class="my-2">{{ $lng->id }}</p></td>
                                 <td><p class="my-2">{{ $lng->title_persian }}</p></td>
+                                <td><p class="my-2">{{ $lng->title_english }}</p></td>
                                 <td class="my-2">
                                     <a href="javascript:void(0)" class="btn btn-danger my-2"
                                        wire:click.prevent="deleteConfirmation({{ $lng->id }})">
