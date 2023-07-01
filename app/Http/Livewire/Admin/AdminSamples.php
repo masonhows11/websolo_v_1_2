@@ -10,10 +10,7 @@ class AdminSamples extends Component
     public $delete_id;
 
 
-    public function mount(){
 
-
-    }
 
     public function deleteConfirmation($id)
     {

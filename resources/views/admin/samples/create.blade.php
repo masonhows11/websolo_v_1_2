@@ -1,4 +1,4 @@
-@extends('dash.include.master')
+@extends('admin.include.master')
 @section('admin_title')
     نمونه کار جدید
 @endsection
@@ -205,7 +205,7 @@
                             <button type="submit" class="btn  btn-success">ذخیره</button>
                         </div>
                         <div>
-                            <a href="{{ route('admin.sample.index') }}" class="btn  btn-secondary">بازگشت</a>
+                            <a href="{{ route('admin.samples.index') }}" class="btn  btn-secondary">بازگشت</a>
                         </div>
                     </div>
                 </div>
@@ -214,6 +214,8 @@
     </div>
 @endsection
 @push('dash_custom_scripts')
+    <link rel="stylesheet" href="{{ asset('assets/plugins/chosen/chosen.min.css') }}">
+    <script type="text/javascript" src="{{ asset('assets/plugins/chosen/chosen.jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/plugins/ckeditor/ckeditor.js') }}"></script>
     <script>
         // ckeditor

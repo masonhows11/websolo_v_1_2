@@ -19,7 +19,14 @@ class AdminSampleController extends Controller
 
     public function create(Request $request)
     {
-        return view('admin.samples.create');
+        $back_ends = DB::table('back_ends')
+            ->select(['id', 'title_persian'])
+            ->get();
+        $front_ends = DB::table('front_ends')
+            ->select(['id', 'title_persian'])
+            ->get();
+        return view('admin.samples.create')
+            ->with(['back_ends' => $back_ends, 'front_ends' => $front_ends]);
     }
 
     public function store(Request $request)
