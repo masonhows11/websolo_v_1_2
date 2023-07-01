@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AdminAdminsController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminPermAssignController;
 use App\Http\Controllers\Admin\AdminRoleAssignController;
+use App\Http\Controllers\Admin\AdminSampleController;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\Auth\AdminValidateController;
 
@@ -167,7 +168,11 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-
+    Route::get('/sample/index', [AdminSampleController::class, 'index'])->name('sample.index');
+    Route::get('/sample/create', [AdminSampleController::class, 'create'])->name('sample.create');
+    Route::post('/sample/store', [AdminSampleController::class, 'store'])->name('sample.store');
+    Route::get('/sample/edit/{id}', [AdminSampleController::class, 'edit'])->name('sample.edit');
+    Route::post('/sample/update', [AdminSampleController::class, 'update'])->name('sample.update');
 
 });
 
