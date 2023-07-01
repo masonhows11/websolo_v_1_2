@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center admin-list-roles">
+        <div class="row d-flex justify-content-center admin-list-perms">
             <div class="col-xl-7 col-lg-7 col-md-7 bg-white rounded-3 list-content">
                 <table class="table">
                     <thead>

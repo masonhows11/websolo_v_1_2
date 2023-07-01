@@ -48,12 +48,12 @@
                                 <td><p class="my-3">{{ $role->name }}</p></td>
                                 @if($role->name == 'admin')
                                     <td>
-                                        <div class="custom-deactive">
+                                        <div class="custom-deactivate">
                                             دسترسی ندارید
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="custom-deactive">
+                                        <div class="custom-deactivate">
                                             دسترسی ندارید
                                         </div>
                                     </td>

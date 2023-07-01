@@ -1,24 +1,5 @@
 /* general styles */
-.attribute-list .fa-trash,
-.list-brand-category .fa-trash,
-.list-brands .fa-trash,
-.list-specification .fa-trash,
-.admin-lng-list .fa-trash,
-.admin-tag-list .fa-trash,
-.admin-list-roles .fa-trash,
-.admin-list-users .fa-trash {
-    color: tomato;
-    font-size: 1.3rem;
-}
-.attribute-list .fa-edit,
-.list-brands .fa-edit,
-.list-specification .fa-edit,
-.admin-lng-list .fa-edit,
-.admin-tag-list .fa-edit,
-.admin-list-roles .fa-edit {
-    color: lightskyblue;
-    font-size: 1.3rem;
-}
+
 
 .alert-profile {
     height: 50px;
@@ -92,7 +73,7 @@
     padding: 2px 0;
     color: seagreen;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .admin-list-roles .custom-deactivate,
