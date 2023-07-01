@@ -161,11 +161,11 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/article/index', [AdminArticleController::class, 'index'])->name('article.index');
-    Route::get('/article/create', [AdminArticleController::class, 'create'])->name('article.create');
-    Route::post('/article/store', [AdminArticleController::class, 'store'])->name('article.store');
-    Route::get('/article/edit/{article}', [AdminArticleController::class, 'edit'])->name('article.edit');
-    Route::post('/article/update', [AdminArticleController::class, 'update'])->name('article.update');
+    Route::get('/article-index', [AdminArticleController::class, 'index'])->name('article.index');
+    Route::get('/article-create', [AdminArticleController::class, 'create'])->name('article.create');
+    Route::post('/article-store', [AdminArticleController::class, 'store'])->name('article.store');
+    Route::get('/article-edit/{article}', [AdminArticleController::class, 'edit'])->name('article.edit');
+    Route::post('/article-update', [AdminArticleController::class, 'update'])->name('article.update');
 
 });
 
@@ -173,11 +173,11 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/samples/index', [AdminSampleController::class, 'index'])->name('samples.index');
-    Route::get('/samples/create', [AdminSampleController::class, 'create'])->name('samples.create');
-    Route::post('/samples/store', [AdminSampleController::class, 'store'])->name('samples.store');
-    Route::get('/samples/edit/{id}', [AdminSampleController::class, 'edit'])->name('samples.edit');
-    Route::post('/samples/update', [AdminSampleController::class, 'update'])->name('samples.update');
+    Route::get('/samples-index', [AdminSampleController::class, 'index'])->name('samples.index');
+    Route::get('/samples-create', [AdminSampleController::class, 'create'])->name('samples.create');
+    Route::post('/samples-store', [AdminSampleController::class, 'store'])->name('samples.store');
+    Route::get('/samples-edit/{id}', [AdminSampleController::class, 'edit'])->name('samples.edit');
+    Route::post('/samples-update', [AdminSampleController::class, 'update'])->name('samples.update');
 
 });
 
