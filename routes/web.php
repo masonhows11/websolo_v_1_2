@@ -156,6 +156,18 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
     Route::post('/perms-assign', [AdminPermAssignController::class, 'store'])->name('perms.assign');
 
 });
+// crud samples
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/samples-index', [AdminSampleController::class, 'index'])->name('samples.index');
+    Route::get('/samples-create', [AdminSampleController::class, 'create'])->name('samples.create');
+    Route::post('/samples-store', [AdminSampleController::class, 'store'])->name('samples.store');
+    Route::get('/samples-edit/{id}', [AdminSampleController::class, 'edit'])->name('samples.edit');
+    Route::post('/samples-update', [AdminSampleController::class, 'update'])->name('samples.update');
+
+});
+
 
 // crud articles
 
@@ -169,17 +181,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 });
 
-// crud samples
 
-Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
-
-    Route::get('/samples-index', [AdminSampleController::class, 'index'])->name('samples.index');
-    Route::get('/samples-create', [AdminSampleController::class, 'create'])->name('samples.create');
-    Route::post('/samples-store', [AdminSampleController::class, 'store'])->name('samples.store');
-    Route::get('/samples-edit/{id}', [AdminSampleController::class, 'edit'])->name('samples.edit');
-    Route::post('/samples-update', [AdminSampleController::class, 'update'])->name('samples.update');
-
-});
 
 // management comments
 

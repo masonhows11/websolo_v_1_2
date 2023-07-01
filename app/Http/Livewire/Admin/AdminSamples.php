@@ -10,6 +10,11 @@ class AdminSamples extends Component
     public $delete_id;
 
 
+    public function mount(){
+
+
+    }
+
     public function deleteConfirmation($id)
     {
         $this->delete_id = $id;
@@ -49,6 +54,6 @@ class AdminSamples extends Component
 
     public function render()
     {
-        return view('livewire.admin.admin-samples');
+        return view('livewire.admin.admin-samples')->with([ 'samples' => Sample::paginate(10)]);
     }
 }

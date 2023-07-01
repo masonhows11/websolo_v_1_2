@@ -19,7 +19,7 @@ class AdminSampleController extends Controller
 
     public function create(Request $request)
     {
-        return view('dash.samples.create');
+        return view('admin.samples.create');
     }
 
     public function store(Request $request)
@@ -95,7 +95,7 @@ class AdminSampleController extends Controller
 
     public function edit($id){
         $sample = Sample::findOrFail($id);
-        return view('dash.samples.edit')
+        return view('admin.samples.edit')
             ->with(['samples' => $sample]);
     }
 
@@ -170,7 +170,7 @@ class AdminSampleController extends Controller
             });
             session()->flash('success', 'نمونه کار با موفقیت بروز رسانی شد.');
             // return redirect()->route('admin.samples.index');
-            return redirect('/admin/samples/index')
+            return redirect('/admin/samples-index')
                 ->with(['success'=>'نمونه کار با موفقیت بروز رسانی شد.']);
         } catch (\Exception $ex) {
             // return  $ex->getMessage();

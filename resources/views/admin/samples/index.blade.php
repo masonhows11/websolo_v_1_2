@@ -3,6 +3,7 @@
 نمونه کارها
 @endsection
 @section('admin_main')
+    <livewire:admin.admin-samples/>
 @endsection
 @push('dash_custom_scripts')
     <script>
