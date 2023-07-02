@@ -13,11 +13,7 @@ class GetImageName
         $path = 'http://websolo.test/storage/articles/';
         return $image = str_replace($path, '', $imagePath);
     }
-    public static function trainingImage($imagePath)
-    {
-        $path = 'http://websolo.test/storage/training/';
-        return $image = str_replace($path, '', $imagePath);
-    }
+
 
 
     public static function sampleMainImage($imagePath)
