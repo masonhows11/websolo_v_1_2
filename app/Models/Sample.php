@@ -29,6 +29,16 @@ class Sample extends Model
             ->saveSlugsTo('slug');
     }
 
+    public function backEnds(){
+
+        return $this->belongsToMany(BackEnd::class);
+    }
+
+    public function frontEnds()
+    {
+        return $this->belongsToMany(FrontEnd::class);
+    }
+
 
 
     public function comments()

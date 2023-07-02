@@ -76,7 +76,7 @@
                                 </div>
                                 <input type="text" id="main_image"
                                        class="form-control @error('image') is-invalid @enderror" name="main_image"
-                                       aria-label="Image" aria-describedby="button-image">
+                                       aria-label="Image" aria-describedby="button-image" readonly>
                             </div>
                             @error('main_image')
                             <div class="alert alert-danger my-5">
@@ -97,7 +97,7 @@
                                 </div>
                                 <input type="text" id="image1"
                                        class="form-control @error('image1') is-invalid @enderror"
-                                       name="image1" aria-label="Image1" aria-describedby="button-image">
+                                       name="image1" aria-label="Image1" aria-describedby="button-image" readonly>
                             </div>
                             @error('image1')
                             <div class="alert alert-danger my-5">
@@ -114,7 +114,7 @@
                                 </div>
                                 <input type="text" id="image2"
                                        class="form-control @error('image2') is-invalid @enderror"
-                                       name="image2" aria-label="Image2" aria-describedby="button-image">
+                                       name="image2" aria-label="Image2" aria-describedby="button-image" readonly>
                             </div>
                             @error('image2')
                             <div class="alert alert-danger my-5">
@@ -132,8 +132,7 @@
                                     </button>
                                 </div>
                                 <input type="text" id="image3"
-                                       class="form-control @error('image3') is-invalid @enderror"
-                                       name="image3" aria-label="Image3">
+                                       class="form-control @error('image3') is-invalid @enderror" name="image3" aria-label="Image3" readonly>
                             </div>
                             @error('image3')
                             <div class="alert alert-danger my-5">
@@ -150,7 +149,7 @@
                                 </div>
                                 <input type="text" id="image4"
                                        class="form-control @error('image4') is-invalid @enderror"
-                                       name="image4" aria-label="Image4" aria-describedby="button-image">
+                                       name="image4" aria-label="Image4" aria-describedby="button-image" readonly>
                             </div>
                             @error('image4')
                             <div class="alert alert-danger my-5">
