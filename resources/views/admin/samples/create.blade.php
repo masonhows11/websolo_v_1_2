@@ -65,25 +65,27 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row main-image-select">
-                    <div class="col-xl-6 mt-5">
-                        <label for="button-image" class="form-label">عکس اصلی :</label>
-                        <div class="input-group">
-                            <div class="input-group-append">
-                                <button class="btn btn-secondary" type="button" id="button-image-main">انتخاب عکس
-                                </button>
+                        <div class="col-xl-6 mt-5">
+                            <label for="button-image" class="form-label">عکس اصلی :</label>
+                            <div class="input-group">
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary" type="button" id="button-image-main">انتخاب عکس
+                                    </button>
+                                </div>
+                                <input type="text" id="main_image"
+                                       class="form-control @error('image') is-invalid @enderror" name="main_image"
+                                       aria-label="Image" aria-describedby="button-image">
                             </div>
-                            <input type="text" id="main_image"
-                                   class="form-control @error('image') is-invalid @enderror" name="main_image"
-                                   aria-label="Image" aria-describedby="button-image">
+                            @error('main_image')
+                            <div class="alert alert-danger my-5">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
-                        @error('main_image')
-                        <div class="alert alert-danger my-5">
-                            {{ $message }}
-                        </div>
-                        @enderror
-                    </div>
                 </div>
+
                 <div class="row  row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1  sample-image-multi-select">
                     <div class="col">
                         <div class="col mt-5">
@@ -162,7 +164,7 @@
 
 
                 <div class="row">
-                    <div class="col-lg-10">
+                    <div class="container">
                         <div class="form-group my-5">
                             <label for="desc-editor-text" class="form-label">خلاصه :</label>
                             <textarea class="form-control @error('short_description') is-invalid @enderror"
@@ -178,7 +180,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-10">
+                    <div class="container">
                         <div class="form-group my-5">
                             <label for="editor-text" class="form-label">توضیحات :</label>
                             <textarea class="form-control @error('description') is-invalid @enderror"
