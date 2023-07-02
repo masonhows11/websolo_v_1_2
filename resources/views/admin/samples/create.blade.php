@@ -11,9 +11,7 @@
 
             <form action="{{ route('admin.samples.store') }}" method="post">
                 @csrf
-
-                <div class="row  row-cols-xxl-2 row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
-
+                <div class="row   row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
                     <div class="col">
                         <div class="my-5">
                             <label for="title_persian" class="form-label">عنوان نمونه کار ( فارسی )</label>
@@ -36,7 +34,6 @@
                             @enderror
                         </div>
                     </div>
-
                     <div class="col">
                         <div class="mt-5">
                             <label for="back-end" class="form-label my-3">زبان یا فریم ورک سمت سرور (back-end)</label>
@@ -67,11 +64,7 @@
                             @enderror
                         </div>
                     </div>
-
                 </div>
-
-
-
                 <div class="row main-image-select">
                     <div class="col-xl-6 mt-5">
                         <label for="button-image" class="form-label">عکس اصلی :</label>
@@ -91,9 +84,8 @@
                         @enderror
                     </div>
                 </div>
-
-                <div class="row d-flex flex-column sample-image-multi-select">
-                    <div class="col-xl-6 col-lg-6 col-md-5 col">
+                <div class="row  row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1  sample-image-multi-select">
+                    <div class="col">
                         <div class="col mt-5">
                             <label for="button-image" class="form-label">عکس نمونه شماره یک :</label>
                             <div class="input-group">
@@ -128,6 +120,8 @@
                             </div>
                             @enderror
                         </div>
+                    </div>
+                    <div class="col">
                         <div class="col mt-5">
                             <label for="button-image" class="form-label">عکس نمونه شماره سه :</label>
                             <div class="input-group">
@@ -145,7 +139,6 @@
                             </div>
                             @enderror
                         </div>
-
                         <div class="col mt-5">
                             <label for="button-image" class="form-label">عکس نمونه شماره چهار :</label>
                             <div class="input-group">
@@ -163,9 +156,11 @@
                             </div>
                             @enderror
                         </div>
-
                     </div>
                 </div>
+
+
+
                 <div class="row">
                     <div class="col-lg-10">
                         <div class="form-group my-5">
