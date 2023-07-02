@@ -86,7 +86,7 @@
 /************** front - back section */
 .admin-front-end .title_english,
 .admin-back-end  .title_english{
-    direction: 'ltr';
+    direction: ltr;
     text-align: left;
 }
 /************ category section */
@@ -152,9 +152,11 @@
     font-size: 1.3rem;
     color: tomato;
 }
+/************* sample section */
 
-
-
+.sample-footer-card .article-op .btn-sm{
+    font-size: 1.1rem;
+}
 
 /************ media query */
 

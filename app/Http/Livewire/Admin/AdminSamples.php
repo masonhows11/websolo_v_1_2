@@ -9,9 +9,6 @@ class AdminSamples extends Component
 {
     public $delete_id;
 
-
-
-
     public function deleteConfirmation($id)
     {
         $this->delete_id = $id;

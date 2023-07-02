@@ -6,13 +6,12 @@
             </div>
         </div>
         @if ($samples->count())
-            <div
-                class="row mt-5 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-3 g-4 sample-section-index">
+
+            <div class="row mt-5 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-4 g-3 sample-section-index">
                 @foreach ($samples as $sample)
                     <div class="col">
-                        <div class="card  h-100">
-                            <img src="{{ asset('storage/samples/' . $sample->main_image) }}" class="card-img-top"
-                                 alt="sample-image">
+                       <div class="card  h-100">
+                            <img src="{{ asset('storage/samples/' . $sample->main_image) }}" class="card-img-top" alt="sample-image">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $sample->title_persian }}</h5>
                                 <p class="card-text my-5">{!! $sample->short_description !!}</p>
@@ -24,7 +23,7 @@
                                         }
                                     @endphp
                                     <h6>بک اند :</h6>
-                                    <span class="mx-2 article-category">{{ implode(' - ', $back_end) }}</span>
+                                    <span class="mx-2">{{ implode(' - ', $back_end) }}</span>
                                 </div>
                                 <div class="d-flex flex-column my-2">
                                     @php
@@ -34,26 +33,27 @@
                                         }
                                     @endphp
                                     <h6>فرانت اند :</h6>
-                                    <span class="mx-2 article-tag">{{ implode(' - ', $front_end) }}</span>
+                                    <span class="mx-2">{{ implode(' - ', $front_end) }}</span>
                                 </div>
-                                <div class="col-xl-12 d-flex justify-content-between mt-5 article-footer-card">
-                                    <div class="col-xl-2  article-date d-flex align-content-center align-items-center">
+                                <div class="col d-flex flex-column mt-5 sample-footer-card">
+                                    <div class="col card-date d-flex align-content-center align-items-center">
                                         <p class="mt-3">
                                             <span>{{ jDate($sample->created_at)->format('Y/m/d') }}</span>
                                         </p>
                                     </div>
-                                    <div class="col-xl-10  d-flex justify-content-end  article-op">
+                                    <div class="co d-flex justify-content-between  article-op">
                                         <a href="javascript:void(0)"
                                            wire:click.prevent="deleteConfirmation({{ $sample->id }})"
-                                           class="btn btn-secondary btn-sm me-3">حذف</a>
+                                           class="btn btn-danger btn-sm ">حذف</a>
                                         <a href="{{ route('admin.samples.edit', ['id' => $sample->id]) }}"
-                                           class="btn btn-info btn-sm me-3">ویرایش</a>
+                                           class="btn btn-primary  btn-sm ">ویرایش</a>
                                         <a href="javascript:void(0)" wire:click.defer="active({{ $sample->id }})"
-                                           class="btn btn-{{ $sample->approved == 0 ? 'danger' : 'success' }} btn-sm">{{ $sample->approved == 0 ? __('messages.unpublished') : __('messages.published') }}</a>
+                                           class="btn btn-{{ $sample->approved == 0 ? 'danger' : 'success' }}  btn-sm ">{{ $sample->approved == 0 ? __('messages.unpublished') : __('messages.published') }}</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 @endforeach
             </div>
