@@ -2,17 +2,23 @@
     <div class="card  item-category bg-white rounded border border-secondary">
         <div class="card-header ">
             {{--start category content --}}
-            <div class="item-category-title d-flex justify-content-evenly">
+
                 @if(count($category->children))
-                    <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
-
-                    <a class="btn my-3  flex-grow-1" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_english }}</h6></a>
+                <div class="item-category-title d-flex flex-row">
+                    <a class="btn my-3" style="width: 400px" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
+                </div>
+                <div class="item-category-title d-flex flex-row">
+                    <a class="btn my-3" style="width: 400px" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_english }}</h6></a>
+                </div>
                 @else
-                    <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_persian }}</a>
-
-                    <a class="btn my-3  flex-grow-1" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_english }}</a>
+                <div class="item-category-title d-flex flex-row">
+                    <a class="btn my-3" style="width: 400px" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_persian }}</a>
+                </div>
+                <div class="item-category-title d-flex flex-row">
+                    <a class="btn my-3 " style="width: 400px" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_english }}</a>
+                </div>
                 @endif
-            </div>
+
             <div class="item-category-actions my-4">
                 @if($category->parent_id == null)
                     <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="btn btn-primary mx-4">
