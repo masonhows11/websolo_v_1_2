@@ -96,7 +96,6 @@ class AdminSampleController extends Controller
             session()->flash('success', 'نمونه کار جدید با موفقیت ایجاد شد.');
             return redirect()->route('admin.samples.index');
         } catch (\Exception $ex) {
-            return $ex->getMessage();
             return view('errors_custom.model_store_error');
         }
     }
