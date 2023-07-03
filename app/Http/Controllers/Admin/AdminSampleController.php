@@ -93,7 +93,7 @@ class AdminSampleController extends Controller
                 $sample->frontEnds()->sync($request->front_ends);
             });
 
-            session()->flash('success', 'نمونه کار جدید با موفقیت ایجاد شد.');
+            session()->flash('success', 'ذخیره سازی با موفقیت انجام شد.');
             return redirect()->route('admin.sample.index');
         } catch (\Exception $ex) {
             return view('errors_custom.model_store_error');
@@ -187,13 +187,11 @@ class AdminSampleController extends Controller
                 $sample->frontEnds()->sync($request->front_ends);
 
             });
-            session()->flash('success', 'نمونه کار با موفقیت بروز رسانی شد.');
-            // return redirect()->route('admin.sample.index');
-            return redirect('/admin/sample-index')
-                ->with(['success'=>'نمونه کار با موفقیت بروز رسانی شد.']);
+            session()->flash('success', 'بروز رسانی با موفقیت انجام شد.');
+            return redirect()->route('admin.sample.index');
         } catch (\Exception $ex) {
             // return  $ex->getMessage();
-            return view('errors_custom.model_store_error');
+            return view('errors_custom.model_store_error',['error'=>$ex->getMessage()]);
         }
     }
 
