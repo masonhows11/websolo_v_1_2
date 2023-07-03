@@ -11,7 +11,7 @@ class Article extends Model
 {
     use HasFactory;
     use HasFactory,HasPersianSlug;
-    protected $table = 'article';
+    protected $table = 'articles';
     protected  $fillable = [
         'title_persian','title_english','slug','image','short_description','description','approved','user_id'
     ];

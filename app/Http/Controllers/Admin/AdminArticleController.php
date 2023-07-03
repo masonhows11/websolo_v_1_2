@@ -22,7 +22,7 @@ class AdminArticleController extends Controller
 
         $tags = Tag::all();
         //$categories = Category::all();
-        return view('dash.article.create')
+        return view('admin.article.create')
             ->with(['tags'=>$tags]);
     }
 

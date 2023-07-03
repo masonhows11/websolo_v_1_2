@@ -19,6 +19,7 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\Admin\AdminAdmins;
 use App\Http\Livewire\Admin\AdminBackEnd;
+use App\Http\Livewire\Admin\AdminCategory;
 use App\Http\Livewire\Admin\AdminEmail;
 use App\Http\Livewire\Admin\AdminFrontEnd;
 use App\Http\Livewire\Admin\AdminPerms;
@@ -168,6 +169,15 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
     Route::get('/front-end/index', AdminFrontEnd::class)->name('front-ends');
 });
+
+// crud categories
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/categories', AdminCategory::class)->name('category.list');
+
+});
+
 
 
 // crud sample

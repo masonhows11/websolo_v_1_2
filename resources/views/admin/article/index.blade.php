@@ -1,4 +1,4 @@
-@extends('dash.include.master')
+@extends('admin.include.master')
 @section('admin_title')
     مقالات
 @endsection

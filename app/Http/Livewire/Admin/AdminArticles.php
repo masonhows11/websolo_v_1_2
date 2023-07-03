@@ -50,6 +50,7 @@ class AdminArticles extends Component
 
     public function render()
     {
-        return view('livewire.admin.admin-article');
+        return view('livewire.admin.admin-articles')
+        ->with(['articles'=>Article::paginate(10)]);
     }
 }
