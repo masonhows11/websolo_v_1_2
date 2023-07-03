@@ -19,7 +19,7 @@
                         <div class="my-5">
                             <label for="title_persian" class="form-label">عنوان نمونه کار ( فارسی )</label>
                             <input type="text" class="form-control @error('title_persian') is-invalid @enderror"
-                                   id="title_persian" name="title_persian" value="{{ $sampel->title_persian }}">
+                                   id="title_persian" name="title_persian" value="{{ $sample->title_persian }}">
                             @error('title_persian')
                             <div class="alert alert-danger mt-5">
                                 {{ $message }}
@@ -82,8 +82,12 @@
                                 </button>
                             </div>
                             <input type="text" id="main_image"
-                                   class="form-control @error('image') is-invalid @enderror" name="main_image"
-                                   aria-label="Image" aria-describedby="button-image" readonly>
+                                   class="form-control @error('image') is-invalid @enderror"
+                                   name="main_image"
+                                   aria-label="Image"
+                                   aria-describedby="button-image"
+                                   value="{{ $sample->main_image }}"
+                                   readonly>
                         </div>
                         @error('main_image')
                         <div class="alert alert-danger my-5">
@@ -104,7 +108,11 @@
                                 </div>
                                 <input type="text" id="image1"
                                        class="form-control @error('image1') is-invalid @enderror"
-                                       name="image1" aria-label="Image1" aria-describedby="button-image" readonly>
+                                       name="image1"
+                                       aria-label="Image1"
+                                       aria-describedby="button-image"
+                                       value="{{ $sample->image1 }}"
+                                       readonly>
                             </div>
                             @error('image1')
                             <div class="alert alert-danger my-5">
@@ -121,7 +129,11 @@
                                 </div>
                                 <input type="text" id="image2"
                                        class="form-control @error('image2') is-invalid @enderror"
-                                       name="image2" aria-label="Image2" aria-describedby="button-image" readonly>
+                                       name="image2"
+                                       aria-label="Image2"
+                                       aria-describedby="button-image"
+                                       value="{{ $sample->image2 }}"
+                                       readonly>
                             </div>
                             @error('image2')
                             <div class="alert alert-danger my-5">
@@ -139,7 +151,11 @@
                                     </button>
                                 </div>
                                 <input type="text" id="image3"
-                                       class="form-control @error('image3') is-invalid @enderror" name="image3" aria-label="Image3" readonly>
+                                       class="form-control @error('image3') is-invalid @enderror"
+                                       name="image3"
+                                       aria-label="Image3"
+                                       value="{{ $sample->image3 }}"
+                                       readonly>
                             </div>
                             @error('image3')
                             <div class="alert alert-danger my-5">
@@ -156,7 +172,11 @@
                                 </div>
                                 <input type="text" id="image4"
                                        class="form-control @error('image4') is-invalid @enderror"
-                                       name="image4" aria-label="Image4" aria-describedby="button-image" readonly>
+                                       name="image4"
+                                       aria-label="Image4"
+                                       aria-describedby="button-image"
+                                       value="{{ $sample->image4 }}"
+                                       readonly>
                             </div>
                             @error('image4')
                             <div class="alert alert-danger my-5">
@@ -175,7 +195,7 @@
                             <label for="desc-editor-text" class="form-label">خلاصه :</label>
                             <textarea class="form-control @error('short_description') is-invalid @enderror"
                                       id="desc-editor-text"
-                                      name="short_description">{{ old('short_description') }}</textarea>
+                                      name="short_description">{{ $sample->short_description }}</textarea>
                         </div>
                         @error('short_description')
                         <div class="alert alert-danger my-5">
@@ -191,7 +211,7 @@
                             <label for="editor-text" class="form-label">توضیحات :</label>
                             <textarea class="form-control @error('description') is-invalid @enderror"
                                       id="editor-text"
-                                      name="description">{{ old('description') }}</textarea>
+                                      name="description">{{$sample->description }}</textarea>
                         </div>
                         @error('description')
                         <div class="alert alert-danger my-5">
