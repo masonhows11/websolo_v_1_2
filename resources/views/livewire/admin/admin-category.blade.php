@@ -52,17 +52,17 @@
                         @foreach($category_tree as $category)
                             <div id="accordion">
                                 <div class="card mt-4">
-                                    <div class="card-header item-category bg-white rounded border border-secondary">
+                                    <div class="card-header d-flex justify-content-around item-category bg-white rounded border border-secondary">
 
-                                        <div class="item-category-title d-flex justify-content-between">
+                                        <div class="item-category-title">
                                             <a class="btn my-3 text-black" href="#collapse{{ $category->id }}"
-                                               data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6>
+                                               data-bs-toggle="collapse" ><h6>{{ $category->title_persian }}</h6>
                                             </a>
                                         </div>
 
-                                        <div class="item-category-title d-flex justify-content-between">
-                                            <a class="btn my-3 text-black  flex-grow-1" href="#collapse{{ $category->id }}"
-                                               data-bs-toggle="collapse"><h6>{{ $category->title_english }}</h6>
+                                        <div class="item-category-title me-5">
+                                            <a class="btn my-3 text-black " href="#collapse{{ $category->id }}"
+                                               data-bs-toggle="collapse" ><h6>{{ $category->title_english }}</h6>
                                             </a>
                                         </div>
 
