@@ -24,7 +24,7 @@
     </div>
     <div class="collapse show" id="collapse{{$category->id}}">
         @if(!$category->chlidren)
-            @include('dash.category.child_category',['child'=>$category->children])
+            @include('admin.category.child_category',['child'=>$category->children])
         @endif
     </div>
 @endforeach

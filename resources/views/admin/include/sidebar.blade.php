@@ -192,14 +192,7 @@
                                 <span class="menu-title">دسته بندی ها</span>
                             </a>
                         </div>
-                        <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.back-ends') }}">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">دسته بندی جدید</span>
-                            </a>
-                        </div>
+
 
                         <div class="menu-item">
                             <a class="menu-link" href="{{ route('admin.back-ends') }}">
