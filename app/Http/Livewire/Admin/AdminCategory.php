@@ -71,7 +71,9 @@ class AdminCategory extends Component
                 $this->title_persian = '';
                 $this->title_english = '';
                 $this->parent = '';
-                session()->flash('success', 'دسته بندی مورد نظر با موفقیت ذخیره شد.');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'ذخیره سازی با موفقیت انجام شد.']);
 
             } else {
                 // for edit category
@@ -91,8 +93,10 @@ class AdminCategory extends Component
                 $this->title_persian = '';
                 $this->title_english = '';
                 $this->parent = '';
-                session()->flash('success', 'دسته بندی مورد نظر با موفقیت بروز رسانی شد.');
-                return redirect()->to('/admin/category/index');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'بروز رسانی با موفقیت انجام شد.']);
+                return redirect()->to('/admin/categories');
             }
 
         } catch (\Exception $ex) {
@@ -115,14 +119,19 @@ class AdminCategory extends Component
         try {
             $category = Category::findOrFail($this->delete_id);
             if ($category->parent_id == null) {
-                session()->flash('error', 'امکان حذف دسته بندی مورد نظر وجود ندارد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type' => 'success',
+                        'message' => 'امکان حذف رکورد مورد نظر وجود ندارد.']);
             } else {
                 $category->delete();
-                session()->flash('success', 'رکورد مورد نظر با موفقیت حذف شد');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type' => 'success',
+                        'message' => 'رکورد با موفقیت حذف شد.']);
             }
-
         } catch (\Exception $ex) {
-            session()->flash('error', 'دسته بندی مورد نظر وجود ندارد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type' => 'error',
+                    'message' => 'رکورد مورد نظر وجود ندارد.']);
         }
     }
 
@@ -133,11 +142,15 @@ class AdminCategory extends Component
             if ($category->parent_id != null) {
                 $category->parent_id = null;
                 $category->save();
-                session()->flash('success', 'دسته بندی از والد خود حذف شد.');
+                $this->dispatchBrowserEvent('show-result',
+                    ['type' => 'success',
+                        'message' => 'دسته بندی از والد خود حذف شد.']);
 
             }
         } catch (\Exception $ex) {
-            session()->flash('error', 'دسته بندی مورد نظر وجود ندارد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type' => 'error',
+                    'message' => 'رکورد مورد نظر وجود ندارد.']);
 
         }
     }
@@ -167,8 +180,8 @@ class AdminCategory extends Component
     public function render()
     {
         return view('livewire.admin.admin-category')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
+            ->extends('admin.include.master')
+            ->section('admin_main')
             ->with(['category_tree' => Category::tree()->get()->toTree(),
                 'categories' => Category::all()]);
     }

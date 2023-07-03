@@ -185,7 +185,7 @@
                     <div class="menu-sub menu-sub-accordion">
 
                         <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.back-ends') }}">
+                            <a class="menu-link" href="{{ route('admin.categories') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>

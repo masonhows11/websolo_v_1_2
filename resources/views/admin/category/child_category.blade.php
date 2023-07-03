@@ -11,12 +11,22 @@
             </div>
             <div class="item-category-actions my-4">
                 @if($category->parent_id == null)
-                    <a href="javascript:void(0)" wire:click.prevent="editCategory({{$category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
-                    <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash" ></i></a>
+                    <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="btn btn-primary mx-4">
+                        {{ __('messages.edit_model') }}
+                    </a>
+                    <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})" class="btn btn-danger">
+                        {{ __('messages.delete_model') }}
+                    </a>
                 @else
-                    <a href="javascript:void(0)" wire:click.prevent="editCategory({{$category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
-                    <a href="javascript:void(0)" wire:click.prevent="detachCategory({{ $category->id }})" class="mx-4"><i class="fa fa-unlink"></i></a>
-                    <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash" ></i></a>
+                    <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class=" btn btn-primary mx-4">
+                        {{ __('messages.edit_model') }}
+                    </a>
+                    <a href="javascript:void(0)" wire:click.prevent="detachCategory({{ $category->id }})" class="btn btn-warning mx-4">
+                        {{ __('messages.detach') }}
+                    </a>
+                    <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})" class="btn btn-danger">
+                        {{ __('messages.delete_model') }}
+                    </a>
                 @endif
             </div>
             {{--end category content --}}

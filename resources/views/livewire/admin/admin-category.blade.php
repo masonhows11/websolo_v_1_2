@@ -4,22 +4,7 @@
     @endsection
     <div class="container-fluid">
 
-        <div class="row d-flex justify-content-center admin-category-alert">
-            @if(session()->has('success'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-success alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('success') }}</strong>
-                </div>
-            @endif
-            @if(session()->has('error'))
-                <div
-                    class="col-xl-7 col-lg-7 col-md-7 alert alert-danger alert-dismissible alert-component text-center">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>{{ session('error') }}</strong>
-                </div>
-            @endif
-        </div>
+
 
 
         <div class="row d-flex justify-content-center  mt-5 category-section-index">
@@ -78,12 +63,22 @@
                                         </div>
                                         <div class="item-category-actions  my-5">
                                             @if($category->parent_id == null)
-                                                <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
-                                                <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash"></i></a>
+                                                <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="btn btn-primary mx-4">
+                                                   {{ __('messages.edit_model') }}
+                                                </a>
+                                                <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})" class="btn btn-danger">
+                                                   {{ __('messages.delete_model') }}
+                                                </a>
                                             @else
-                                                <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class="mx-4"><i class="fas fa-edit"></i></a>
-                                                <a href="javascript:void(0)" wire:click.prevent="detachCategory({{ $category->id }})" class="mx-4"><i class="fa fa-unlink"></i></a>
-                                                <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})"><i class="fas fa-trash"></i></a>
+                                                <a href="javascript:void(0)" wire:click.prevent="editCategory({{ $category->id}})" class=" btn btn-primary mx-4">
+                                                    {{ __('messages.edit_model') }}
+                                                </a>
+                                                <a href="javascript:void(0)" wire:click.prevent="detachCategory({{ $category->id }})" class="btn btn-warning mx-4">
+                                                    {{ __('messages.detach') }}
+                                                </a>
+                                                <a href="javascript:void(0)" wire:click.prevent="deleteConfirmation({{ $category->id }})" class="btn btn-danger">
+                                                    {{ __('messages.delete_model') }}
+                                                </a>
                                             @endif
                                         </div>
                                     </div>
@@ -120,5 +115,26 @@
                 }
             });
         })
+    </script>
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        window.addEventListener('show-result', ({detail: {type, message}}) => {
+            Toast.fire({
+                icon: type,
+                title: message
+            })
+        })
+
     </script>
 @endpush
