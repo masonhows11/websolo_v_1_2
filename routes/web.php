@@ -170,7 +170,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 });
 
 
-// crud samples
+// crud sample
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
@@ -183,7 +183,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 });
 
 
-// crud articles
+// crud article
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 

@@ -23,13 +23,13 @@ return new class extends Migration
             $table->unsignedBigInteger('article_id')->nullable();
             $table->foreign('article_id')
                 ->references('id')
-                ->on('articles')
+                ->on('article')
                 ->onDelete('cascade');
 
             $table->unsignedBigInteger('sample_id')->nullable();
             $table->foreign('sample_id')
                 ->references('id')
-                ->on('samples')
+                ->on('sample')
                 ->onDelete('cascade');
 
 

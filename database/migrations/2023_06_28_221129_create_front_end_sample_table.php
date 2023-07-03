@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('sample_id')->nullable();
             $table->foreign('sample_id')->references('id')
-                ->on('samples')->onDelete('cascade');
+                ->on('sample')->onDelete('cascade');
 
             $table->unsignedBigInteger('front_end_id')->nullable();
             $table->foreign('front_end_id')->references('id')

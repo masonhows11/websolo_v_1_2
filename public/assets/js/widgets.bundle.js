@@ -17402,7 +17402,7 @@ var KTTablesWidget4 = function () {
         });
     }
 
-    // Subtable data samples
+    // Subtable data sample
     const data = [
         {
             image: '76',

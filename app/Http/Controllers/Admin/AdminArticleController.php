@@ -15,7 +15,7 @@ class AdminArticleController extends Controller
     //
     public function index()
     {
-        return view('admin.articles.index');
+        return view('admin.article.index');
     }
 
     public function create(){

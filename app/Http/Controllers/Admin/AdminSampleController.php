@@ -14,7 +14,7 @@ class AdminSampleController extends Controller
 {
     public function index(Sample $sample)
     {
-        return view('admin.samples.index');
+        return view('admin.sample.index');
     }
 
     public function create(Request $request)
@@ -25,7 +25,7 @@ class AdminSampleController extends Controller
         $front_ends = DB::table('front_ends')
             ->select(['id', 'title_persian'])
             ->get();
-        return view('admin.samples.create')
+        return view('admin.sample.create')
             ->with(['back_ends' => $back_ends, 'front_ends' => $front_ends]);
     }
 
@@ -94,25 +94,37 @@ class AdminSampleController extends Controller
             });
 
             session()->flash('success', 'نمونه کار جدید با موفقیت ایجاد شد.');
-            return redirect()->route('admin.samples.index');
+            return redirect()->route('admin.sample.index');
         } catch (\Exception $ex) {
             return view('errors_custom.model_store_error');
         }
     }
 
     public function edit($id){
-        $sample = Sample::findOrFail($id);
-        return view('admin.samples.edit')
-            ->with(['samples' => $sample]);
+
+        try {
+            $sample = Sample::findOrFail($id);
+            $back_ends = DB::table('back_ends')
+                ->select(['id', 'title_persian'])
+                ->get();
+            $front_ends = DB::table('front_ends')
+                ->select(['id', 'title_persian'])
+                ->get();
+            return view('admin.sample.edit')
+                ->with(['sample' => $sample, 'back_ends' => $back_ends, 'front_ends' => $front_ends]);
+        }catch (\Exception $ex){
+            return  view('errors_custom.model_not_found',['error'=>$ex->getMessage()]);
+        }
+
     }
 
     public function update(Request $request)
     {
         $request->validate([
             'title_persian' =>
-                ['required',Rule::unique('samples')->ignore($request->id), 'min:3', 'max:40'],
+                ['required',Rule::unique('sample')->ignore($request->id), 'min:3', 'max:40'],
             'title_english' =>
-                ['required',Rule::unique('samples')->ignore($request->id), 'min:3', 'max:40'],
+                ['required',Rule::unique('sample')->ignore($request->id), 'min:3', 'max:40'],
             'back_ends' => ['required'],
             'front_ends' => ['required'],
             'description' => ['required', 'min:3', 'max:5000'],
@@ -176,8 +188,8 @@ class AdminSampleController extends Controller
 
             });
             session()->flash('success', 'نمونه کار با موفقیت بروز رسانی شد.');
-            // return redirect()->route('admin.samples.index');
-            return redirect('/admin/samples-index')
+            // return redirect()->route('admin.sample.index');
+            return redirect('/admin/sample-index')
                 ->with(['success'=>'نمونه کار با موفقیت بروز رسانی شد.']);
         } catch (\Exception $ex) {
             // return  $ex->getMessage();

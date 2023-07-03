@@ -8,37 +8,37 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="{{'images/samples/folio-1.jpg'}}" class="card-img-top" alt="...">
+                    <img src="{{'images/sample/folio-1.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="{{'images/samples/folio-2.jpg'}}" class="card-img-top" alt="...">
+                    <img src="{{'images/sample/folio-2.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="{{'images/samples/folio-3.jpg'}}" class="card-img-top" alt="...">
+                    <img src="{{'images/sample/folio-3.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="{{'images/samples/folio-4.jpg'}}" class="card-img-top" alt="...">
+                    <img src="{{'images/sample/folio-4.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="{{'images/samples/folio-5.jpg'}}" class="card-img-top" alt="...">
+                    <img src="{{'images/sample/folio-5.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 
             <div class="col">
                 <div class="card">
-                    <img src="{{'images/samples/folio-6.jpg'}}" class="card-img-top" alt="...">
+                    <img src="{{'images/sample/folio-6.jpg'}}" class="card-img-top" alt="...">
                 </div>
             </div>
 

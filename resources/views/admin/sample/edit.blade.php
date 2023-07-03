@@ -6,7 +6,7 @@
     <div class="container-fluid">
 
 
-        <div class="sample-section-create">
+        <div class="sample-section-edit">
 
 
             <form action="{{ route('admin.sample.update') }}" method="post">
@@ -201,7 +201,7 @@
                             <button type="submit" class="btn  btn-success">ذخیره</button>
                         </div>
                         <div>
-                            <a href="{{ route('admin.samples.index') }}" class="btn  btn-secondary">بازگشت</a>
+                            <a href="{{ route('admin.sample.index') }}" class="btn  btn-secondary">بازگشت</a>
                         </div>
                     </div>
                 </div>
