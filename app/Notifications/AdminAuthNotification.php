@@ -51,7 +51,7 @@ class AdminAuthNotification extends Notification implements shouldQueue
             ->from('admin_websolo@mail.ir')
             ->greeting('Websolo')
             ->line('Dear User')
-            ->line('Admin panel active code for admin user :')
+            ->line('admin panel active code for admin user :')
             ->line("admin: $this->admin")
             ->line("active code : $this->code");
     }

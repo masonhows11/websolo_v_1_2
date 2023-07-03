@@ -21,7 +21,7 @@
                                          class="rounded image-admin-preview">
                                 @else
                                     <img class="rounded admin-image"
-                                         src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/media/avatars/no-image-icon-23494.png') }}"
+                                         src="{{ $admin->image_path ?  asset('storage/admin/'.$admin->image_path)  : asset('assets/admin/media/avatars/no-image-icon-23494.png') }}"
                                          alt="">
                                 @endif
                             </div>

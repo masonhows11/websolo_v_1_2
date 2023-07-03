@@ -10,7 +10,7 @@ class GetImageName
 {
     public static function articleImage($imagePath)
     {
-        $path = 'http://websolo.test/storage/article/';
+        $path = 'http://websolo.test/storage/articles/';
         return $image = str_replace($path, '', $imagePath);
     }
 
@@ -18,7 +18,7 @@ class GetImageName
 
     public static function sampleMainImage($imagePath)
     {
-        $path = 'http://websolo.test/storage/sample/';
+        $path = 'http://websolo.test/storage/samples/';
         return $image = str_replace($path, '', $imagePath);
     }
 
@@ -35,7 +35,7 @@ class GetImageName
 
         $array_count = count($img_array);
         for ($i = 0; $i < $array_count; $i++) {
-            array_push($image_name_array, str_replace('http://websolo.test/storage/sample/', '', $img_array[$i]));
+            array_push($image_name_array, str_replace('http://websolo.test/storage/samples/', '', $img_array[$i]));
         }
         return $image_collection = collect($image_name_array);
     }

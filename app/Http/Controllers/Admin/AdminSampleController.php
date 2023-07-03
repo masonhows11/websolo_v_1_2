@@ -122,9 +122,9 @@ class AdminSampleController extends Controller
     {
         $request->validate([
             'title_persian' =>
-                ['required',Rule::unique('sample')->ignore($request->id), 'min:3', 'max:40'],
+                ['required',Rule::unique('samples')->ignore($request->id), 'min:3', 'max:40'],
             'title_english' =>
-                ['required',Rule::unique('sample')->ignore($request->id), 'min:3', 'max:40'],
+                ['required',Rule::unique('samples')->ignore($request->id), 'min:3', 'max:40'],
             'back_ends' => ['required'],
             'front_ends' => ['required'],
             'description' => ['required', 'min:3', 'max:5000'],
