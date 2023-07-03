@@ -174,11 +174,11 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/samples-index', [AdminSampleController::class, 'index'])->name('samples.index');
-    Route::get('/samples-create', [AdminSampleController::class, 'create'])->name('samples.create');
-    Route::post('/samples-store', [AdminSampleController::class, 'store'])->name('samples.store');
-    Route::get('/samples-edit/{id}', [AdminSampleController::class, 'edit'])->name('samples.edit');
-    Route::post('/samples-update', [AdminSampleController::class, 'update'])->name('samples.update');
+    Route::get('/sample-index', [AdminSampleController::class, 'index'])->name('sample.index');
+    Route::get('/sample-create', [AdminSampleController::class, 'create'])->name('sample.create');
+    Route::post('/sample-store', [AdminSampleController::class, 'store'])->name('sample.store');
+    Route::get('/sample-edit/{id}', [AdminSampleController::class, 'edit'])->name('sample.edit');
+    Route::post('/sample-update', [AdminSampleController::class, 'update'])->name('sample.update');
 
 });
 

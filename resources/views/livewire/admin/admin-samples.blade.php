@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col create-sample-link">
-                <a href="{{ route('admin.samples.create') }}" class="btn btn-success">نمونه کار جدید</a>
+                <a href="{{ route('admin.sample.create') }}" class="btn btn-success">نمونه کار جدید</a>
             </div>
         </div>
         @if ($samples->count())
@@ -45,7 +45,7 @@
                                         <a href="javascript:void(0)"
                                            wire:click.prevent="deleteConfirmation({{ $sample->id }})"
                                            class="btn btn-danger btn-sm ">حذف</a>
-                                        <a href="{{ route('admin.samples.edit', ['id' => $sample->id]) }}"
+                                        <a href="{{ route('admin.sample.edit', ['id' => $sample->id]) }}"
                                            class="btn btn-primary  btn-sm ">ویرایش</a>
                                         <a href="javascript:void(0)" wire:click.defer="active({{ $sample->id }})"
                                            class="btn btn-{{ $sample->approved == 0 ? 'danger' : 'success' }}  btn-sm ">{{ $sample->approved == 0 ? __('messages.unpublished') : __('messages.published') }}</a>

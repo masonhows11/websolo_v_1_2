@@ -9,7 +9,7 @@
         <div class="sample-section-create">
 
 
-            <form action="{{ route('admin.samples.store') }}" method="post">
+            <form action="{{ route('admin.sample.store') }}" method="post">
                 @csrf
                 <div class="row   row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
                     <div class="col">
@@ -201,7 +201,7 @@
                             <button type="submit" class="btn  btn-success">ذخیره</button>
                         </div>
                         <div>
-                            <a href="{{ route('admin.samples.index') }}" class="btn  btn-secondary">بازگشت</a>
+                            <a href="{{ route('admin.sample.index') }}" class="btn  btn-secondary">بازگشت</a>
                         </div>
                     </div>
                 </div>

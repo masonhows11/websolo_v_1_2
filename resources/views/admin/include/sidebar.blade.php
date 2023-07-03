@@ -197,7 +197,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.samples.index') }}">
+                            <a class="menu-link" href="{{ route('admin.sample.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
@@ -206,7 +206,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <a class="menu-link" href="{{ route('admin.samples.create') }}">
+                            <a class="menu-link" href="{{ route('admin.sample.create') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>

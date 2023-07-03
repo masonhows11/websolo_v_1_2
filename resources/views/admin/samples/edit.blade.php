@@ -9,7 +9,7 @@
         <div class="sample-section-create">
 
 
-            <form action="{{ route('admin.samples.store') }}" method="post">
+            <form action="{{ route('admin.sample.update') }}" method="post">
                 @csrf
                 <div class="row   row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
                     <div class="col">
