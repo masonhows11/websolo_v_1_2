@@ -158,6 +158,10 @@
     font-size: 1.1rem;
 }
 
+.sample-section-index .card img{
+    height: 287px;
+}
+
 /************ media query */
 
 

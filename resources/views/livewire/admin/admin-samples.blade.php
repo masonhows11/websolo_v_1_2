@@ -11,7 +11,7 @@
                 @foreach ($samples as $sample)
                     <div class="col">
                        <div class="card  h-100">
-                            <img src="{{ $sample->main_image  != null ? asset('storage/samples/' . $sample->main_image) : asset('assets/admin/media/images/no-image-icon-23494.png') }}" class="card-img-top" alt="sample-image">
+                            <img src="{{ $sample->main_image  != null ? asset('storage/samples/' . $sample->main_image) : asset('assets/admin/media/images/no-picture-available.jpg') }}" class="card-img-top" alt="sample-image">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $sample->title_persian }}</h5>
                                 <p class="card-text my-5">{!! $sample->short_description !!}</p>
