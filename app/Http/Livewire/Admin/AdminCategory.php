@@ -96,7 +96,7 @@ class AdminCategory extends Component
                 $this->dispatchBrowserEvent('show-result',
                     ['type'=>'success',
                         'message'=>'بروز رسانی با موفقیت انجام شد.']);
-                return redirect()->to('/admin/categories');
+               // return redirect()->to('/admin/categories');
             }
 
         } catch (\Exception $ex) {

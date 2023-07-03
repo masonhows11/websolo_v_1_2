@@ -1,12 +1,16 @@
 @foreach($child as $category)
-    <div class="card  item-category d-flex justify-content-between ">
-        <div class="card-header">
+    <div class="card  item-category bg-white rounded border border-secondary">
+        <div class="card-header ">
             {{--start category content --}}
-            <div class="item-category-title">
+            <div class="item-category-title d-flex justify-content-evenly">
                 @if(count($category->children))
                     <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
+
+                    <a class="btn my-3  flex-grow-1" href="#collapse{{ $category->id }}" data-bs-toggle="collapse"><h6>{{ $category->title_english }}</h6></a>
                 @else
                     <a class="btn my-3" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_persian }}</a>
+
+                    <a class="btn my-3  flex-grow-1" href="#collapse{{ $category->id }}" data-bs-toggle="collapse">{{ $category->title_english }}</a>
                 @endif
             </div>
             <div class="item-category-actions my-4">

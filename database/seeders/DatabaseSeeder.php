@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Admin;
 use App\Models\BackEnd;
+use App\Models\Category;
 use App\Models\FrontEnd;
 use App\Models\Tag;
 use App\Models\User;
@@ -89,9 +90,7 @@ class DatabaseSeeder extends Seeder
             ],
 
         ];
-        foreach ($users as $user) {
-            User::create($user);
-        }
+
 
         $back_ends = [
             [
@@ -155,6 +154,73 @@ class DatabaseSeeder extends Seeder
                 'title_english' => 'css',
             ],
         ];
+
+
+
+        $category = Category::create([
+            'title_persian' => 'برنامه نویسی',
+            'title_english' => 'programming',
+        ]);
+
+        $category->child()->saveMany([
+            $cat1 = new Category([
+                'title_persian' => 'برنامه نویسی وب',
+                'title_english' => 'back-end programming',
+            ]),
+            $cat2 = new Category([
+                'title_persian' => 'برنامه نویسی ویندوز',
+                'title_english' => 'windows programming',
+            ]),
+            $cat3 = new Category([
+                'title_persian' => 'برنامه نویسی فرانت',
+                'title_english' => 'front-end programming',
+            ])
+        ]);
+
+        $cat1->child()->saveMany([
+            new Category([
+                'title_persian' => 'پی اچ پی',
+                'title_english' => 'php',
+            ]),
+            new Category([
+                'title_persian' => 'لاراول',
+                'title_english' => 'laravel',
+            ])
+        ]);
+        $cat2->child()->saveMany([
+            new Category([
+                'title_persian' => 'سی شارپ',
+                'title_english' => 'c-sharp',
+            ]),
+            new Category([
+                'title_persian' => 'پایتون',
+                'title_english' => 'python',
+            ])
+        ]);
+        $cat3->child()->saveMany([
+            new Category([
+                'title_persian' => 'سی اس اس',
+                'title_english' => 'css',
+            ]),
+            new Category([
+                'title_persian' => 'اچ تی ام ال',
+                'title_english' => 'html',
+            ]),
+            new Category([
+                'title_persian' => 'ری اکت جی اس',
+                'title_english' => 'react js',
+            ]),
+            new Category([
+                'title_persian' => 'ویو جی اس',
+                'title_english' => 'vue js',
+            ])
+        ]);
+
+        foreach ($users as $user) {
+            User::create($user);
+        }
+
+        User::factory()->count(30)->create();
 
         foreach ($back_ends as $lng) {
             BackEnd::create($lng);

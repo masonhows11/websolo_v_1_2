@@ -4,11 +4,7 @@
     @endsection
     <div class="container-fluid">
 
-
-
-
         <div class="row d-flex justify-content-center  mt-5 category-section-index">
-
             <!-- creat category -->
             <div class="col-lg-4 col-md-5  col-sm-5 col-xs-5  category-create">
                 <form wire:submit.prevent="storeCategory">
@@ -57,9 +53,13 @@
                             <div id="accordion">
                                 <div class="card mt-4">
                                     <div class="card-header item-category bg-white rounded border border-secondary">
-                                        <div class="item-category-title">
+                                        <div class="item-category-title d-flex justify-content-between">
                                             <a class="btn my-3 text-black" href="#collapse{{ $category->id }}"
-                                               data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
+                                               data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6>
+                                            </a>
+                                            <a class="btn my-3 text-black  flex-grow-1" href="#collapse{{ $category->id }}"
+                                               data-bs-toggle="collapse"><h6>{{ $category->title_english }}</h6>
+                                            </a>
                                         </div>
                                         <div class="item-category-actions  my-5">
                                             @if($category->parent_id == null)
