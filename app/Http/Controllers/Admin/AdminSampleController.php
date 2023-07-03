@@ -113,7 +113,7 @@ class AdminSampleController extends Controller
             return view('admin.sample.edit')
                 ->with(['sample' => $sample, 'back_ends' => $back_ends, 'front_ends' => $front_ends]);
         }catch (\Exception $ex){
-            return  view('errors_custom.model_not_found',['error'=>$ex->getMessage()]);
+            return  view('errors_custom.model_not_found');
         }
 
     }
@@ -190,8 +190,7 @@ class AdminSampleController extends Controller
             session()->flash('success', 'بروز رسانی با موفقیت انجام شد.');
             return redirect()->route('admin.sample.index');
         } catch (\Exception $ex) {
-            // return  $ex->getMessage();
-            return view('errors_custom.model_store_error',['error'=>$ex->getMessage()]);
+            return view('errors_custom.model_store_error');
         }
     }
 
