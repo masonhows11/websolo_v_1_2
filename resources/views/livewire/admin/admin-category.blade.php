@@ -48,7 +48,7 @@
             <div class="col-xl-7 col-lg-7 col-sm-6 col-xs-10">
                 @if($categories->isEmpty())
                     <div
-                        class="alert d-flex justify-content-center border border-2 border-dark alert-light no-categories">
+                        class="alert d-flex justify-content-center border border-2 border-light alert-light no-categories">
                         <p class="text-center my-auto">دسته بندی وجود ندارد.</p>
                     </div>
                 @else
@@ -56,7 +56,7 @@
                         @foreach($category_tree as $category)
                             <div id="accordion">
                                 <div class="card mt-4">
-                                    <div class="card-header item-category bg-secondary">
+                                    <div class="card-header item-category bg-white rounded border border-secondary">
                                         <div class="item-category-title">
                                             <a class="btn my-3 text-black" href="#collapse{{ $category->id }}"
                                                data-bs-toggle="collapse"><h6>{{ $category->title_persian }}</h6></a>
