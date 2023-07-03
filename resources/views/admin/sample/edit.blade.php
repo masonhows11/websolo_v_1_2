@@ -11,12 +11,15 @@
 
             <form action="{{ route('admin.sample.update') }}" method="post">
                 @csrf
-                <div class="row   row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
+
+                <input type="hidden" name="id" value="{{ $sample->id }}">
+
+                <div class="row  row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1">
                     <div class="col">
                         <div class="my-5">
                             <label for="title_persian" class="form-label">عنوان نمونه کار ( فارسی )</label>
                             <input type="text" class="form-control @error('title_persian') is-invalid @enderror"
-                                   id="title_persian" name="title_persian" value="{{ old('title_persian') }}">
+                                   id="title_persian" name="title_persian" value="{{ $sampel->title_persian }}">
                             @error('title_persian')
                             <div class="alert alert-danger mt-5">
                                 {{ $message }}
@@ -26,7 +29,7 @@
                         <div class="my-5">
                             <label for="title_english" class="form-label">عنوان نمونه کار (انگلیسی )</label>
                             <input type="text" class="form-control @error('title_english') is-invalid @enderror"
-                                   id="title_english" name="title_english" value="{{ old('title_english') }}">
+                                   id="title_english" name="title_english" value="{{ $sample->title_english }}">
                             @error('title_english')
                             <div class="alert alert-danger mt-5">
                                 {{ $message }}
@@ -40,7 +43,9 @@
                             <select type="text" multiple class="form-control chosen-select mt-3" id="back-end"
                                     name="back_ends[]">
                                 @foreach($back_ends as $lang)
-                                    <option value="{{ $lang->id }}">{{ $lang->title_persian }}</option>
+                                    <option value="{{ $lang->id }}" {{ in_array($lang->id,$sample->backEnds()->pluck('back_end_id')->toArray())? 'selected' :''}}>
+                                        {{ $lang->title_persian }}
+                                    </option>
                                 @endforeach
                             </select>
                             @error('back_ends')
@@ -54,7 +59,9 @@
                             <select type="text" multiple class="form-control chosen-select" id="front-end"
                                     name="front_ends[]">
                                 @foreach($front_ends as $lang)
-                                    <option value="{{ $lang->id }}">{{ $lang->title_persian }}</option>
+                                    <option value="{{ $lang->id }}" {{ in_array($lang->id,$sample->frontEnds()->pluck('front_end_id')->toArray())? 'selected' :''}}>
+                                        {{ $lang->title_persian }}
+                                    </option>
                                 @endforeach
                             </select>
                             @error('front_ends')

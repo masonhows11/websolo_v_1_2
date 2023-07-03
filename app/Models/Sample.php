@@ -10,7 +10,7 @@ use Spatie\Sluggable\SlugOptions;
 class Sample extends Model
 {
     use HasFactory, HasPersianSlug;
-    protected $table = 'sample';
+    protected $table = 'samples';
     protected $fillable =
         ['title_persian',
             'title_english',

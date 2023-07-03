@@ -48,6 +48,7 @@ class AdminSamples extends Component
 
     public function render()
     {
-        return view('livewire.admin.admin-sample')->with([ 'sample' => Sample::paginate(10)]);
+        return view('livewire.admin.admin-samples')
+            ->with([ 'samples' => Sample::paginate(10)]);
     }
 }
