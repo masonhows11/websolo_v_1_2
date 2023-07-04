@@ -7,7 +7,7 @@
         <div class="about row mt-5">
 
             <div class="about-img col-md-3">
-                <img src="{{'images/avatar/avatar.jpg'}}" alt="" class="img-thumbnail mb-4"/>
+                <img src="{{asset('assets/front/images/avatar/avatar.jpg')}}" alt="" class="img-thumbnail mb-4"/>
             </div>
 
             <div class="about-introduce col-md-9">

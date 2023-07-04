@@ -8,7 +8,7 @@
                 <div class="col-md-4">
                     <div class="card border mb-4">
                         <img
-                            src="{{'images/blog/blog-1.jpg'}}"
+                            src="{{asset('assets/front/images/blog/blog-1.jpg')}}"
                             alt=""
                             class="card-img-top w-100"/>
                         <div class="card-body d-flex flex-column">
@@ -31,7 +31,7 @@
 
                 <div class="col-md-4">
                     <div class="card border mb-4">
-                        <img src="{{'images/blog/blog-2.jpg'}}"
+                        <img src="{{asset('assets/front/images/blog/blog-2.jpg')}}"
                              alt=""
                              class="card-img-top w-100"/>
                         <div class="card-body d-flex flex-column">
@@ -54,7 +54,7 @@
 
                 <div class="col-md-4">
                     <div class="card border mb-4">
-                        <img src="{{'images/blog/blog-3.jpg'}}"
+                        <img src="{{asset('assets/front/images/blog/blog-3.jpg')}}"
                              alt=""
                              class="card-img-top w-100"/>
                         <div class="card-body d-flex flex-column">

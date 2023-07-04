@@ -27,7 +27,7 @@
                     <div class="carousel-item active">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="{{'images/avatar/avatar-1.jpg'}}" alt=""/>
+                                <img src="{{asset('assets/front/images/avatar/avatar-1.jpg')}}" alt=""/>
                                 <p>
                                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                                     با استفاده از طراحان گرافیک است.
@@ -41,7 +41,7 @@
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="{{'images/avatar/avatar-2.jpg'}}" alt=""/>
+                                <img src="{{asset('assets/front/images/avatar/avatar-2.jpg')}}" alt=""/>
                                 <p>
                                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                                     با استفاده از طراحان گرافیک است.
@@ -55,7 +55,7 @@
                     <div class="carousel-item">
                         <div class="card testmonial-card border">
                             <div class="card-body">
-                                <img src="{{'images/avatar/avatar-3.jpg'}}" alt=""/>
+                                <img src="{{asset('assets/front/images/avatar/avatar-3.jpg')}}" alt=""/>
                                 <p>
                                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
                                     با استفاده از طراحان گرافیک است.
