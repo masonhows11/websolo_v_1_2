@@ -10,7 +10,8 @@ class GetImageName
 {
     public static function articleImage($imagePath)
     {
-        $path = 'http://websolo.test/storage/articles/';
+        //$path = 'http://websolo.test/storage/articles/';
+        $path = env('APP_URL')."/storage/articles/";
         return $image = str_replace($path, '', $imagePath);
     }
 

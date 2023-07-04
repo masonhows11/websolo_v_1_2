@@ -83,6 +83,7 @@ class AdminArticleController extends Controller
             return redirect()->route('admin.article.index');
 
         } catch (\Exception $ex) {
+            return $ex->getMessage();
             return view('errors_custom.model_store_error');
         }
     }
