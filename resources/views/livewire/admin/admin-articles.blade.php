@@ -7,7 +7,7 @@
         </div>
         @if($articles->count())
             <div
-                class="row mt-5 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-3 g-4 article-section-index">
+                class="row mt-5 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-4 g-4 article-section-index">
                 @foreach($articles as $article)
                     <div class="col">
                         <div class="card w-100 h-100">
@@ -46,9 +46,9 @@
                                     <div class="col-xl-10  d-flex justify-content-end  article-op">
                                         <a href="javascript:void(0)"
                                            wire:click.prevent="deleteConfirmation({{ $article->id }})"
-                                           class="btn btn-secondary btn-sm me-3">حذف</a>
+                                           class="btn btn-danger btn-sm me-3">حذف</a>
                                         <a href="{{ route('admin.article.edit',[$article]) }}"
-                                           class="btn btn-info btn-sm me-3">ویرایش</a>
+                                           class="btn btn-primary btn-sm me-3">ویرایش</a>
                                         <a href="javascript:void(0)" wire:click.defer="active({{$article->id}})"
                                            class="btn btn-{{  $article->approved == 0 ? 'danger' : 'success' }} btn-sm">{{ $article->approved == 0 ?  __('messages.unpublished') : __('messages.published') }}</a>
                                     </div>
