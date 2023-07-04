@@ -11,7 +11,7 @@
                 @foreach($articles as $article)
                     <div class="col">
                         <div class="card w-100 h-100">
-                            <img src="{{ asset('storage/article/'.$article->image) }}" class="card-img-top"
+                            <img src="{{ asset('storage/articles/'.$article->image) }}" class="card-img-top"
                                  alt="article-image">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $article->title_persian }}</h5>
