@@ -20,10 +20,10 @@ return new class extends Migration
                 ->on('users')
                 ->onDelete('cascade');
 
-            $table->unsignedBigInteger('article_id')->nullable();
-            $table->foreign('article_id')
+            $table->unsignedBigInteger('articles_id')->nullable();
+            $table->foreign('articles_id')
                 ->references('id')
-                ->on('article')
+                ->on('articles')
                 ->onDelete('cascade');
 
             $table->unsignedBigInteger('sample_id')->nullable();

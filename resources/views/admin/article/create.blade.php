@@ -1,4 +1,4 @@
-@extends('dash.include.master')
+@extends('admin.include.master')
 @section('admin_title')
     مقاله جدید
 @endsection
@@ -137,7 +137,9 @@
     </div>
 @endsection
 @push('dash_custom_scripts')
-    <script type="text/javascript" src="{{ asset('assets/plugins/ckeditor/ckeditor.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/chosen/chosen.min.css') }}">
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/chosen/chosen.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
     <script>
         // ckeditor

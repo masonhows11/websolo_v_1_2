@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Category;
 use App\Models\Tag;
 use App\Services\GetImageName;
 use Illuminate\Http\Request;
@@ -21,9 +22,9 @@ class AdminArticleController extends Controller
     public function create(){
 
         $tags = Tag::all();
-        //$categories = Category::all();
+        $categories = Category::all();
         return view('admin.article.create')
-            ->with(['tags'=>$tags]);
+            ->with(['tags'=>$tags,'categories'=>$categories]);
     }
 
 

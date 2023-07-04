@@ -210,9 +210,9 @@
     </div>
 @endsection
 @push('dash_custom_scripts')
-    <link rel="stylesheet" href="{{ asset('assets/plugins/chosen/chosen.min.css') }}">
-    <script type="text/javascript" src="{{ asset('assets/plugins/chosen/chosen.jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/plugins/ckeditor/ckeditor.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/chosen/chosen.min.css') }}">
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/chosen/chosen.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/ckeditor/ckeditor.js') }}"></script>
     <script>
         // ckeditor
         CKEDITOR.replace('editor-text', {
