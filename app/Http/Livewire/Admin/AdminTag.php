@@ -51,10 +51,11 @@ class AdminTag extends Component
                 Tag::create([
                     'title_persian' => $this->title_persian,
                     'title_english' => $this->title_english]);
-                session()
-                    ->flash('success', 'تگ مورد نظر با موفقیت ایجاد شد');
                 $this->title_persian = '';
                 $this->title_english = '';
+                $this->dispatchBrowserEvent('show-result',
+                    ['type'=>'success',
+                        'message'=>'ذخیره سازی با موفقیت انجام شد.']);
             } catch (\Exception $ex) {
                 return view('errors_custom.model_store_error');
             }
@@ -68,8 +69,9 @@ class AdminTag extends Component
             $this->title_persian = '';
             $this->title_english = '';
             $this->edit_mode = false;
-            session()
-                ->flash('success', 'تگ مورد نظر با موفقیت بروز رسانی شد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type'=>'success',
+                    'message'=>'بروز رسانی با موفقیت انجام شد.']);
         }
     }
 
@@ -85,7 +87,9 @@ class AdminTag extends Component
     {
         try {
             Tag::destroy($this->delete_id);
-            session()->flash('success', 'تگ مورد نظر با موفقیت حذف شد');
+            $this->dispatchBrowserEvent('show-result',
+                ['type' => 'success',
+                    'message' => 'رکورد با موفقیت حذف شد.']);
         } catch (\Exception $ex) {
             return view('errors_custom.model_not_found');
         }

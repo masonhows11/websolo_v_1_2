@@ -133,25 +133,6 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
-
-.tag-section-index .fa-edit,
-.article-section-index .fa-edit,
-.item-category-actions .fa-edit {
-    color: deepskyblue;
-    font-size: 1.4rem;
-}
-
-.tag-section-index .fa-trash,
-.article-section-index .fa-trash,
-.item-category-actions .fa-trash {
-    font-size: 1.4rem;
-    color: tomato;
-}
-
-.item-category-actions .fa-unlink {
-    font-size: 1.3rem;
-    color: tomato;
-}
 /************* sample section */
 
 .sample-footer-card .article-op .btn-sm{
@@ -161,7 +142,11 @@
 .sample-section-index .card img{
     height: 287px;
 }
-
+/************** admin-tag-list */
+.admin-tag-list thead tr th ,
+.admin-tag-list tbody tr td{
+    
+}
 /************ media query */
 
 

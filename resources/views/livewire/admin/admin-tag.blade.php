@@ -66,17 +66,18 @@
                     @isset($tags)
                         @foreach($tags as $tag)
                             <tr class="text-center">
-                                <td>{{ $tag->id }}</td>
-                                <td>{{ $tag->title_persian }}</td>
-                                <td class="mb-3">
-                                    <a href="javascript:void(0)"
+                                <td><div class="my-3">{{ $tag->id }}</div></td>
+                                <td><div class="my-3">{{ $tag->title_persian }}</div></td>
+                                <td class="my-3">
+                                    <a href="javascript:void(0)" class="btn btn-danger my-3"
                                        wire:click.prevent="deleteConfirmation({{ $tag->id }})">
-                                        <i class="fa fa-trash"></i>
+                                        {{ __('messages.delete_model') }}
                                     </a>
                                 </td>
-                                <td class="mb-3">
-                                    <a href="javascript:void(0)" wire:click.prevent="editTag({{ $tag->id }})" class="btn btn-sm mb-3">
-                                        <i class="fa fa-edit"></i>
+                                <td class="my-3">
+                                    <a href="javascript:void(0)" class="btn btn-primary my-3"
+                                       wire:click.prevent="editTag({{ $tag->id }})" >
+                                       {{ __('messages.edit_model') }}
                                     </a>
                                 </td>
                             </tr>
@@ -105,5 +106,26 @@
                 }
             });
         })
+    </script>
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        window.addEventListener('show-result', ({detail: {type, message}}) => {
+            Toast.fire({
+                icon: type,
+                title: message
+            })
+        })
+
     </script>
 @endpush
