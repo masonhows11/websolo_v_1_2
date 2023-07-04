@@ -216,6 +216,29 @@ class DatabaseSeeder extends Seeder
             ])
         ]);
 
+        $tags = [
+            [
+                'title_persian' => 'لاراول',
+                'title_english' => 'laravel',
+            ],
+            [
+                'title_persian' => 'ری اکت جی اس',
+                'title_english' => 'react-js',
+            ],
+            [
+                'title_persian' => 'ویو جی اس',
+                'title_english' => 'vue-js',
+            ],
+            [
+                'title_persian' => 'لایووایر',
+                'title_english' => 'livewire',
+            ],
+            [
+                'title_persian' => 'سی اس اس',
+                'title_english' => 'css',
+            ],
+        ];
+
         foreach ($users as $user) {
             User::create($user);
         }

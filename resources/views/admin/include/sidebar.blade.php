@@ -193,7 +193,6 @@
                             </a>
                         </div>
 
-
                         <div class="menu-item">
                             <a class="menu-link" href="{{ route('admin.back-ends') }}">
                                 <span class="menu-bullet">
@@ -209,6 +208,16 @@
                                     <span class="bullet bullet-dot"></span>
                                 </span>
                                 <span class="menu-title">زبان های سمت کاربر</span>
+                            </a>
+                        </div>
+
+
+                        <div class="menu-item">
+                            <a class="menu-link" href="{{ route('admin.tags') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">برچسب ها ( تگ )</span>
                             </a>
                         </div>
 

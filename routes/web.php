@@ -25,6 +25,7 @@ use App\Http\Livewire\Admin\AdminFrontEnd;
 use App\Http\Livewire\Admin\AdminPerms;
 use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Admin\AdminRoles;
+use App\Http\Livewire\Admin\AdminTag;
 use App\Http\Livewire\Admin\AdminUsers;
 use App\Http\Livewire\Admin\ListUsersForPerm;
 use App\Http\Livewire\Admin\ListUsersForRole;
@@ -175,6 +176,14 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
     Route::get('/categories', AdminCategory::class)->name('categories');
+
+});
+
+// crud tags
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/tags', AdminTag::class)->name('tags');
 
 });
 
