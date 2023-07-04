@@ -25,10 +25,10 @@
             <div class="col-xl-4 col-lg-4 col-md-4">
                 <form wire:submit.prevent="storeTag">
                     <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">نام تگ ( فارسی ) :</label>
+                        <label for="title_persian" class="form-label">نام تگ ( فارسی ) :</label>
                         <input type="text" wire:model.lazy="title_persian"
                                class="form-control"
-                               id="name">
+                               id="title_persian" autocomplete="on">
                     </div>
                     @error('title_persian')
                     <div class="alert alert-danger my-2">
@@ -36,10 +36,10 @@
                     </div>
                     @enderror
                     <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">نام تگ ( انگلیسی ) :</label>
+                        <label for="title_english" class="form-label">نام تگ ( انگلیسی ) :</label>
                         <input type="text" wire:model.lazy="title_english"
                                class="form-control"
-                               id="name">
+                               id="title_english"  autocomplete="on">
                     </div>
                     @error('title_english')
                     <div class="alert alert-danger my-2">

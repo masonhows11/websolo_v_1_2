@@ -63,7 +63,8 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
-.admin-list-users tbody tr td{
+
+.admin-list-users tbody tr td {
     font-size: 1.1rem;
 }
 
@@ -83,12 +84,14 @@
     font-weight: bold;
     font-size: 1.1rem;
 }
+
 /************** front - back section */
 .admin-front-end .title_english,
-.admin-back-end  .title_english{
+.admin-back-end .title_english {
     direction: ltr;
     text-align: left;
 }
+
 /************ category section */
 .sample-section-create label,
 .tag-section-create label,
@@ -133,20 +136,23 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
+
 /************* sample section */
 
-.sample-footer-card .article-op .btn-sm{
+.sample-footer-card .article-op .btn-sm {
     font-size: 1.1rem;
 }
 
-.sample-section-index .card img{
+.sample-section-index .card img {
     height: 287px;
 }
-/************** admin-tag-list */
-.admin-tag-list thead tr th ,
-.admin-tag-list tbody tr td{
 
+/************** admin-tag-list */
+.admin-tag-list thead tr th,
+.admin-tag-list tbody tr td div{
+    font-size: 1.2rem;
 }
+
 /************ media query */
 
 
