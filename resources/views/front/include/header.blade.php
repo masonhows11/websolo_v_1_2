@@ -1,7 +1,7 @@
 <header class="header container">
     <div class="row pt-2 mt-2 border-bottom border-2">
         <div class="img-holder col-lg-6 d-flex justify-content-center">
-            <img src="{{'images/man.svg'}}" alt=""/>
+            <img src="{{ asset('assets/front/images/man.svg') }}" alt=""/>
         </div>
 
         <div class="info col-lg-6 d-flex flex-column justify-content-center">
