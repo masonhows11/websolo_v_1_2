@@ -18,6 +18,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\Admin\AdminAdmins;
+use App\Http\Livewire\Admin\AdminArticleComment;
 use App\Http\Livewire\Admin\AdminBackEnd;
 use App\Http\Livewire\Admin\AdminCategory;
 use App\Http\Livewire\Admin\AdminEmail;
@@ -25,6 +26,7 @@ use App\Http\Livewire\Admin\AdminFrontEnd;
 use App\Http\Livewire\Admin\AdminPerms;
 use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Admin\AdminRoles;
+use App\Http\Livewire\Admin\AdminSampleComment;
 use App\Http\Livewire\Admin\AdminTag;
 use App\Http\Livewire\Admin\AdminUsers;
 use App\Http\Livewire\Admin\ListUsersForPerm;
