@@ -322,21 +322,14 @@
                     <div class="menu-sub menu-sub-accordion">
 
                         <div class="menu-item">
-                            <a class="menu-link" href="#">
+                            <a class="menu-link" href="{{ route('admin.setting.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
                                 <span class="menu-title">تنظیمات</span>
                             </a>
                         </div>
-                        <div class="menu-item">
-                            <a class="menu-link" href="#">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">تنظیمات</span>
-                            </a>
-                        </div>
+
                     </div>
                 </div>
                 {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">

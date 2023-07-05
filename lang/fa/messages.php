@@ -13,4 +13,5 @@ return [
     'edit_model' => 'ویرایش',
     'detach' => 'حذف از والد',
     'there_is_no_comment_for_this_post' => 'برای این مقاله دیدگاهی ثبت نشده.',
+    'This_part_is_being_prepared' => 'این قسمت در حال اماده سازی است...',
 ];

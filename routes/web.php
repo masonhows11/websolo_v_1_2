@@ -27,6 +27,7 @@ use App\Http\Livewire\Admin\AdminPerms;
 use App\Http\Livewire\Admin\AdminProfile;
 use App\Http\Livewire\Admin\AdminRoles;
 use App\Http\Livewire\Admin\AdminSampleComment;
+use App\Http\Livewire\Admin\AdminSettings;
 use App\Http\Livewire\Admin\AdminTag;
 use App\Http\Livewire\Admin\AdminUsers;
 use App\Http\Livewire\Admin\ArticleListComment;
@@ -248,7 +249,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
     Route::get('/comment/articles-index', AdminArticleComment::class)->name('comment.articles.index');
     Route::get('/comments/article', ArticleListComment::class)->name('article.comments');
-    
+
     Route::get('/comment/samples-index', AdminSampleComment::class)->name('comment.samples.index');
     Route::get('/comments/sample', SampleListComment::class)->name('sample.comments');
 
@@ -256,7 +257,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
-    Route::get('/comment/articles-index', AdminArticleComment::class)->name('comment.articles.index');
+    Route::get('/setting-index',AdminSettings::class)->name('setting.index');
 
 
 });
