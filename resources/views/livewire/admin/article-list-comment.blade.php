@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="card">
-                            <img src="{{ asset('/storage/articles/' . $article->image) }}" class="img-fluid card-img-top"
+                            <img src="{{ asset('/storage/articles/' . $article->image) }}"  class="card-img-top"
                                  alt="article-image">
                             <div class="card-body mt-3 comment-post-title">
                                 <h4 class="card-title">{{ $article->user->name }}</h4>

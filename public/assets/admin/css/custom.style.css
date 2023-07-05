@@ -169,7 +169,9 @@
 .wk-article-card-title h5{
     margin-right: 5px;
 }
-
+.list-unapproved-comments .card img{
+    height: 280px;
+}
 
 /************ media query */
 
