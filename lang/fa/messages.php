@@ -11,5 +11,6 @@ return [
     'not_defined' => 'تعریف نشده',
     'delete_model' => 'حذف',
     'edit_model' => 'ویرایش',
-    'detach' => 'حذف از والد'
+    'detach' => 'حذف از والد',
+    'there_is_no_comment_for_this_post' => 'برای این مقاله دیدگاهی ثبت نشده.',
 ];

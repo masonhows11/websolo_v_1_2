@@ -69,7 +69,7 @@
             @else
                 <div class="col-md-4">
                     <div class="alert alert-light mt-5 border border-3">
-                        <strong> برای این نمونه کار دیدگاهی ثبت نشده.</strong>
+                        <strong class="text-gray-700">{{ __('messages.there_is_no_comment_for_this_post') }}</strong>
                     </div>
                 </div>
             @endif
