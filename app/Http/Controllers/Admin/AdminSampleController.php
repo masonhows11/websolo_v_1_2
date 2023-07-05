@@ -96,6 +96,7 @@ class AdminSampleController extends Controller
             session()->flash('success', 'ذخیره سازی با موفقیت انجام شد.');
             return redirect()->route('admin.sample.index');
         } catch (\Exception $ex) {
+            return  $ex->getMessage();
             return view('errors_custom.model_store_error');
         }
     }
@@ -190,6 +191,7 @@ class AdminSampleController extends Controller
             session()->flash('success', 'بروز رسانی با موفقیت انجام شد.');
             return redirect()->route('admin.sample.index');
         } catch (\Exception $ex) {
+            return $ex->getMessage();
             return view('errors_custom.model_store_error');
         }
     }
