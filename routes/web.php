@@ -220,6 +220,10 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
+    Route::get('/comment/articles/index', AdminArticleComment::class)->name('comment.articles.index');
+    Route::get('/comments/article', ArticleListComment::class)->name('article.comments');
 
+    Route::get('/comment/samples/index', AdminSampleComment::class)->name('comment.samples.index');
+    Route::get('/comments/sample', SampleListComment::class)->name('sample.comments');
 
 });

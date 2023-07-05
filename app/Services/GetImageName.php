@@ -22,7 +22,7 @@ class GetImageName
 
     public static function sampleMainImage($imagePath)
     {
-       
+
         $path = env('APP_URL') .self::SAMPLE_STORAGE_PATH;
         return $image = str_replace($path, '', $imagePath);
     }
