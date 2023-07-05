@@ -41,7 +41,7 @@
                                             <span>{{ jDate($sample->created_at)->format('Y/m/d') }}</span>
                                         </p>
                                     </div>
-                                    <div class="co d-flex justify-content-between  article-op">
+                                    <div class="col d-flex justify-content-between  article-op">
                                         <a href="javascript:void(0)"
                                            wire:click.prevent="deleteConfirmation({{ $sample->id }})"
                                            class="btn btn-danger btn-sm ">حذف</a>

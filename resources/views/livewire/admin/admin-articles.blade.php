@@ -10,7 +10,7 @@
                 class="row mt-5 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-4 g-4 article-section-index">
                 @foreach($articles as $article)
                     <div class="col">
-                        <div class="card w-100 h-100">
+                        <div class="card h-100">
                             <img src="{{ asset('storage/articles/'.$article->image) }}" class="card-img-top"
                                  alt="article-image">
                             <div class="card-body">
@@ -24,8 +24,7 @@
                                         }
                                     @endphp
                                     <h6>دسته بندی ها:</h6>
-                                    <span
-                                        class="mx-2 article-category">دسته {{ implode(' - ',$article_categories)}}</span>
+                                    <span class="mx-2 article-category">دسته {{ implode(' - ',$article_categories)}}</span>
                                 </div>
                                 <div class="d-flex flex-column my-2">
                                     @php
@@ -37,18 +36,18 @@
                                     <h6>تگ ها :</h6>
                                     <span class="mx-2 article-tag">{{ implode(' - ',$article_tags)}}</span>
                                 </div>
-                                <div class="col-xl-12 d-flex justify-content-between mt-5 article-footer-card">
-                                    <div class="col-xl-2  article-date d-flex align-content-center align-items-center">
+                                <div class="col d-flex flex-column mt-5 article-footer-card">
+                                    <div class="col  card-date d-flex align-content-center align-items-center">
                                         <p class="mt-3">
                                             <span>{{ JDate($article->created_at)->format('Y/m/d')}}</span>
                                         </p>
                                     </div>
-                                    <div class="col-xl-10  d-flex justify-content-end  article-op">
+                                    <div class="  d-flex justify-content-between  article-op">
                                         <a href="javascript:void(0)"
                                            wire:click.prevent="deleteConfirmation({{ $article->id }})"
-                                           class="btn btn-danger btn-sm me-3">حذف</a>
+                                           class="btn btn-danger btn-sm">حذف</a>
                                         <a href="{{ route('admin.article.edit',[$article]) }}"
-                                           class="btn btn-primary btn-sm me-3">ویرایش</a>
+                                           class="btn btn-primary btn-sm">ویرایش</a>
                                         <a href="javascript:void(0)" wire:click.defer="active({{$article->id}})"
                                            class="btn btn-{{  $article->approved == 0 ? 'danger' : 'success' }} btn-sm">{{ $article->approved == 0 ?  __('messages.unpublished') : __('messages.published') }}</a>
                                     </div>

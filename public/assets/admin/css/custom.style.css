@@ -1,27 +1,14 @@
 /* general styles */
-
-
 .alert-profile {
     height: 50px;
 }
-
 .admin-logo-login {
     font-size: 2rem;
     color: dodgerblue;
 }
-
 .alert-dive {
     height: 150px;
 }
-
-.validate-mobile-admin-form .timer {
-
-    font-size: 1.1rem;
-    text-decoration: none;
-    font-weight: 600;
-    color: #000000;
-}
-
 .aside-logo a {
     font-size: 1.5rem;
     font-weight: 600;
@@ -139,6 +126,7 @@
 
 /************* sample section */
 
+.article-footer-card .article-op .btn-sm,
 .sample-footer-card .article-op .btn-sm {
     font-size: 1.1rem;
 }

@@ -40,8 +40,7 @@
                     <div class="col">
                         <div class="mt-5">
                             <label for="back-end" class="form-label my-3">زبان یا فریم ورک سمت سرور (back-end)</label>
-                            <select type="text" multiple class="form-control chosen-select mt-3" id="back-end"
-                                    name="back_ends[]">
+                            <select type="text" multiple class="form-control chosen-select mt-3" id="back-end" name="back_ends[]">
                                 @foreach($back_ends as $lang)
                                     <option value="{{ $lang->id }}" {{ in_array($lang->id,$sample->backEnds()->pluck('back_end_id')->toArray())? 'selected' :''}}>
                                         {{ $lang->title_persian }}
@@ -56,8 +55,7 @@
                         </div>
                         <div class="mt-5">
                             <label for="front-end" class="form-label my-3">زبان یا فریم ورک سمت کاربر (front-end)</label>
-                            <select type="text" multiple class="form-control chosen-select" id="front-end"
-                                    name="front_ends[]">
+                            <select type="text" multiple class="form-control chosen-select" id="front-end" name="front_ends[]">
                                 @foreach($front_ends as $lang)
                                     <option value="{{ $lang->id }}" {{ in_array($lang->id,$sample->frontEnds()->pluck('front_end_id')->toArray())? 'selected' :''}}>
                                         {{ $lang->title_persian }}
@@ -75,7 +73,7 @@
 
                 <div class="row main-image-select">
                     <div class="col-xl-6 mt-5">
-                        <label for="button-image" class="form-label">عکس اصلی :</label>
+                        <label for="main_image" class="form-label">عکس اصلی :</label>
                         <div class="input-group">
                             <div class="input-group-append">
                                 <button class="btn btn-secondary" type="button" id="button-image-main">انتخاب عکس
@@ -100,7 +98,7 @@
                 <div class="row  row-cols-xl-2 row-cols-lg-2 row-cols-md-1 row-cols-1  sample-image-multi-select">
                     <div class="col">
                         <div class="col mt-5">
-                            <label for="button-image" class="form-label">عکس نمونه شماره یک :</label>
+                            <label for="image1" class="form-label">عکس نمونه شماره یک :</label>
                             <div class="input-group">
                                 <div class="input-group-append">
                                     <button class="btn btn-secondary" type="button" id="button-image1">انتخاب عکس
@@ -121,7 +119,7 @@
                             @enderror
                         </div>
                         <div class="col mt-5">
-                            <label for="button-image" class="form-label">عکس نمونه شماره دو :</label>
+                            <label for="image2" class="form-label">عکس نمونه شماره دو :</label>
                             <div class="input-group">
                                 <div class="input-group-append">
                                     <button class="btn btn-secondary" type="button" id="button-image2">انتخاب عکس
@@ -144,7 +142,7 @@
                     </div>
                     <div class="col">
                         <div class="col mt-5">
-                            <label for="button-image" class="form-label">عکس نمونه شماره سه :</label>
+                            <label for="image3" class="form-label">عکس نمونه شماره سه :</label>
                             <div class="input-group">
                                 <div class="input-group-append">
                                     <button class="btn btn-secondary" type="button" id="button-image3">انتخاب عکس
@@ -164,7 +162,7 @@
                             @enderror
                         </div>
                         <div class="col mt-5">
-                            <label for="button-image" class="form-label">عکس نمونه شماره چهار :</label>
+                            <label for="image4" class="form-label">عکس نمونه شماره چهار :</label>
                             <div class="input-group">
                                 <div class="input-group-append">
                                     <button class="btn btn-secondary" type="button" id="button-image4">انتخاب عکس
@@ -237,9 +235,9 @@
     </div>
 @endsection
 @push('dash_custom_scripts')
-    <link rel="stylesheet" href="{{ asset('assets/plugins/chosen/chosen.min.css') }}">
-    <script type="text/javascript" src="{{ asset('assets/plugins/chosen/chosen.jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/plugins/ckeditor/ckeditor.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/chosen/chosen.min.css') }}">
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/chosen/chosen.jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin/plugins/ckeditor/ckeditor.js') }}"></script>
     <script>
         // ckeditor
         CKEDITOR.replace('editor-text', {
