@@ -46,7 +46,7 @@
                                         <a href="javascript:void(0)"
                                            wire:click.prevent="deleteConfirmation({{ $article->id }})"
                                            class="btn btn-danger btn-sm">حذف</a>
-                                        <a href="{{ route('admin.article.edit',[$article]) }}"
+                                        <a href="{{ route('admin.article.edit',['id'=>$article->id]) }}"
                                            class="btn btn-primary btn-sm">ویرایش</a>
                                         <a href="javascript:void(0)" wire:click.defer="active({{$article->id}})"
                                            class="btn btn-{{  $article->approved == 0 ? 'danger' : 'success' }} btn-sm">{{ $article->approved == 0 ?  __('messages.unpublished') : __('messages.published') }}</a>

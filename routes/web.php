@@ -209,7 +209,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
     Route::get('/article-index', [AdminArticleController::class, 'index'])->name('article.index');
     Route::get('/article-create', [AdminArticleController::class, 'create'])->name('article.create');
     Route::post('/article-store', [AdminArticleController::class, 'store'])->name('article.store');
-    Route::get('/article-edit/{article}', [AdminArticleController::class, 'edit'])->name('article.edit');
+    Route::get('/article-edit/{id}', [AdminArticleController::class, 'edit'])->name('article.edit');
     Route::post('/article-update', [AdminArticleController::class, 'update'])->name('article.update');
 
 });

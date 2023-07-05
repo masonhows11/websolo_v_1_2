@@ -89,12 +89,13 @@ class AdminArticleController extends Controller
     }
 
 
-    public function edit(Article $article){
+    public function edit($id){
 
         try {
+            $article = Article::findOrFail($id);
             $tags = DB::table('tags')->get();
             $categories = DB::table('categories')->get();
-            return view('dash.article.edit')
+            return view('admin.article.edit')
                 ->with(['article' => $article,
                     'categories' => $categories,
                     'tags'=>$tags]);
