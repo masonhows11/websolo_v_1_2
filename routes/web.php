@@ -123,6 +123,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 });
 
+
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
 
     Route::get('/profile', AdminProfile::class)->name('profile');
@@ -136,16 +137,22 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
     Route::get('/admins-list',AdminAdmins::class)->name('admins.list');
     Route::get('/user-list',AdminUsers::class)->name('users.list');
 
+
 });
+
 
 // crud roles & perms
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
     Route::get('/roles', AdminRoles::class)->name('roles');
     Route::get('/perms', AdminPerms::class)->name('perms');
+
 });
 
+
 // assign roles
+
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
@@ -155,7 +162,10 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 });
 
+
+
 // assign perms
+
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
@@ -167,15 +177,24 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 
 // backEnd
+
+
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
     Route::get('/back-end/index', AdminBackEnd::class)->name('back-ends');
 });
+
+
+
 // frontEnd
+
+
+
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function () {
     Route::get('/front-end/index', AdminFrontEnd::class)->name('front-ends');
 });
 
 // crud categories
+
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
@@ -183,7 +202,9 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 });
 
+
 // crud tags
+
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
@@ -194,6 +215,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
 
 // crud sample
+
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
 
@@ -226,8 +248,15 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', '
 
     Route::get('/comment/articles-index', AdminArticleComment::class)->name('comment.articles.index');
     Route::get('/comments/article', ArticleListComment::class)->name('article.comments');
-
+    
     Route::get('/comment/samples-index', AdminSampleComment::class)->name('comment.samples.index');
     Route::get('/comments/sample', SampleListComment::class)->name('sample.comments');
+
+});
+
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth_front:admin', 'verify_admin', 'role:admin|admin'])->group(function (){
+
+    Route::get('/comment/articles-index', AdminArticleComment::class)->name('comment.articles.index');
+
 
 });
