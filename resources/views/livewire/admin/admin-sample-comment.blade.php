@@ -24,7 +24,9 @@
                                         </div>
                                     </div>
                                     <div class="wk-article-card-footer d-flex justify-content-end my-1">
-                                        <a class="btn btn-list-comment" href="{{ route('admin.sample.comments',['sample_id'=>$sample->id]) }}">لیست دیدگاه ها</a>
+                                        <div>
+                                            <a class="btn btn-primary  my-4 me-5" href="{{ route('admin.sample.comments',['sample_id'=>$sample->id]) }}">لیست دیدگاه ها</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

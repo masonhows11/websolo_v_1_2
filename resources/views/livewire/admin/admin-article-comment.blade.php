@@ -16,15 +16,20 @@
                                 </div>
 
                                 <div class="wk-article-card-body mt-2">
-                                    <div class="wk-article-card-title  my-1"><h5>{{ $article->title_persian }}</h5>
+                                    <div class="wk-article-card-title  my-1">
+                                        <h5>{{ $article->title_persian }}</h5>
                                     </div>
+
                                     <div class="wk-article-card-text my-1">
                                         <div class="desc">
                                             {!! $article->short_description !!}
                                         </div>
                                     </div>
+
                                     <div class="wk-article-card-footer d-flex justify-content-end my-1">
-                                        <a class="btn btn-list-comment" href="{{ route('admin.article.comments',['article_id'=>$article->id]) }}">لیست دیدگاه ها</a>
+                                       <div>
+                                           <a class="btn btn-primary my-4 me-5" href="{{ route('admin.article.comments',['article_id'=>$article->id]) }}">لیست دیدگاه ها</a>
+                                       </div>
                                     </div>
                                 </div>
                             </div>

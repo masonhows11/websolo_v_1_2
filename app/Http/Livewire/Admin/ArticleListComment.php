@@ -54,8 +54,8 @@ class ArticleListComment extends Component
     public function render()
     {
         return view('livewire.admin.article-list-comment')
-            ->extends('dash.include.master')
-            ->section('dash_main_content')
+            ->extends('admin.include.master')
+            ->section('admin_main')
             ->with(['article'=> Article::findOrFail($this->article_id)]);
     }
 }
