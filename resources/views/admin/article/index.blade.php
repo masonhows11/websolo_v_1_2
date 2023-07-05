@@ -3,6 +3,7 @@
     مقالات
 @endsection
 @section('admin_main')
+    
     <div>
         <livewire:admin.admin-articles/>
     </div>
