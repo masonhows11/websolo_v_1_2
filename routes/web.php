@@ -15,6 +15,7 @@ use App\Http\Controllers\Auth\ResendEmailVerifyController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Front\Article\ArticleController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\Admin\AdminAdmins;
@@ -35,11 +36,13 @@ use App\Http\Livewire\Admin\ListUsersForPerm;
 use App\Http\Livewire\Admin\ListUsersForRole;
 use App\Http\Livewire\Admin\SampleListComment;
 
+use App\Http\Livewire\Front\Articles\ArticleComponent;
+use App\Http\Livewire\Front\Samples\SampleComponent;
 use App\Http\Livewire\Front\SingleAbout;
 use App\Http\Livewire\Front\SingleContact;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
 
-use App\Http\Livewire\Front\Articles\ArticlesComponent;
+
 use App\Http\Livewire\Front\Samples\SamplesComponent;
 
 
@@ -110,15 +113,18 @@ Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 
 Route::middleware(['web'])->group(function(){
 
-
-    Route::get('/articles',ArticlesComponent::class)->name('articles');
-
     Route::get('/samples',SamplesComponent::class)->name('samples');
-
-
+    Route::get('/sample',SampleComponent::class)->name('sample');
 
 });
 
+
+Route::middleware(['web'])->group(function(){
+
+    Route::get('/articles',[ArticleController::class,'index'])->name('articles');
+
+
+});
 
 
 

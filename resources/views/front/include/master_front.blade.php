@@ -15,6 +15,7 @@
 <section class="main-content">
     @yield('main_content')
 </section>
+<livewire:front.contact/>
 @include('front.include.footer');
 @include('front.include.scripts')
 @stack('front_custom_scripts')
