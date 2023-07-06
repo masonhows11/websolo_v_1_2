@@ -102,7 +102,19 @@ Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 });
 
 
-// admin routes
+//// front routes
+
+Route::middleware(['web'])->group(function(){
+
+    
+
+
+});
+
+
+
+
+//// admin routes
 
 Route::prefix('admin')->group(function () {
 

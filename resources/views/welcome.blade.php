@@ -22,7 +22,7 @@
 {{-- clients --}}
 <livewire:front.clients/>
 {{-- blog --}}
-<livewire:front.blog/>
+<livewire:front.article/>
 {{-- hire me --}}
 @include('front.include.hire_me')
 {{-- contact --}}
