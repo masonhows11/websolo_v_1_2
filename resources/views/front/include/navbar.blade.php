@@ -19,17 +19,18 @@
                     <a class="nav-link" href="{{ route('home') }}">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">خدمات</a>
+                    <a class="nav-link" href="{{  route('samples') }}">نمونه کارها</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">نمونه کارها</a>
+                    <a class="nav-link" href="{{  route('articles') }}">مقالات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">خدمات</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">مشتریان</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">بلاگ</a>
-                </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
                 </li>
