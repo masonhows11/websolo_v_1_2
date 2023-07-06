@@ -1,4 +1,4 @@
-@extends('front.include.master')
+@extends('front.include.master_front')
 @section('page_title')
     مقالات
 @endsection
