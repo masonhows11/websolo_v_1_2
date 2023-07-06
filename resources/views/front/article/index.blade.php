@@ -4,12 +4,12 @@
 @endsection
 @section('main_content')
     <div class="container">
-        <div class="row my-3 py-2 px-2">
+        <div class="row my-3 py-2 px-2 ws-articles-page-main">
             <div class="col-md-2 article-category mt-2 w3-flat-clouds rounded-3">
                 @include('front.include.category')
             </div>
             <div class="col-md-10">
-                <div class="row  row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1  articles-page">
+                <div class="row  row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1">
                     @if ($articles->count())
                         @foreach ($articles as $article)
                             <div class="col my-2">
@@ -26,8 +26,11 @@
                                             </div>
                                         </div>
                                         <div class="ws-article-card-footer d-flex justify-content-between my-1">
-                                            <div class="py-2 px-2 ws-article-date"><i class="fa-regular fa-clock"></i>{{ jDate($article->created_at)->ago()  }}</div>
-                                            <div><a class="btn ws-article-continue" href="{{ route('article', [$article]) }}">ادامه....</a></div>
+                                            <div class="py-2 px-2 ws-article-date">
+                                                <i class="fa-regular fa-clock me-2"></i>
+                                                {{ jDate($article->created_at)->ago()  }}
+                                            </div>
+                                            <div><a class="ws-sample-continue-btn me-3" href="{{ route('article', [$article]) }}">ادامه....</a></div>
                                         </div>
                                     </div>
                                 </div>

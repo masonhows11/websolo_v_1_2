@@ -27,7 +27,7 @@
                                         <i class="fa-regular fa-clock me-2"></i>
                                         {{ jDate($sample->created_at)->ago() }}
                                     </div>
-                                    <a class="btn me-3" href="{{ route('sample', [$sample->slug]) }}">ادامه....</a>
+                                    <a class="ws-sample-continue-btn me-3" href="{{ route('sample', [$sample->slug]) }}">ادامه....</a>
                                 </div>
                             </div>
                         </div>
