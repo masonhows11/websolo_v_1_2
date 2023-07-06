@@ -15,15 +15,15 @@
             <div class="form col-sm-6 px-2 py-2 my-2">
                 <form>
                     <div class="mb-3 mt-3">
-                        <input type="email" class="form-control" id="Email" dir="rtl" placeholder="ایمیل" required=""/>
+                        <input type="email" class="form-control" id="Email" dir="rtl" placeholder="ایمیل" autocomplete="on" required="required"/>
                     </div>
 
                     <div class="mb-3 mt-3">
-                        <input type="text" class="form-control" id="Username" placeholder="نام کاربری" required=""/>
+                        <input type="text" class="form-control" id="Username" placeholder="نام کاربری" autocomplete="on" required="required"/>
                     </div>
 
                     <div class="mb-3 mt-3">
-                     <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="متن پیام"></textarea>
+                     <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="متن پیام" autocomplete="on" required="required" ></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-custom-primary btn-block rounded w-lg">
