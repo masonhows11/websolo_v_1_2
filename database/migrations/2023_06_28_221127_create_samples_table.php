@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title_persian')->unique();
             $table->string('title_english')->nullable();
-            $table->string('slug')->nullable();
+            $table->string('slug')->unique()->nullable();
             $table->string('short_description','500')->nullable();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('views')->default(0);

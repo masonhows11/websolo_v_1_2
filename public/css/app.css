@@ -11388,6 +11388,11 @@ body {
   color: tomato;
 }
 
+.ws-sample-created_at_date {
+  font-family: "iransans_num", sans-serif;
+  font-size: 1.2rem;
+}
+
 /**************** paginate section livewire *****************/
 .wk-sample-single-date,
 .list-comments-section .comment-date,

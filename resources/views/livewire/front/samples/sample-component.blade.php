@@ -35,13 +35,13 @@
                         @endforeach
                     </div>
                     <div class="mt-5">
-                        <h4>خلاصه :</h4>
+                        <h4 class="mb-2">خلاصه :</h4>
                         <div class="">
                             {!! $sample->short_description !!}
                         </div>
                     </div>
                     <div class="mt-5">
-                        <p class="">ایجاد شده در تاریخ
+                        <p class="ws-sample-created_at_date">ایجاد شده در تاریخ
                             : {{ JDate($sample->created_at)->format('Y/m/d') }}</p>
                     </div>
                 </div>
@@ -60,35 +60,22 @@
                 <div class="col">
                     <div class="d-flex justify-content-end">
 
-                        <div class="ws-sample-view-count me-2">
-                            <span class="">{{ $sample->views }}</span>
-                            <span>{{ __('messages.views') }}</span>
+                        <div class="ws-sample-view-count my-2 d-flex flex-row me-2">
+                            <div class="me-2">{{ $sample->views }}</div>
+                            <div class="me-2">{{ __('messages.views') }}</div>
+                        </div>
+                        <div class="ws-sample-like-count my-2 d-flex flex-row  me-2">
+                            <div class="me-2" id="like-count">{{ $sample->likes()->count() }}</div>
+                            <div><i class="far fa-heart"></i></div>
                         </div>
 
-                        <div class="ws-sample-like-count  me-2">
-                            <span class="" id="like-count">{{ $sample->likes()->count() }}</span>
-                            <span>  <i class="far fa-heart"></i></span>
-                            {{--  @auth
-                                  @if (\Illuminate\Support\Facades\Auth::user()->likes()->where(['sample_id' => $sample->id, 'like' => 1])->first())
-                                      <i class="fas fa-heart fa-border-style" style="color:tomato" id="add-like"
-                                         data-sample="{{ $sample->id }}"></i>
-                                  @else
-                                      <i class="far fa-heart" style="color:tomato" id="add-like"
-                                         data-sample="{{ $sample->id }}"></i>
-                                  @endif
-                              @else
-                                  <i class="far fa-heart fa-border-style" style="color:tomato"
-                                     id="add-like-an-auth" data-sample="{{ $sample->id }}"></i>
-                              @endauth--}}
-                        </div>
                     </div>
                 </div>
-
             </div>
 
 
             <!-- image gallery -->
-            <h4 class="mt-3">تصاویر پروژه</h4>
+            <h4 class="my-3 h3">تصاویر پروژه</h4>
             <div
                 class="row  row-cols-xxl-4 row-cols-xl-4 row-cols-lg-2 row-cols-md-2 row-cols-1 d-flex justify-content-evenly sample-gallery mt-3 mb-4 w3-flat-clouds rounded-3">
                 <div class="col my-5">
@@ -126,7 +113,7 @@
                         </div>
 
                         <!-- Modal body -->
-                        <div class="modal-body">
+                        <div class="modal-body d-flex justify-content-center">
                             <img src="{{ asset('storage/samples/' . $sample->image4) }}"
                                  class="img-fluid img-thumbnail " style="max-height:600px" loading="lazy" alt="">
                         </div>

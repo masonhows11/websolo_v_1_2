@@ -23,7 +23,7 @@
                                     <div class="py-2 px-2 wk-article-date"><i
                                             class="fa-regular fa-clock"></i>{{ jDate($sample->created_at)->ago()  }}
                                     </div>
-                                    <a class="btn wk-article-continue" href="{{ route('sample', [$sample]) }}">ادامه....</a>
+                                    <a class="btn wk-article-continue" href="{{ route('sample', [$sample->slug]) }}">ادامه....</a>
                                 </div>
                             </div>
                         </div>
