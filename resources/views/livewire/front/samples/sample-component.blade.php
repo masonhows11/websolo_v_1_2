@@ -5,21 +5,20 @@
     <div class="container">
     @if ($sample)
         <!-- main info -->
-            <div class="row my-3 p-3 ws-sample-info-section w3-flat-clouds rounded-3">
+            <div class="row my-3 p-3  w3-flat-clouds rounded-3">
 
-                <div class="col-sm-6 py-4  d-flex flex-column ws-sample-main-image">
-                    <div class="wk-sample-title">
+                <div class="col-sm-6 py-4  d-flex flex-column ">
+                    <div class="">
                         <h3>{{ $sample->title_persian }}</h3>
                         <h5>{{ $sample->title_english }}</h5>
                     </div>
                     <img src="{{ asset('storage/samples/'. $sample->main_image) }}" loading="lazy"
                          class="img-thumbnail h-100" alt="sample-main-image">
                 </div>
-
-                <div class="col-sm-6 py-2 d-flex flex-column wk-sample-info  align-content-center justify-content-around">
+                <div class="col-sm-6 py-2 d-flex flex-column   align-content-center justify-content-around">
 
                     <h4 class="text-black">جزئیات توسعه پروژه :</h4>
-                    <div class="wk-sample-lang py-3">
+                    <div class=" py-3">
                         <h5>بک اند (back-end)</h5>
                         @foreach ($sample->backEnds as $lng)
                             <ul class="list-group  list-group-flush list-group-horizontal my-2 py-2">
@@ -34,23 +33,23 @@
                         @endforeach
                     </div>
 
-                    <div class="wk-sample-short-desc">
+                    <div class="">
                         <div class="row">
                             <h4>خلاصه :</h4>
-                            <div class="sample-short-text">
+                            <div class="">
                                 {!! $sample->short_description !!}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p class="wk-sample-single-date">ایجاد شده در تاریخ
+                                <p class="">ایجاد شده در تاریخ
                                     : {{ JDate($sample->created_at)->format('Y/m/d') }}</p>
                             </div>
 
-                            <div class="col wk-sample-like-section">
-                                <span class="wk-post-view-count">{{ $sample->views }}</span>
+                            <div class="col ">
+                                <span class="">{{ $sample->views }}</span>
                                 <i class="fa-regular fa-eye"></i>
-                                <span class="wk-post-heart-count"
+                                <span class=""
                                       id="like-count">{{ $sample->likes()->count() }}</span>
 
                                 @auth
@@ -73,7 +72,7 @@
 
             <!-- description -->
             <h4 class="mt-3"> توضیحات</h4>
-            <div class="row  wk-sample-description w3-flat-clouds rounded-3">
+            <div class="row   w3-flat-clouds rounded-3">
                 <div class="col mx-3 py-5">
                     {!! $sample->description !!}
                 </div>
@@ -208,7 +207,7 @@
         @endif
 
 
-       <div class="row d-flex justify-content-center write-comments-section my-4">
+       <div class="row d-flex justify-content-center  my-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
                 <form id="add-comment">
                     @auth
@@ -232,6 +231,7 @@
                 </form>
             </div>
         </div>
+
         <div class="row my-5 list-comments-section d-flex justify-content-center align-items-center">
             @if ($sample->comments->where('sample_id', '=', $sample->id)->where('approved', '=', 1))
                 @foreach ($sample->comments->where('approved', 1) as $comment)

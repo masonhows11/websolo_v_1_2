@@ -11377,40 +11377,6 @@ body {
   border-top: 2px solid #1f1f1f;
 }
 
-.wk-article-card-footer .wk-article-continue:hover {
-  background: #3195FF;
-  color: #ffffff;
-}
-
-.wk-article-card-footer .wk-article-continue {
-  margin-left: 5px;
-}
-
-.wk-sample-card .wk-sample-short-desc {
-  border-bottom: 3px solid #ECF0F1;
-}
-
-.wk-sample-description div p {
-  border-right: 3px solid #ECF0F1;
-  padding-right: 5px;
-}
-
-.wk-sample-lang ul li {
-  list-style-type: none;
-}
-
-.wk-sample-like-section {
-  text-align: left;
-}
-
-.wk-sample-like-section span, i {
-  margin-left: 15px;
-}
-
-.ws-sample-info-section {
-  height: auto;
-}
-
 /**************** paginate section livewire *****************/
 .wk-sample-single-date,
 .list-comments-section .comment-date,
