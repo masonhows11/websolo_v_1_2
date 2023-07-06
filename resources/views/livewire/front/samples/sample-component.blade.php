@@ -138,7 +138,7 @@
                         </div>
 
                         <!-- Modal body -->
-                        <div class="modal-body">
+                        <div class="modal-body d-flex justify-content-center">
                             <img src="{{ asset('storage/samples/' . $sample->image3) }}"
                                  class="img-fluid img-thumbnail " style="max-height:600px" loading="lazy" alt="">
                         </div>
@@ -163,7 +163,7 @@
                         </div>
 
                         <!-- Modal body -->
-                        <div class="modal-body">
+                        <div class="modal-body d-flex justify-content-center">
                             <img src="{{ asset('storage/samples/' . $sample->image2) }}"
                                  class="img-fluid img-thumbnail" style="max-height:600px" loading="lazy" alt="">
                         </div>
@@ -188,7 +188,7 @@
                         </div>
 
                         <!-- Modal body -->
-                        <div class="modal-body">
+                        <div class="modal-body d-flex justify-content-center">
                             <img src="{{ asset('storage/samples/' . $sample->image1) }}"
                                  class="img-fluid img-thumbnail " style="max-height:600px" loading="lazy" alt="">
                         </div>
