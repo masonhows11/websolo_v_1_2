@@ -11260,88 +11260,88 @@ body {
   color: #2196F3;
 }
 
-.wk-article-card-body .desc {
+.ws-article-card-body .desc {
   text-align: justify;
   direction: rtl;
   padding: 5px;
   font-size: 15px;
 }
 
-.wk-article-img-card {
+.ws-article-img-card {
   width: 100%;
 }
 
-.wk-article-img-card img {
+.ws-article-img-card img {
   width: 100%;
   height: 260px;
 }
 
-.wk-article-card-body {
+.ws-article-card-body {
   background: #ecf0f1;
   border: 2px solid #ecf0f1;
   border-radius: 8px;
 }
 
-.wk-article-card-title h5 {
+.ws-article-card-title h5 {
   margin-right: 5px;
 }
 
-.wk-article-card-footer a.continue:hover {
+.ws-article-card-footer a.continue:hover {
   color: #2196F3;
 }
 
-.wk-post-section .wk-post-img {
+.ws-post-section .ws-post-img {
   width: 100%;
   height: 400px;
 }
 
-.wk-post-section .wk-post-img img {
+.ws-post-section .ws-post-img img {
   width: 100%;
   height: 100%;
 }
 
-.wk-article-date,
-.wk-post-view-count,
-.wk-post-heart-count,
-.wk-post-section .wk-post-created-date {
+.ws-article-date,
+.ws-post-view-count,
+.ws-post-heart-count,
+.ws-post-section .ws-post-created-date {
   font-family: iransans_num, sans-serif;
   font-size: 1rem;
 }
 
-.wk-post-author-name span {
+.ws-post-author-name span {
   margin-right: 10px;
 }
 
-.wk-post-created-date span {
+.ws-post-created-date span {
   margin-left: 10px;
 }
 
-.wk-post-author-name .fa-pen {
+.ws-post-author-name .fa-pen {
   margin-left: 5px;
 }
 
-.wk-post-title-persian h1,
-.wk-post-title-english h4 {
+.ws-post-title-persian h1,
+.ws-post-title-english h4 {
   color: #222222;
 }
 
-.wk-post-description div {
+.ws-post-description div {
   text-align: justify;
   font-size: 16px;
 }
 
-.wk-post-tags-section .tag-title {
+.ws-post-tags-section .tag-title {
   font-size: large;
   margin-top: 5px;
   padding: 5px 0 5px 0;
 }
 
-.wk-post-tag-name {
+.ws-post-tag-name {
   border-radius: 10px;
   background-color: #ECF0F1;
 }
 
-.wk-post-tag-name a {
+.ws-post-tag-name a {
   color: #222222;
   line-height: 50px;
   font-size: 0.9rem;
@@ -11350,27 +11350,28 @@ body {
   text-decoration: none;
 }
 
-.wk-post-tag {
+.ws-post-tag {
   text-align: left;
 }
 
-.wk-post-like-section {
+.ws-post-like-section {
   text-align: left;
 }
 
-.wk-post-like-section .col {
+.ws-post-like-section .col {
   border-bottom: 3px solid #222222;
 }
 
-.wk-post-heart-count {
+.ws-post-heart-count {
   margin-left: 8px;
   font-size: 1.1rem;
 }
 
-.wk-post-like-section .fa-heart {
+.ws-post-like-section .fa-heart {
   font-size: 1.2rem;
 }
 
+.ws-samples-page-main,
 .ws-sample-page-main {
   font-family: "vazirRegular", Sans-Serif;
 }
@@ -11393,8 +11394,7 @@ body {
   font-size: 1.2rem;
 }
 
-/**************** paginate section livewire *****************/
-.wk-sample-single-date,
+.ws-sample-single-date,
 .list-comments-section .comment-date,
 .page-link {
   font-family: "iransans_num", sans-serif;
