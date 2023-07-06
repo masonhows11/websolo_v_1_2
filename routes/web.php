@@ -114,7 +114,7 @@ Route::middleware(['web', 'auth_front', 'verifyUser'])->group(function () {
 Route::middleware(['web'])->group(function(){
 
     Route::get('/samples',SamplesComponent::class)->name('samples');
-    Route::get('/sample',SampleComponent::class)->name('sample');
+    Route::get('/sample/{sample}',SampleComponent::class)->name('sample');
 
 });
 
