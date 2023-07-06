@@ -34,8 +34,8 @@ use App\Http\Livewire\Admin\ArticleListComment;
 use App\Http\Livewire\Admin\ListUsersForPerm;
 use App\Http\Livewire\Admin\ListUsersForRole;
 use App\Http\Livewire\Admin\SampleListComment;
-use App\Http\Livewire\Front\About;
-use App\Http\Livewire\Front\ContactSingle;
+use App\Http\Livewire\Front\SingleAbout;
+use App\Http\Livewire\Front\SingleContact;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
 
 use App\Http\Livewire\Front\Dashboard\EditEmail;
@@ -79,8 +79,8 @@ Route::get('/resend-email-prompt', [ResendEmailVerifyController::class, 'resendE
 Route::post('/resend-email', [ResendEmailVerifyController::class, 'resendEmail'])->name('resend.email');
 
 
-Route::get('/about-us',About::class)->name('about');
-Route::get('/contact-us',ContactSingle::class)->name('contact');
+Route::get('/about-us',SingleAbout::class)->name('about');
+Route::get('/contact-us',SingleContact::class)->name('contact');
 
 Route::middleware(['web','auth_front','verifyUser'])->group(function () {
 
