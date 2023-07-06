@@ -34,18 +34,20 @@ use App\Http\Livewire\Admin\ArticleListComment;
 use App\Http\Livewire\Admin\ListUsersForPerm;
 use App\Http\Livewire\Admin\ListUsersForRole;
 use App\Http\Livewire\Admin\SampleListComment;
-use App\Http\Livewire\Front\Article\ArticlesComponent;
+
 use App\Http\Livewire\Front\SingleAbout;
 use App\Http\Livewire\Front\SingleContact;
 use App\Http\Livewire\Front\Dashboard\Dashboard;
 
+use App\Http\Livewire\Front\Articles\ArticlesComponent;
+use App\Http\Livewire\Front\Samples\SamplesComponent;
 
 
 use App\Http\Livewire\Front\Dashboard\EditEmail;
 use App\Http\Livewire\Front\Dashboard\EditPassword;
 use App\Http\Livewire\Front\Dashboard\EditProfile;
 use App\Http\Livewire\Front\Dashboard\DeleteAccount;
-use App\Http\Livewire\Front\Sample\SamplesComponent;
+
 use Illuminate\Support\Facades\Route;
 
 
