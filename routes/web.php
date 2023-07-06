@@ -122,7 +122,8 @@ Route::middleware(['web'])->group(function(){
 Route::middleware(['web'])->group(function(){
 
     Route::get('/articles',[ArticleController::class,'index'])->name('articles');
-
+    Route::get('/articles/{category}',[ArticleController::class,'articleCategory'])->name('article.category');
+    Route::get('/article/{article}',[ArticleController::class,'article'])->name('article');
 
 });
 
