@@ -15,7 +15,7 @@
                 <div class="col py-2 d-flex flex-column">
                     <div class="mt-4">
                         <h3 class="my-2 h3">{{ $sample->title_persian }}</h3>
-                        <h5 class="my-2 h4" >{{ $sample->title_english }}</h5>
+                        <h5 class="my-2 h4">{{ $sample->title_english }}</h5>
                     </div>
                     <div class="mt-4">
                         <h4 class="text-black">جزئیات توسعه پروژه :</h4>
@@ -50,34 +50,43 @@
 
 
             <!-- description -->
-            <h4 class="my-3"> توضیحات</h4>
+            <h4 class="my-3 h3"> توضیحات</h4>
             <div class="row d-flex flex-column  w3-flat-clouds rounded-3">
 
-                <div class="col mx-3 py-5">
+                <div class="col mx-3 py-5 ws-sample-full-description">
                     {!! $sample->description !!}
                 </div>
 
                 <div class="col">
                     <div class="d-flex justify-content-end">
-                        <span class="">{{ $sample->views }}</span>
-                        <i class="fa-regular fa-eye"></i>
-                        <span class=""
-                              id="like-count">{{ $sample->likes()->count() }}</span>
-                        @auth
-                            @if (\Illuminate\Support\Facades\Auth::user()->likes()->where(['sample_id' => $sample->id, 'like' => 1])->first())
-                                <i class="fas fa-heart fa-border-style" style="color:tomato" id="add-like"
-                                   data-sample="{{ $sample->id }}"></i>
-                            @else
-                                <i class="far fa-heart" style="color:tomato" id="add-like"
-                                   data-sample="{{ $sample->id }}"></i>
-                            @endif
-                        @else
-                            <i class="far fa-heart fa-border-style" style="color:tomato"
-                               id="add-like-an-auth" data-sample="{{ $sample->id }}"></i>
-                        @endauth
+
+                        <div class="ws-sample-view-count me-2">
+                            <span class="">{{ $sample->views }}</span>
+                            <span>{{ __('messages.views') }}</span>
+                        </div>
+
+                        <div class="ws-sample-like-count  me-2">
+                            <span class="" id="like-count">{{ $sample->likes()->count() }}</span>
+                            <span>  <i class="far fa-heart"></i></span>
+                            {{--  @auth
+                                  @if (\Illuminate\Support\Facades\Auth::user()->likes()->where(['sample_id' => $sample->id, 'like' => 1])->first())
+                                      <i class="fas fa-heart fa-border-style" style="color:tomato" id="add-like"
+                                         data-sample="{{ $sample->id }}"></i>
+                                  @else
+                                      <i class="far fa-heart" style="color:tomato" id="add-like"
+                                         data-sample="{{ $sample->id }}"></i>
+                                  @endif
+                              @else
+                                  <i class="far fa-heart fa-border-style" style="color:tomato"
+                                     id="add-like-an-auth" data-sample="{{ $sample->id }}"></i>
+                              @endauth--}}
+                        </div>
                     </div>
                 </div>
+
             </div>
+
+
             <!-- image gallery -->
             <h4 class="mt-3">تصاویر پروژه</h4>
             <div

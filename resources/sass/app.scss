@@ -1098,10 +1098,14 @@ body {
 .ws-sample-front-end-list{
     list-style:none;
 }
+.ws-sample-like-count .fa-heart{
+    font-size: 1.2rem;
+}
+.ws-sample-like-count .fa-heart{
+    color:tomato;
+}
 
-
-
-/**************** paginate section livewire *****************/
+    /**************** paginate section livewire *****************/
 .wk-sample-single-date,
 .list-comments-section .comment-date,
 .page-link {
