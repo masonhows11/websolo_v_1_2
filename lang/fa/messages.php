@@ -14,4 +14,5 @@ return [
     'detach' => 'حذف از والد',
     'there_is_no_comment_for_this_post' => 'برای این مقاله دیدگاهی ثبت نشده.',
     'This_part_is_being_prepared' => 'این قسمت در حال اماده سازی است...',
+    'login_first_to_post_your_comment'=>'برای ارسال نظر خود ابتدا وارد شوید.',
 ];

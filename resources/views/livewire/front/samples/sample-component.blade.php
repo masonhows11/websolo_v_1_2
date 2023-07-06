@@ -208,7 +208,7 @@
         @endif
 
 
-     {{--   <div class="row d-flex justify-content-center write-comments-section my-4">
+       <div class="row d-flex justify-content-center write-comments-section my-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
                 <form id="add-comment">
                     @auth
@@ -223,13 +223,10 @@
                             <button type="sumbit" class="btn btn-success">ثبت دیدگاه</button>
                         </div>
                     @else
-                        <div class="mb-3">
-                            <a href="{{ route('register.form') }}" class="btn btn-outline-primary">برای ارسال دیگاه
-                                ابتدا
-                                برای ارسال
-                                دیگاه ابتدا
-                                وارد سایت
-                                شوید یا اگر عضو نیستید ثبت نام کنید.</a>
+                        <div class="mb-3 d-flex justify-content-center">
+                            <a href="{{ route('register.form') }}" class="btn btn-outline-primary text-center">
+                                {{ __('messages.login_first_to_post_your_comment') }}
+                            </a>
                         </div>
                     @endauth
                 </form>
@@ -262,7 +259,7 @@
                     </div>
                 @endforeach
             @endif
-        </div>--}}
+        </div>
 
     </div>
 </div>
