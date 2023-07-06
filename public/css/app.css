@@ -11371,6 +11371,10 @@ body {
   font-size: 1.2rem;
 }
 
+.ws-article-card-text .desc {
+  line-height: 1.5rem;
+}
+
 .ws-samples-page-main,
 .ws-sample-page-main {
   font-family: "vazirRegular", Sans-Serif;
