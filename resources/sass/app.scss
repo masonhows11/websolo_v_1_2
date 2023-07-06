@@ -966,7 +966,8 @@ body {
 .about-sec-one p {
     font-size: 1.1rem;
 }
-/**************** articles page *****************/
+////// articles samples style
+
 .article-category .root-category a {
     text-decoration: none;
     color: #4a5562;
@@ -1090,9 +1091,12 @@ body {
 
 // sample front style
 
-.sample-page .card-body,
-.sample-content .card-body {
-    border-top: 2px solid #1f1f1f;
+.ws-sample-page-main {
+    font-family:"vazirRegular",Sans-Serif;
+}
+.ws-sample-back-end-list ,
+.ws-sample-front-end-list{
+    list-style:none;
 }
 
 
