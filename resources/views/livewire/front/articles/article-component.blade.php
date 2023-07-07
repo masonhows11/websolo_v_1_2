@@ -29,23 +29,18 @@
                     </div>
                 </div>
                 <!-- article description -->
-                <div class="col-sm-6 mx-auto d-flex my-4 justify-content-center ws-article-card-text">
-                    <div class="desc px-2 ">
+                <div class="col-sm-6 mx-auto d-flex flex-column my-4 rounded rounded-4    w3-flat-clouds ws-article-card-text">
+                    <div class="desc px-2 py-3 ">
                         {!! $article->description !!}
+                    </div>
+                    <div class="ws-article-view-like">
+                        
+
                     </div>
                 </div>
                 <!-- article like & view -->
                 <div class="col-sm-6 d-flex justify-content-between ws-post-like-section">
-                    <div class="col">
-                        <span class="ws-post-view-count">{{ $article->views }}</span>
-                        <i class="fa-solid fa-eye"></i>
-                        @auth
-                            <i class="far fa-heart" style="color:tomato" id="add-like"
-                               data-article="{{ $article->id }}"></i>
-                        @else
-                            <i class="far fa-heart fa-border-style" style="color:tomato" id="add-like-un-auth"></i>
-                        @endauth
-                    </div>
+
                 </div>
 
             </div>
