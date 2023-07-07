@@ -6,12 +6,12 @@
         <!-- main info -->
             <div class="row my-3  w3-flat-clouds rounded-3">
 
-                <div class="col py-4 d-flex justify-content-center">
+                <div class="col-sm-6 py-4 d-flex justify-content-center">
                     <img src="{{ asset('storage/samples/'. $sample->main_image) }}" loading="lazy"
-                         class="h-100" alt="sample-main-image">
+                         class="h-100 img-thumbnail" alt="sample-main-image">
                 </div>
 
-                <div class="col py-2 d-flex flex-column">
+                <div class="col-sm-6 py-2 d-flex flex-column">
                     <div class="mt-4">
                         <h3 class="my-2 h3">{{ $sample->title_persian }}</h3>
                         <h5 class="my-2 h4">{{ $sample->title_english }}</h5>
