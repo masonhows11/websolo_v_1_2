@@ -16,20 +16,21 @@ class SampleComponent extends Component
     public $like_count;
 
     public $is_liked;
+    public $auth_id;
 
     public function mount($sample)
     {
-
+        $this->auth_id = Auth::id();
 
         $this->sample = Sample::where('slug', $sample)->first();
         $this->like_count = $this->sample->likes()->count();
         if (Auth::user()) {
 
-            if (view::where('user_id', Auth::id())->where('sample_id', $this->sample->id)->exists()) {
+            if (view::where('user_id', $this->auth_id)->where('sample_id', $this->sample->id)->exists()) {
                 $this->view_count = view::where('sample_id', $this->sample->id)->count();
             } else {
                 view::create([
-                    'user_id' => Auth::id(),
+                    'user_id' => $this->auth_id,
                     'sample_id' => $this->sample->id,
                 ]);
             }
@@ -42,19 +43,19 @@ class SampleComponent extends Component
     {
 
         if (Auth::user()) {
-
-            if (Like::where(['user_id' => Auth::id(), 'sample_id' => $this->sample->id])->exists()) {
-
-               
-
+            $this->is_liked = Like::where(['user_id' => $this->auth_id, 'sample_id' => $this->sample->id])->first();
+            if ($this->is_liked) {
+                $this->is_liked->delete();
             } else {
-                view::create([
-                    'user_id' => \auth()->id(),
+                Like::create([
+                    'user_id' => $this->auth_id ,
                     'sample_id' => $this->sample->id,
-                    'like' => true,
                 ]);
             }
-
+        }else{
+            $this->dispatchBrowserEvent('show-result',
+                ['type' => 'success',
+                    'message' => 'برای ثبت لایک یا دیس لایک ابتدا وارد شوید.']);
         }
 
     }
