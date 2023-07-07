@@ -56,8 +56,7 @@ class Sample extends Model
         return $this->hasMany(Like::class);
     }
 
-    public function isLiked()
-    {
-        
-    }
+
+
+
 }
