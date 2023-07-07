@@ -10,4 +10,6 @@ class view extends Model
     use HasFactory;
     protected $table = 'views';
     protected $guarded =[];
+
+
 }

@@ -30,7 +30,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="">مشتریان</a>
                 </li>
-               
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">درباره ما</a>
                 </li>
@@ -43,7 +43,7 @@
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link " id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="{{ route('dashboard') }}">
-                           <img src="{{ asset('/images/avatar/avatar-64.png') }}" width="46" height="46" alt="user-image">
+                           <img src="{{ asset('assets/front/images/avatar/avatar-64.png') }}" width="46" height="46" alt="user-image">
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ route('dashboard') }}">{{ \Illuminate\Support\Facades\Auth::user()->name  }}</a></li>
