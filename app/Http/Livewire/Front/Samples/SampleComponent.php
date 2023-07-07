@@ -15,9 +15,9 @@ class SampleComponent extends Component
     public $view_count;
     public $like_count;
 
-    public $is_liked;
+    public $is_liked = null;
     public $auth_id;
-    public $is_auth = false;
+    public $is_auth_liked = false;
 
     public function mount($sample)
     {
@@ -25,15 +25,20 @@ class SampleComponent extends Component
         $this->sample = Sample::where('slug', $sample)->first();
         $this->like_count = $this->sample->likes()->count();
 
-        // for add view count & set like state
+
         if (Auth::user()) {
 
+            // for set like status
             $this->is_liked = Like::where(['user_id' => $this->auth_id, 'sample_id' => $this->sample->id])->first();
-            if($this->is_liked){
-                $this->is_auth = true;
+            if ($this->is_liked) {
+                $this->is_auth_liked = true;
+            } else {
+                $this->is_auth_liked = false;
             }
 
-            if (view::where('user_id', $this->auth_id)->where('sample_id', $this->sample->id)->exists()) {
+            // for set view status
+            if (view::where('user_id', $this->auth_id)->where('sample_id', $this->sample->id)->exists())
+            {
                 $this->view_count = view::where('sample_id', $this->sample->id)->count();
             } else {
                 view::create([
@@ -48,18 +53,21 @@ class SampleComponent extends Component
 
     public function AddLike()
     {
-
         if (Auth::user()) {
             $this->is_liked = Like::where(['user_id' => $this->auth_id, 'sample_id' => $this->sample->id])->first();
             if ($this->is_liked) {
                 $this->is_liked->delete();
+                $this->like_count--;
+                $this->is_auth_liked = false;
             } else {
                 Like::create([
-                    'user_id' => $this->auth_id ,
+                    'user_id' => $this->auth_id,
                     'sample_id' => $this->sample->id,
                 ]);
+                $this->like_count++;
+                $this->is_auth_liked = true;
             }
-        }else{
+        } else {
             $this->dispatchBrowserEvent('show-result',
                 ['type' => 'success',
                     'message' => 'برای ثبت لایک یا دیس لایک ابتدا وارد شوید.']);
