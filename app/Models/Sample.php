@@ -10,6 +10,7 @@ use Spatie\Sluggable\SlugOptions;
 class Sample extends Model
 {
     use HasFactory, HasPersianSlug;
+
     protected $table = 'samples';
     protected $fillable =
         ['title_persian',
@@ -21,15 +22,15 @@ class Sample extends Model
             'main_image', 'image1', 'image2', 'image3', 'image4', 'user_id'];
 
 
-
-    public function getSlugOptions() : SlugOptions
+    public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
             ->generateSlugsFrom('title_persian')
             ->saveSlugsTo('slug');
     }
 
-    public function backEnds(){
+    public function backEnds()
+    {
 
         return $this->belongsToMany(BackEnd::class);
     }
@@ -40,17 +41,23 @@ class Sample extends Model
     }
 
 
-
     public function comments()
     {
         return $this->hasMany(Comment::class);
     }
+
     public function user()
     {
         return $this->belongsTo(Admin::class);
     }
+
     public function likes()
     {
         return $this->hasMany(Like::class);
+    }
+
+    public function isLiked()
+    {
+        
     }
 }
