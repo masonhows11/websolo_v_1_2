@@ -10644,18 +10644,9 @@ body {
   color: black;
 }
 
-.auth-link .nav-item .fa-user,
-.auth-link .nav-item .fa-arrow-up-left-from-circle,
-.auth-link .nav-item .fa-user-plus,
-.auth-link .nav-item .fa-right-to-bracket {
-  font-size: 1.1rem;
-}
-
-.auth-link .nav-item .fa-user:hover,
-.auth-link .nav-item .fa-arrow-up-left-from-circle:hover,
-.auth-link .nav-item .fa-right-to-bracket:hover,
-.auth-link .nav-item .fa-user-plus:hover {
-  color: tomato;
+.auth-link li i.fa-user,
+.auth-link li i.fa-sign-out {
+  font-size: 1.3rem;
 }
 
 .navbar-brand {
@@ -11411,9 +11402,6 @@ body {
     text-align: center;
   }
   .auth-link .nav-item .nav-link i {
-    display: none;
-  }
-  .auth-link .nav-item .nav-link span {
     display: block;
   }
   .about-sec-one p {

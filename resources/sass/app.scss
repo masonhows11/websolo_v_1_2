@@ -302,18 +302,9 @@ body {
     color: black;
 }
 
-.auth-link .nav-item .fa-user,
-.auth-link .nav-item .fa-arrow-up-left-from-circle,
-.auth-link .nav-item .fa-user-plus,
-.auth-link .nav-item .fa-right-to-bracket {
-    font-size: 1.1rem;
-}
-
-.auth-link .nav-item .fa-user:hover,
-.auth-link .nav-item .fa-arrow-up-left-from-circle:hover,
-.auth-link .nav-item .fa-right-to-bracket:hover,
-.auth-link .nav-item .fa-user-plus:hover {
-    color: tomato;
+.auth-link li i.fa-user ,
+.auth-link li i.fa-sign-out{
+    font-size: 1.3rem;
 }
 
 .navbar-brand {
@@ -1062,6 +1053,7 @@ body {
     font-family: "iransans_num", sans-serif;
     font-size: 1rem;
 }
+
 .ws-sample-short-description,
 .ws-sample-full-description {
     line-height: 1.7rem;
@@ -1096,25 +1088,21 @@ body {
         align-items: center;
 
     }
-
     .contact-infor .item div {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .contact-infor .item div h5 {
         margin: 20px 0 20px 0;
         padding: 5px 0 5px 0;
     }
-
     .navbar .navbar-nav {
         margin-top: 1.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .about .about-introduce {
         display: flex;
         flex-direction: column;
@@ -1128,29 +1116,24 @@ body {
         line-height: 29px;
         text-align: center;
     }
-
     .about .about-introduce .introduce {
         font-size: 1.1rem;
         line-height: 29px;
         font-family: vazirRegular, "sans-serif";
         text-align: center;
     }
-
     .services .section-title {
         font-size: 1.3rem;
     }
-
     .services .service-intro {
         font-size: 1.1rem;
         line-height: 29px;
         text-align: center;
     }
-
     .clients .carousel-control-prev,
     .clients .carousel-control-next {
         display: none;
     }
-
     .clients .carousel-item .card-body p {
         font-size: 1rem;
         line-height: 29px;
@@ -1159,11 +1142,9 @@ body {
 
 
     .auth-link .nav-item .nav-link i {
-        display: none;
-    }
-    .auth-link .nav-item .nav-link span {
         display: block;
     }
+
 
     .about-sec-one p {
         line-height: 35px;

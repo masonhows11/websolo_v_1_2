@@ -16,4 +16,5 @@ return [
     'This_part_is_being_prepared' => 'این قسمت در حال اماده سازی است...',
     'login_first_to_post_your_comment'=>'برای ارسال نظر خود ابتدا وارد شوید.',
     'views' => 'بازدید',
+    'dashboard' => 'پنل کاربری',
 ];
