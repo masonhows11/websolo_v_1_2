@@ -44,10 +44,13 @@ class SampleComponent extends Component
         if (Auth::user()) {
 
             if (Like::where(['user_id' => Auth::id(), 'sample_id' => $this->sample->id])->exists()) {
-                $this->sample->user()->likes()->delete();
+
+               
+
             } else {
-                $this->sample->likes()->create([
+                view::create([
                     'user_id' => \auth()->id(),
+                    'sample_id' => $this->sample->id,
                     'like' => true,
                 ]);
             }

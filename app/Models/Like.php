@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Like extends Model
 {
+
+
+
+
     use HasFactory;
     protected $table = 'likes';
     protected $guarded = [
