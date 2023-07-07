@@ -1007,93 +1007,23 @@ body {
 .ws-article-card-title h5 {
     margin-right: 5px;
 }
+.ws-article-continue-btn,
 .ws-sample-continue-btn{
+    padding:8px 0 2px 0;
     text-decoration: none;
     color: #0b0e18;
     border:none;
 }
+.ws-article-continue-btn:hover,
 .ws-sample-continue-btn:hover{
     color: #0b0e18;
 }
-// article page
-.ws-post-section .ws-post-img {
-    width: 100%;
-    height: 400px;
-}
-.ws-post-section .ws-post-img img {
-    width: 100%;
-    height: 100%;
-}
 
-
-.ws-post-author-name span {
-    margin-right: 10px;
-}
-
-.ws-post-created-date span {
-    margin-left: 10px;
-
-}
-
-.ws-post-author-name .fa-pen {
-    margin-left: 5px;
-}
-
-.ws-post-title-persian h1,
-.ws-post-title-english h4 {
-    color: #222222;
-}
-
-.ws-post-description div {
-    text-align: justify;
-    font-size: 16px;
-}
-.ws-post-tags-section .tag-title {
-    font-size: large;
-    margin-top: 5px;
-    padding: 5px 0 5px 0;
-}
-.ws-post-tag-name {
-    border-radius: 10px;
-    background-color: #ECF0F1;
-}
-.ws-post-tag-name a {
-    color: #222222;
-    line-height: 50px;
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 2px 10px 2px 10px;
-    text-decoration: none;
-}
-
-.ws-post-tag {
-    text-align: left;
-}
-
-.ws-post-like-section {
-    text-align: left;
-}
-.ws-post-like-section .col{
-    border-bottom: 3px solid #222222;
-}
-
-.ws-post-heart-count {
-    margin-left: 8px;
-    font-size: 1.1rem;
-}
-
-.ws-post-like-section .fa-heart {
-    font-size: 1.2rem;
-}
-// samples  and article front style
 .ws-article-card-text .desc{
     line-height: 1.5rem;
 }
 
-
-// sample and samples front style
 .ws-article-date,
-.ws-post-section .ws-post-created-date,
 .ws-articles-page-main,
 .ws-samples-page-main,
 .ws-sample-page-main {
@@ -1109,9 +1039,11 @@ body {
 .ws-sample-like-count .fa-heart{
     color:tomato;
 }
+
+.ws-article-date,
 .ws-sample-created_at_date {
     font-family: "iransans_num", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 ///// paginate section livewire

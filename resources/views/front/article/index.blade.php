@@ -18,7 +18,7 @@
                                         <img src="{{ asset('storage/articles/' . $article->image) }}"
                                              class="img-fluid rounded" alt="article-image"/>
                                     </div>
-                                    <div class="wk-article-card-body">
+                                    <div class="ws-article-card-body">
                                         <div class="ws-article-card-title pt-3"><h5>{{ $article->title_persian }}</h5></div>
                                         <div class="ws-article-card-text my-1">
                                             <div class="desc">
@@ -30,7 +30,7 @@
                                                 <i class="fa-regular fa-clock me-2"></i>
                                                 {{ jDate($article->created_at)->ago()  }}
                                             </div>
-                                            <div><a class="ws-sample-continue-btn me-3" href="{{ route('article', [$article]) }}">ادامه....</a></div>
+                                           <a class="ws-article-continue-btn me-3" href="{{ route('article', [$article]) }}">ادامه....</a>
                                         </div>
                                     </div>
                                 </div>
