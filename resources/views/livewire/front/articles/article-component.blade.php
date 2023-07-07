@@ -2,29 +2,25 @@
     @section('page_title')
         {{ $article->title_persian }}
     @endsection
-    <div class="container ws-article-page-main">
+    <div class="container   ws-article-page-main">
         @if($article != null)
 
-            <div class="row my-5">
-
+            <div class="row d-flex flex-column align-items-center my-5">
+                <!-- article image -->
+                <div class="col-sm-6 d-flex justify-content-center  ws-article-img">
+                    <img src="{{ asset('/storage/articles/'.$article->image) }}" loading="lazy" class="rounded-4" alt="article-image">
+                </div>
                 <!-- article title -->
-                <div class="row d-flex flex-column ">
+                <div class="col-sm-6 my-4 d-flex justify-content-evenly ">
                     <div class="col">
                         <h1> {{ $article->title_persian }}</h1>
                     </div>
-                    <div class="col ">
+                    <div class="col d-flex justify-content-end">
                         <h4> {{ $article->title_english }}</h4>
                     </div>
                 </div>
-
-                <!-- article image -->
-                <div class="ws-post-img">
-                    <img src="{{ asset('/storage/articles/'.$article->image) }}" loading="lazy" class="rounded-4"
-                         alt="article-image">
-                </div>
-
                 <!-- article author -->
-                <div class="d-flex  justify-content-between mt-2 border border-2 rounded-3 ws-post-author-info">
+                <div class="col-sm-6 d-flex  justify-content-between mt-2 border border-2 rounded-3 ">
                     <div class="ws-post-author-name py-3">
                         <span class=""><i class="fas fa-pen"></i>{{ $article->user->name }}</span>
                     </div>
@@ -32,23 +28,20 @@
                         <span class=""> {{ jdate($article->created_at)->ago() }}</span>
                     </div>
                 </div>
-
                 <!-- article description -->
-                <div class="row d-flex my-4 justify-content-center ws-article-card-text">
-                    <div class="col">
+                <div class="col-sm-6 d-flex my-4 justify-content-center ws-article-card-text">
+                    <div class="desc">
                         {!! $article->description !!}
                     </div>
                 </div>
-
                 <!-- article like & view -->
-                <div class="row d-flex justify-content-between ws-post-like-section">
+                <div class="col-sm-6 d-flex justify-content-between ws-post-like-section">
                     <div class="col">
                         <span class="ws-post-view-count">{{ $article->views }}</span>
                         <i class="fa-solid fa-eye"></i>
                         @auth
                             <i class="far fa-heart" style="color:tomato" id="add-like"
                                data-article="{{ $article->id }}"></i>
-
                         @else
                             <i class="far fa-heart fa-border-style" style="color:tomato" id="add-like-un-auth"></i>
                         @endauth
