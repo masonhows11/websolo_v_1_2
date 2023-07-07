@@ -11290,10 +11290,6 @@ body {
   color: #0b0e18;
 }
 
-.ws-article-card-text .desc {
-  line-height: 1.5rem;
-}
-
 .ws-article-date,
 .ws-article-page-main,
 .ws-samples-page-main,
@@ -11322,6 +11318,7 @@ body {
   font-size: 1rem;
 }
 
+.ws-article-card-text .desc,
 .ws-sample-short-description,
 .ws-sample-full-description {
   line-height: 1.7rem;

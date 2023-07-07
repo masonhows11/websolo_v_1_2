@@ -8,7 +8,7 @@
             <div class="row d-flex flex-column align-items-center my-5">
                 <!-- article image -->
                 <div class="col-sm-6 d-flex justify-content-center  ws-article-img">
-                    <img src="{{ asset('/storage/articles/'.$article->image) }}" loading="lazy" class="rounded-4" alt="article-image">
+                    <img src="{{ asset('/storage/articles/'.$article->image) }}" loading="lazy" class="img-thumbnail rounded-4" alt="article-image">
                 </div>
                 <!-- article title -->
                 <div class="col-sm-6 my-4 d-flex justify-content-evenly ">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <!-- article author -->
-                <div class="col-sm-6 d-flex  justify-content-between mt-2 border border-2 rounded-3 ">
+              <div class="col-sm-6  d-flex justify-content-between  mt-2 border border-2 rounded-3 ">
                     <div class="ws-post-author-name py-3">
                         <span class=""><i class="fas fa-pen"></i>{{ $article->user->name }}</span>
                     </div>
@@ -29,8 +29,8 @@
                     </div>
                 </div>
                 <!-- article description -->
-                <div class="col-sm-6 d-flex my-4 justify-content-center ws-article-card-text">
-                    <div class="desc">
+                <div class="col-sm-6 mx-auto d-flex my-4 justify-content-center ws-article-card-text">
+                    <div class="desc px-2 ">
                         {!! $article->description !!}
                     </div>
                 </div>
