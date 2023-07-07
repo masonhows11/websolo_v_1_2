@@ -70,7 +70,7 @@
 
                             <div class="me-2 py-1">{{ $like_count }}</div>
                             <div wire:click="AddLike">
-                                <i class="far fa-heart"></i>
+                                <i class=" {{ $is_auth  ? 'fa-solid fa-heart' : 'far fa-heart' }} "></i>
                             </div>
 
                         </div>

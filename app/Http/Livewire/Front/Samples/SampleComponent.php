@@ -17,14 +17,21 @@ class SampleComponent extends Component
 
     public $is_liked;
     public $auth_id;
+    public $is_auth = false;
 
     public function mount($sample)
     {
         $this->auth_id = Auth::id();
-
         $this->sample = Sample::where('slug', $sample)->first();
         $this->like_count = $this->sample->likes()->count();
+
+        // for add view count & set like state
         if (Auth::user()) {
+
+            $this->is_liked = Like::where(['user_id' => $this->auth_id, 'sample_id' => $this->sample->id])->first();
+            if($this->is_liked){
+                $this->is_auth = true;
+            }
 
             if (view::where('user_id', $this->auth_id)->where('sample_id', $this->sample->id)->exists()) {
                 $this->view_count = view::where('sample_id', $this->sample->id)->count();
