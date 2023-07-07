@@ -10,8 +10,11 @@ class SampleComponent extends Component
 
     public $sample;
 
+    public $has_view;
+
     public function mount($sample)
     {
+
         $this->sample = Sample::where('slug',$sample)->first();
     }
 
