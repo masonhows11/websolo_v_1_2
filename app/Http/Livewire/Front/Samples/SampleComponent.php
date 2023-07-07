@@ -33,7 +33,7 @@ class SampleComponent extends Component
 
     public function AddLike(){
 
-        
+
 
     }
 
