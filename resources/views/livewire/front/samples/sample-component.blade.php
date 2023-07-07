@@ -36,7 +36,7 @@
                     </div>
                     <div class="mt-5">
                         <h4 class="mb-2">خلاصه :</h4>
-                        <div class="">
+                        <div class="ws-sample-short-description">
                             {!! $sample->short_description !!}
                         </div>
                     </div>
@@ -53,7 +53,7 @@
             <h4 class="my-3 h3"> توضیحات</h4>
             <div class="row d-flex flex-column  w3-flat-clouds rounded-3">
 
-                <div class="col mx-3 py-5 ws-sample-full-description">
+                <div class="col py-5 ws-sample-full-description">
                     {!! $sample->description !!}
                 </div>
 

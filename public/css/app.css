@@ -11323,10 +11323,18 @@ body {
   color: tomato;
 }
 
+.ws-sample-view-count,
+.ws-sample-like-count,
 .ws-article-date,
 .ws-sample-created_at_date {
   font-family: "iransans_num", sans-serif;
   font-size: 1rem;
+}
+
+.ws-sample-short-description,
+.ws-sample-full-description {
+  line-height: 1.7rem;
+  text-align: justify-all;
 }
 
 .ws-sample-single-date,

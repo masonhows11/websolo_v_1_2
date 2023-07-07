@@ -966,6 +966,7 @@ body {
 .about-sec-one p {
     font-size: 1.1rem;
 }
+
 ////// articles samples style
 
 .article-category .root-category a {
@@ -974,77 +975,99 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
 .article-category ul li {
     list-style-type: none;
     font-size: 0.9rem;
     font-weight: 600;
 }
+
 .article-category ul li a {
     text-decoration: none;
     color: #6E8192;
 }
+
 .article-category ul li a:hover {
     color: #2196F3;
 }
+
 .ws-article-card-body .desc {
     text-align: justify;
     direction: rtl;
     padding: 5px;
     font-size: 15px;
 }
+
 .ws-article-img-card {
     width: 100%;
 }
+
 .ws-article-img-card img {
     width: 100%;
     height: 260px;
 }
+
 .ws-article-card-body {
     background: #ecf0f1;
     border: 2px solid #ecf0f1;
     border-radius: 8px;
 }
+
 .ws-article-card-title h5 {
     margin-right: 5px;
 }
+
 .ws-article-continue-btn,
-.ws-sample-continue-btn{
-    padding:8px 0 2px 0;
+.ws-sample-continue-btn {
+    padding: 8px 0 2px 0;
     text-decoration: none;
     color: #0b0e18;
-    border:none;
+    border: none;
 }
+
 .ws-article-continue-btn:hover,
-.ws-sample-continue-btn:hover{
+.ws-sample-continue-btn:hover {
     color: #0b0e18;
 }
 
-.ws-article-card-text .desc{
+.ws-article-card-text .desc {
     line-height: 1.5rem;
 }
+
 
 .ws-article-date,
 .ws-articles-page-main,
 .ws-samples-page-main,
 .ws-sample-page-main {
-    font-family:"vazirRegular",Sans-Serif;
-}
-.ws-sample-back-end-list ,
-.ws-sample-front-end-list{
-    list-style:none;
-}
-.ws-sample-like-count .fa-heart{
-    font-size: 1.2rem;
-}
-.ws-sample-like-count .fa-heart{
-    color:tomato;
+    font-family: "vazirRegular", Sans-Serif;
 }
 
+.ws-sample-back-end-list,
+.ws-sample-front-end-list {
+    list-style: none;
+}
+
+.ws-sample-like-count .fa-heart {
+    font-size: 1.2rem;
+}
+
+.ws-sample-like-count .fa-heart {
+    color: tomato;
+}
+
+.ws-sample-view-count,
+.ws-sample-like-count,
 .ws-article-date,
 .ws-sample-created_at_date {
     font-family: "iransans_num", sans-serif;
     font-size: 1rem;
 }
+.ws-sample-short-description,
+.ws-sample-full-description {
+    line-height: 1.7rem;
+    text-align: justify-all;
+}
+
 
 ///// paginate section livewire
 .ws-sample-single-date,
