@@ -68,7 +68,7 @@
 
                         <div class="ws-sample-like-count my-2 d-flex flex-row  me-2">
 
-                            <div class="me-2 py-1" id="like-count">{{ $like_count }}</div>
+                            <div class="me-2 py-1">{{ $like_count }}</div>
                             <div wire:click="AddLike">
                                 <i class="far fa-heart"></i>
                             </div>
