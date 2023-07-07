@@ -1,5 +1,6 @@
 <div>
     @section('page_title')
+       {{ $sample->title_persian }}
     @endsection
     <div class="container ws-sample-page-main">
     @if($sample != null )
