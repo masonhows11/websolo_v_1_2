@@ -27,7 +27,7 @@
                                             </div>
                                             <div class="wk-article-card-footer d-flex justify-content-between my-1">
                                                 <div class="py-2 px-2ws-article-date"><i class="fa-regular fa-clock"></i>{{ jDate($article->created_at)->ago()  }}</div>
-                                                <div><a class="btnws-article-continue" href="{{ route('article', [$article]) }}">ادامه....</a></div>
+                                                <div><a class="btnws-article-continue" href="{{ route('article', ['article'=>$article->slug]) }}">ادامه....</a></div>
                                             </div>
                                         </div>
                                     </div>

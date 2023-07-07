@@ -2,14 +2,16 @@
 
 namespace App\Http\Livewire\Front\Articles;
 
+use App\Models\Article;
 use Livewire\Component;
 
 class ArticleComponent extends Component
 {
     public $article;
 
-    public function mount(){
-
+    public function mount($article)
+    {
+        $this->article = Article::where('slug', $article)->first();
     }
 
     public function render()

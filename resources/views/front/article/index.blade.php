@@ -30,7 +30,7 @@
                                                 <i class="fa-regular fa-clock me-2"></i>
                                                 {{ jDate($article->created_at)->ago()  }}
                                             </div>
-                                           <a class="ws-article-continue-btn me-3" href="{{ route('article', [$article]) }}">ادامه....</a>
+                                           <a class="ws-article-continue-btn me-3" href="{{ route('article', ['article'=>$article->slug]) }}">ادامه....</a>
                                         </div>
                                     </div>
                                 </div>
