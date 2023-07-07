@@ -25,7 +25,7 @@ return new class extends Migration
             $table->unsignedBigInteger('sample_id')->nullable();
             $table->foreign('sample_id')->on('samples')->references('id')->onDelete('cascade');
 
-           
+
             $table->timestamps();
         });
     }

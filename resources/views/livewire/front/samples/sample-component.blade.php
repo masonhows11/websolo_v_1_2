@@ -61,12 +61,17 @@
                     <div class="d-flex justify-content-end">
 
                         <div class="ws-sample-view-count my-2 d-flex flex-row me-2">
+
                             <div class="me-2 py-1">{{ $sample->views }}</div>
                             <div class="me-2">{{ __('messages.views') }}</div>
+
                         </div>
+
                         <div class="ws-sample-like-count my-2 d-flex flex-row  me-2">
+
                             <div class="me-2 py-1" id="like-count">{{ $sample->likes()->count() }}</div>
                             <div><i class="far fa-heart"></i></div>
+
                         </div>
 
                     </div>
