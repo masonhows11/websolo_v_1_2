@@ -26,6 +26,7 @@ class SampleComponent extends Component
         $this->like_count = $this->sample->likes()->count();
 
 
+
         if (Auth::user()) {
 
             // for set like status
