@@ -7,11 +7,11 @@
 
         <div class="row mt-5">
 
-            <div class="col-md-3 article-category mt-2 w3-flat-clouds rounded-3">
+            <div class="col-md-2 article-category mt-2 w3-flat-clouds rounded-3 h-auto">
                 @include('front.include.category')
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <div class="row  row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1">
                     @if ($articles->count())
                         @foreach ($articles as $article)
