@@ -92,7 +92,7 @@ class ArticleComponent extends Component
         try {
             Comment::create([
                 'user_id' => $this->auth_id,
-                'article_id' => $this->sample->id,
+                'article_id' => $this->article->id,
                 'body' => $this->body,
             ]);
             $this->body = '';

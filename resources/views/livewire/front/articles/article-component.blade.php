@@ -64,11 +64,7 @@
                         @auth
                             <div class="mb-3">
                                 <label for="body-comment" class="form-label">دیدگاه</label>
-                                <textarea class="form-control"
-                                          id="body-comment"
-                                          wire:model="body"
-                                          placeholder="متن دیدگاه خود را وارد کنید."
-                                          rows="6"></textarea>
+                                <textarea class="form-control" id="body-comment" wire:model="body" placeholder="متن دیدگاه خود را وارد کنید." rows="6"></textarea>
                                 @error('body')
                                 <div class="alert alert-danger mt-3">
                                     {{ $message }}
@@ -90,10 +86,11 @@
             </div>
 
             <!-- article list comment -->
-            <div class="row my-5 ws-article-list-comment d-flex">
+            <div class="row my-5 list-comments-section d-flex d-flex justify-content-center align-items-center">
                 @if ($article->comments->where('article_id', '=', $article->id)->where('approved','=',1))
                     @foreach ($article->comments->where('approved',1) as $comment)
-                        <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col">
+                        <div class="col-md-11 col-lg-9 col-xl-7">
+
                             <div class="d-flex flex-start mb-4">
                                 <img class="rounded-circle shadow-1-strong me-3"
                                      src="{{ $comment->user->image_path

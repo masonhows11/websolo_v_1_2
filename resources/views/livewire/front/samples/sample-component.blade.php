@@ -211,25 +211,20 @@
         @endif
 
 
+        <!-- sample write comment -->
         <div class="row d-flex justify-content-center  my-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
                 <form wire:submit.prevent="add_comment">
                     @auth
                         <div class="mb-3">
                             <label for="body-comment" class="form-label">دیدگاه</label>
-                            <textarea class="form-control"
-                                      id="body-comment"
-                                      wire:model="body"
-                                      placeholder="متن دیدگاه خود را وارد کنید."
-                                      rows="6">
+                            <textarea class="form-control" id="body-comment" wire:model="body" placeholder="متن دیدگاه خود را وارد کنید." rows="6">
                             </textarea>
-
                             @error('body')
                             <div class="alert alert-danger mt-3">
                                 {{ $message }}
                             </div>
                             @enderror
-
                         </div>
                         <div class="mb-3 mt-3">
                             <button type="sumbit" wire:model="body" class="btn btn-success">ثبت دیدگاه</button>
@@ -251,7 +246,6 @@
                     <div class="col-md-11 col-lg-9 col-xl-7">
 
                         <div class="d-flex flex-start mb-4">
-
                             <img class="rounded-circle shadow-1-strong me-3"
                                  src="{{ $comment->user->image_path
                                     ? asset('storage/users/' . $comment->user->image_path)
@@ -273,6 +267,7 @@
                 @endforeach
             @endif
         </div>
+
     </div>
     @push('front_custom_scripts')
             <script>
