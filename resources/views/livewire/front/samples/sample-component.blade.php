@@ -240,7 +240,7 @@
             </div>
         </div>
 
-        <div class="row my-5 list-comments-section d-flex justify-content-center align-items-center">
+        <div class="row my-5 ws-list-comments-section d-flex justify-content-center align-items-center">
             @if ($sample->comments->where('sample_id', '=', $sample->id)->where('approved', '=', 1))
                 @foreach ($sample->comments->where('approved', 1) as $comment)
                     <div class="col-md-11 col-lg-9 col-xl-7">
@@ -254,10 +254,10 @@
 
                             <div class="card w-100">
                                 <div class="card-body p-4">
-                                    <div class="">
-                                        <h5>{{ $comment->user->name }}</h5>
-                                        <p class="small comment-date">{{ jDate($comment->created_at)->ago() }}</p>
-                                        <p> {{ $comment->body }}</p>
+                                    <div class="my-2">
+                                        <h5 class="py-2">{{ $comment->user->name }}</h5>
+                                        <p class="py-1 small comment-date">{{ jDate($comment->created_at)->ago() }}</p>
+                                        <p class="py-2"> {{ $comment->body }}</p>
                                     </div>
                                 </div>
                             </div>

@@ -11313,7 +11313,7 @@ body {
 }
 
 .ws-sample-single-date,
-.list-comments-section .comment-date,
+.ws-list-comments-section .comment-date,
 .page-link,
 .ws-article-created-date,
 .ws-sample-view-count,
@@ -11331,7 +11331,7 @@ body {
   text-align: justify-all;
 }
 
-.list-comments-section img {
+.ws-list-comments-section img {
   width: 65px;
   height: 65px;
 }
