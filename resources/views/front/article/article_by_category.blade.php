@@ -3,18 +3,16 @@
     مقالات
 @endsection
 @section('main_content')
-    <div class="container d-flex justify-content-around mt-5">
+    <div class="container">
 
+        <div class="row mt-5">
 
-        <div class="category-list mt-2 w-75 h-auto">
-            <div class="col article-category mt-2 w3-flat-clouds rounded-3">
+            <div class="col-md-3 article-category mt-2 w3-flat-clouds rounded-3">
                 @include('front.include.category')
             </div>
-        </div>
 
-        <div class="article-list row ms-2">
-            <div class="col-md-12">
-                <div class="row  row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1  articles-page">
+            <div class="col-md-9">
+                <div class="row  row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1">
                     @if ($articles->count())
                         @foreach ($articles as $article)
                             <div class="col my-2">
@@ -24,7 +22,7 @@
                                              class="img-fluid rounded" alt="article-image"/>
                                     </div>
                                     <div class="ws-article-card-body">
-                                        <div class="ws-article-card-title  pt-3"><h5>{{ $article->title_persian }}</h5></div>
+                                        <div class="ws-article-card-title pt-3"><h5 class="h5">{{ $article->title_persian }}</h5></div>
                                         <div class="ws-article-card-text my-1">
                                             <div class="desc">
                                                 {!! $article->short_description !!}
@@ -51,8 +49,17 @@
             </div>
         </div>
 
-      {{--  <div class="row my-3 py-2 px-2 ws-articles-page-main">
-        </div>--}}
+
+
+
+
+
+
+
+
+        {{--  <div class="row my-3 py-2 px-2 ws-articles-page-main">
+
+          </div>--}}
 
     </div>
 @endsection
