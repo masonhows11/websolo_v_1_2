@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Front\Samples;
 
+use App\Models\Comment;
 use App\Models\Like;
 use App\Models\Sample;
 use App\Models\view;
@@ -90,6 +91,17 @@ class SampleComponent extends Component
     public function add_comment(){
 
         $this->validate();
+        try {
+            Comment::create([
+                'user_id' => $this->auth_id,
+                'sample_id' => $this->sample->id,
+                'body' => $this->body,
+            ]);
+            $this->body = '';
+            session()->flash('success', 'دیدگاه شما با موفقیت ذخیره شد.');
+        }catch (\Exception $ex){
+            return \view('errors_custom.model_store_error');
+        }
 
     }
 

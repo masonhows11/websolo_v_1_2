@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Front\Articles;
 
 use App\Models\Article;
+use App\Models\Comment;
 use App\Models\Like;
 use App\Models\View;
 use Illuminate\Support\Facades\Auth;
@@ -88,6 +89,18 @@ class ArticleComponent extends Component
     public function add_comment(){
 
         $this->validate();
+        try {
+            Comment::create([
+                'user_id' => $this->auth_id,
+                'article_id' => $this->sample->id,
+                'body' => $this->body,
+            ]);
+            $this->body = '';
+            session()->flash('success', 'دیدگاه شما با موفقیت ذخیره شد.');
+
+        }catch (\Exception $ex){
+            return \view('errors_custom.model_store_error');
+        }
 
     }
 

@@ -255,7 +255,7 @@
                             <img class="rounded-circle shadow-1-strong me-3"
                                  src="{{ $comment->user->image_path
                                     ? asset('storage/users/' . $comment->user->image_path)
-                                    : asset('assets/images/users/no-user.png') }}"
+                                    : asset('assets/front/images/avatar/no-user.png') }}"
                                  alt="avatar"/>
 
                             <div class="card w-100">
@@ -294,8 +294,15 @@
                         title: message
                     })
                 })
-
             </script>
+        @if(session()->has('success'))
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    text: {{ session('success') }},
+                })
+            </script>
+            @endif
     @endpush
 </div>
 

@@ -96,7 +96,9 @@
                         <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col">
                             <div class="d-flex flex-start mb-4">
                                 <img class="rounded-circle shadow-1-strong me-3"
-                                     src="{{ $comment->user->image_path  ? asset('storage/users/' . $comment->user->image_path): asset('assets/images/users/no-user.png') }}"
+                                     src="{{ $comment->user->image_path
+                                    ? asset('storage/users/' . $comment->user->image_path):
+                                     asset('assets/front/images/avatar/no-user.png') }}"
                                      alt="avatar"/>
                                 <div class="card w-100">
                                     <div class="card-body p-4">
@@ -116,29 +118,38 @@
     </div>
 
     @endif
-</div>
-@push('front_custom_scripts')
-    <script>
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top',
-            showConfirmButton: false,
-            showCloseButton: true,
-            timer: 5000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        });
-        window.addEventListener('show-result', ({detail: {type, message}}) => {
-            Toast.fire({
-                icon: type,
-                title: message
+    @push('front_custom_scripts')
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                showCloseButton: true,
+                timer: 5000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+            window.addEventListener('show-result', ({detail: {type, message}}) => {
+                Toast.fire({
+                    icon: type,
+                    title: message
+                })
             })
-        })
-
-    </script>
+        </script>
+            @if(session()->has('success'))
+                <script>
+                    Swal.fire({
+                        icon: 'success',
+                        text: {{ session('success') }},
+                    })
+                </script>
+            @endif
     @endpush
+</div>
 
-    </div>
+
+
+
