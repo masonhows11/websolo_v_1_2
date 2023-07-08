@@ -15,9 +15,20 @@ class SampleComponent extends Component
     public $view_count;
     public $like_count;
 
+    public $body;
     public $is_liked = null;
     public $auth_id;
     public $is_auth_liked = false;
+
+    protected $rules = [
+        'body' => 'required|min:5|max:500',
+    ];
+
+    protected $messages = [
+        'body.required' => 'لطفا دیدگاه خود را بنویسید.',
+        'body.min' => 'حداقل ۵ کاراکتر بنویسید. ',
+        'body.max' => 'حداکثز تعداد کاراکتر مجاز ۵۰۰ عدد.',
+    ];
 
     public function mount($sample)
     {
@@ -73,6 +84,10 @@ class SampleComponent extends Component
                 ['type' => 'success',
                     'message' => 'برای ثبت لایک یا دیس لایک ابتدا وارد شوید.']);
         }
+
+    }
+
+    public function save_comment(){
 
     }
 

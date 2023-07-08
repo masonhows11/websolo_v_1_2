@@ -59,7 +59,7 @@
             <!-- article write comment -->
             <div class="row d-flex justify-content-center  my-4">
                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
-                    <form>
+                    <form wire:submit.prevent="save_comment">
                         @auth
                             <div class="mb-3">
                                 <label for="body-comment" class="form-label">دیدگاه</label>
