@@ -57,22 +57,22 @@
 
 
             <!-- article write comment -->
-            <div class="row d-flex justify-content-center my-4">
+            <div class="row d-flex justify-content-center  my-4">
                 <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
                     <form>
                         @auth
                             <div class="mb-3">
                                 <label for="body-comment" class="form-label">دیدگاه</label>
-                                <textarea class="form-control" placeholder="متن دیدگاه خود را وارد کنید."
-                                          id="body-comment" rows="6">
-                                </textarea>
+                                <textarea class="form-control" placeholder="متن دیدگاه خود را وارد کنید." id="body-comment"
+                                          rows="6">
+                            </textarea>
                             </div>
                             <div class="mb-3 mt-3">
                                 <button type="sumbit" class="btn btn-success">ثبت دیدگاه</button>
                             </div>
                         @else
-                            <div class="mb-3">
-                                <a href="{{ route('register.form') }}" class="btn btn-outline-primary">
+                            <div class="mb-3 d-flex justify-content-center">
+                                <a href="{{ route('register.form') }}" class="btn btn-outline-primary text-center">
                                     {{ __('messages.login_first_to_post_your_comment') }}
                                 </a>
                             </div>
@@ -80,6 +80,7 @@
                     </form>
                 </div>
             </div>
+
             <!-- article list comment -->
             <div class="row my-5 ws-article-list-comment d-flex">
                 @if ($article->comments->where('article_id', '=', $article->id)->where('approved','=',1))
