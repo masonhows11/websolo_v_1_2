@@ -1044,6 +1044,10 @@ body {
     color: tomato;
 }
 
+.ws-sample-single-date,
+.list-comments-section .comment-date,
+.page-link,
+.ws-article-created-date,
 .ws-sample-view-count,
 .ws-sample-like-count,
 .ws-article-date,
@@ -1057,14 +1061,6 @@ body {
 .ws-sample-full-description {
     line-height: 1.7rem;
     text-align: justify-all;
-}
-
-
-///// paginate section livewire
-.ws-sample-single-date,
-.list-comments-section .comment-date,
-.page-link {
-    font-family: 'iransans_num', sans-serif;
 }
 
 .list-comments-section img {

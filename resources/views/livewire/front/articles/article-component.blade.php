@@ -14,18 +14,18 @@
                 <!-- article title -->
                 <div class="col-sm-6 my-4 d-flex justify-content-evenly ">
                     <div class="col">
-                        <h1> {{ $article->title_persian }}</h1>
+                        <h4 class="h4"> {{ $article->title_persian }}</h4>
                     </div>
                     <div class="col d-flex justify-content-end">
-                        <h4> {{ $article->title_english }}</h4>
+                        <h4 class="h4"> {{ $article->title_english }}</h4>
                     </div>
                 </div>
                 <!-- article author -->
                 <div class="col-sm-6  d-flex justify-content-between  mt-2 border border-2 rounded-3 ">
-                    <div class="ws-post-author-name py-3">
+                    <div class="ws-article-author-name py-3">
                         <span class=""><i class="fas fa-pen"></i>{{ $article->user->name }}</span>
                     </div>
-                    <div class="ws-post-created-date  py-3">
+                    <div class="ws-article-created-date  py-3">
                         <span class=""> {{ jdate($article->created_at)->ago() }}</span>
                     </div>
                 </div>
