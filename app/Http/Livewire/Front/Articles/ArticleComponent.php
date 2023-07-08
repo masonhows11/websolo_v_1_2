@@ -61,7 +61,7 @@ class ArticleComponent extends Component
         $this->view_count = view::where('article_id', $this->article->id)->count();
     }
 
-    public function AddLike()
+    public function add_like()
     {
         if (Auth::user()) {
             $this->is_liked = Like::where(['user_id' => $this->auth_id, 'article_id' => $this->article->id])->first();
@@ -85,8 +85,9 @@ class ArticleComponent extends Component
 
     }
 
-    public function save_comment(){
+    public function add_comment(){
 
+        $this->validate();
 
     }
 

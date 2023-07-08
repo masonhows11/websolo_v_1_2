@@ -70,7 +70,7 @@
                         <div class="ws-sample-like-count my-2 d-flex flex-row  me-2">
 
                             <div class="me-2 py-1">{{ $like_count }}</div>
-                            <div wire:click="AddLike">
+                            <div wire:click="add_like">
                                 <i class="{{ $is_auth_liked  ? 'fa-solid fa-heart' : 'far fa-heart'  }}"></i>
                             </div>
 
@@ -213,16 +213,26 @@
 
         <div class="row d-flex justify-content-center  my-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
-                <form wire:submit.prevent="save_comment">
+                <form wire:submit.prevent="add_comment">
                     @auth
                         <div class="mb-3">
                             <label for="body-comment" class="form-label">دیدگاه</label>
-                            <textarea class="form-control" placeholder="متن دیدگاه خود را وارد کنید." id="body-comment"
+                            <textarea class="form-control"
+                                      id="body-comment"
+                                      wire:model="body"
+                                      placeholder="متن دیدگاه خود را وارد کنید."
                                       rows="6">
                             </textarea>
+
+                            @error('body')
+                            <div class="alert alert-danger mt-3">
+                                {{ $message }}
+                            </div>
+                            @enderror
+
                         </div>
                         <div class="mb-3 mt-3">
-                            <button type="sumbit" wire:model.defer="body" class="btn btn-success">ثبت دیدگاه</button>
+                            <button type="sumbit" wire:model="body" class="btn btn-success">ثبت دیدگاه</button>
                         </div>
                     @else
                         <div class="mb-3 d-flex justify-content-center">

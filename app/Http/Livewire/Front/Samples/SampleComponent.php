@@ -63,7 +63,7 @@ class SampleComponent extends Component
         $this->view_count = view::where('sample_id', $this->sample->id)->count();
     }
 
-    public function AddLike()
+    public function add_like()
     {
         if (Auth::user()) {
             $this->is_liked = Like::where(['user_id' => $this->auth_id, 'sample_id' => $this->sample->id])->first();
@@ -87,7 +87,9 @@ class SampleComponent extends Component
 
     }
 
-    public function save_comment(){
+    public function add_comment(){
+
+        $this->validate();
 
     }
 
