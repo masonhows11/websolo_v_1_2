@@ -257,7 +257,7 @@
                                     <div class="my-2">
                                         <h5 class="py-2">{{ $comment->user->name }}</h5>
                                         <p class="py-1 small comment-date">{{ jDate($comment->created_at)->ago() }}</p>
-                                        <p class="py-2"> {{ $comment->body }}</p>
+                                        <p class="mt-3"> {{ $comment->body }}</p>
                                     </div>
                                 </div>
                             </div>
