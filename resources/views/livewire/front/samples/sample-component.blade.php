@@ -213,9 +213,8 @@
 
         <div class="row d-flex justify-content-center  my-4">
             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
-                <form id="add-comment">
+                <form>
                     @auth
-                        <input type="hidden" id="sample-id" value="{{ $sample->id }}">
                         <div class="mb-3">
                             <label for="body-comment" class="form-label">دیدگاه</label>
                             <textarea class="form-control" placeholder="متن دیدگاه خود را وارد کنید." id="body-comment"

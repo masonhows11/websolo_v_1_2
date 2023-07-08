@@ -11290,6 +11290,8 @@ body {
   color: #0b0e18;
 }
 
+.ws-article-card-title,
+.ws-article-card-text .desc,
 .ws-article-date,
 .ws-article-page-main,
 .ws-samples-page-main,

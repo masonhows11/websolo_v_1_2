@@ -9,6 +9,14 @@ class ArticleComponent extends Component
 {
     public $article;
 
+    public $view_count;
+    public $like_count;
+
+    public $is_liked = null;
+    public $auth_id;
+    public $is_auth_liked = false;
+
+
     public function mount($article)
     {
         $this->article = Article::where('slug', $article)->first();

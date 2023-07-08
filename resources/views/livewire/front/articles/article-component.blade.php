@@ -8,7 +8,8 @@
             <div class="row d-flex flex-column align-items-center my-5">
                 <!-- article image -->
                 <div class="col-sm-6 d-flex justify-content-center  ws-article-img">
-                    <img src="{{ asset('/storage/articles/'.$article->image) }}" loading="lazy" class="img-thumbnail rounded-4" alt="article-image">
+                    <img src="{{ asset('/storage/articles/'.$article->image) }}" loading="lazy"
+                         class="img-thumbnail rounded-4" alt="article-image">
                 </div>
                 <!-- article title -->
                 <div class="col-sm-6 my-4 d-flex justify-content-evenly ">
@@ -20,7 +21,7 @@
                     </div>
                 </div>
                 <!-- article author -->
-              <div class="col-sm-6  d-flex justify-content-between  mt-2 border border-2 rounded-3 ">
+                <div class="col-sm-6  d-flex justify-content-between  mt-2 border border-2 rounded-3 ">
                     <div class="ws-post-author-name py-3">
                         <span class=""><i class="fas fa-pen"></i>{{ $article->user->name }}</span>
                     </div>
@@ -30,34 +31,41 @@
                 </div>
                 <!-- article description -->
                 <div class="col-sm-6 mx-auto d-flex flex-column my-4 rounded rounded-4    w3-flat-clouds ws-article-card-text">
+
                     <div class="desc px-2 py-3 ">
                         {!! $article->description !!}
                     </div>
-                    <div class="ws-article-view-like">
-                        
 
+                    <div class="col ws-article-view-like">
+                        <!-- article like & view -->
+                        <div class="d-flex justify-content-end">
+                            <div class="ws-sample-view-count my-2 d-flex flex-row me-2">
+                                <div class="me-2 py-1">{{ $view_count }}</div>
+                                <div class="me-2">{{ __('messages.views') }}</div>
+                            </div>
+                            <div class="ws-sample-like-count my-2 d-flex flex-row  me-2">
+                                <div class="me-2 py-1">{{ $like_count }}</div>
+                                <div wire:click="AddLike">
+                                    <i class="{{ $is_auth_liked  ? 'fa-solid fa-heart' : 'far fa-heart'  }}"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- article like & view -->
-                <div class="col-sm-6 d-flex justify-content-between ws-post-like-section">
-
                 </div>
 
             </div>
 
 
             <!-- article write comment -->
-            <div class="row d-flex justify-content-center ws-article-form-comment my-4">
-                <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-9">
-                    <form id="add-comment">
+            <div class="row d-flex justify-content-center my-4">
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-4 col-10">
+                    <form>
                         @auth
-                            <input type="hidden" id="article-id" value="{{ $article->id }}">
                             <div class="mb-3">
                                 <label for="body-comment" class="form-label">دیدگاه</label>
-                                <textarea class="form-control"
-                                          placeholder="متن دیدگاه خود را وارد کنید."
-                                          id="body-comment"
-                                          rows="6"></textarea>
+                                <textarea class="form-control" placeholder="متن دیدگاه خود را وارد کنید."
+                                          id="body-comment" rows="6">
+                                </textarea>
                             </div>
                             <div class="mb-3 mt-3">
                                 <button type="sumbit" class="btn btn-success">ثبت دیدگاه</button>
@@ -65,10 +73,8 @@
                         @else
                             <div class="mb-3">
                                 <a href="{{ route('register.form') }}" class="btn btn-outline-primary">
-                                    برای ارسال
-                                    دیگاه ابتدا
-                                    وارد سایت
-                                    شوید یا اگر عضو نیستید ثبت نام کنید.</a>
+                                    {{ __('messages.login_first_to_post_your_comment') }}
+                                </a>
                             </div>
                         @endauth
                     </form>

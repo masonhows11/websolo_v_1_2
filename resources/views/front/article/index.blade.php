@@ -19,7 +19,7 @@
                                              class="img-fluid rounded" alt="article-image"/>
                                     </div>
                                     <div class="ws-article-card-body">
-                                        <div class="ws-article-card-title pt-3"><h5>{{ $article->title_persian }}</h5></div>
+                                        <div class="ws-article-card-title pt-3"><h5 class="h5">{{ $article->title_persian }}</h5></div>
                                         <div class="ws-article-card-text my-1">
                                             <div class="desc">
                                                 {!! $article->short_description !!}
