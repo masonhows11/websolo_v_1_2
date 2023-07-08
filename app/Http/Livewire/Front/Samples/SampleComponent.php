@@ -98,7 +98,7 @@ class SampleComponent extends Component
                 'body' => $this->body,
             ]);
             $this->body = '';
-            session()->flash('success', 'دیدگاه شما با موفقیت ذخیره شد.');
+            $this->dispatchBrowserEvent('comment-success');
         }catch (\Exception $ex){
             return \view('errors_custom.model_store_error');
         }

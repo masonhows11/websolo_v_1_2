@@ -295,14 +295,14 @@
                     })
                 })
             </script>
-        @if(session()->has('success'))
             <script>
-                Swal.fire({
-                    icon: 'success',
-                    text: {{ session('success') }},
+                window.addEventListener('comment-success', event => {
+                    Swal.fire({
+                        icon: 'success',
+                        text: 'دیدگاه شما با موفقیت ثبت شد.',
+                    })
                 })
             </script>
-            @endif
     @endpush
 </div>
 
