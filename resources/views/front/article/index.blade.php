@@ -5,9 +5,13 @@
 @section('main_content')
     <div class="container">
         <div class="row my-3 py-2 px-2 ws-articles-page-main">
+
+            <!-- categories -->
             <div class="col-md-2 article-category mt-2 w3-flat-clouds rounded-3">
                 @include('front.include.category')
             </div>
+
+            <!-- articles -->
             <div class="col-md-10">
                 <div class="row  row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-1">
                     @if ($articles->count())
@@ -30,7 +34,7 @@
                                                 <i class="fa-regular fa-clock me-2"></i>
                                                 {{ jDate($article->created_at)->ago()  }}
                                             </div>
-                                           <a class="ws-article-continue-btn me-3" href="{{ route('article', ['article'=>$article->slug]) }}">ادامه....</a>
+                                           <a class="ws-article-continue-btn me-3 pt-2" href="{{ route('article', ['article'=>$article->slug]) }}">ادامه....</a>
                                         </div>
                                     </div>
                                 </div>
