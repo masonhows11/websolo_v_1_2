@@ -7,23 +7,28 @@
             @if ($samples->count())
                 @foreach ($samples as $sample)
                     <div class="col my-2">
-                        <div class="ws-article-card d-flex flex-column h-100">
+                        <div class="ws-sample-card d-flex flex-column h-100">
+
+
                             <div class="ws-sample-img-card">
                                 <img src="{{ asset('storage/samples/'. $sample->main_image) }}"
                                      class="img-fluid rounded-4" alt="sample-image"/>
                             </div>
 
                             <div class="ws-sample-card-body">
+
                                 <div class="ws-sample-card-title  pt-3">
                                     <h5 class="h5">{{ $sample->title_persian }}</h5>
                                 </div>
+
                                 <div class="ws-sample-card-text my-1">
                                     <div class="desc">
                                         {!! $sample->short_description !!}
                                     </div>
                                 </div>
+
                                 <div class="ws-sample-card-footer d-flex justify-content-between my-1">
-                                    <div class="py-2 px-2 ws-article-date">
+                                    <div class="py-2 px-2 ws-sample-date">
                                         <i class="fa-regular fa-clock me-2"></i>
                                         {{ jDate($sample->created_at)->ago() }}
                                     </div>
