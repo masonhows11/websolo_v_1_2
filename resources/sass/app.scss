@@ -962,21 +962,22 @@ body {
 
 
 //// article category layout styles ////
-
-.ws-article-card{
-  //  width: 320px;
-
+.ws-articles-wrapper{
+    display: flex;
 }
-.ws-articles-page-main {
-   // width:1250px;
-   // height: auto;
+.ws-article-card{
+    width: 320px;
 }
 .article-category{
-    max-height: max-content;
-   // height: auto;
-
-  //  width:250px;
+    flex: 1;
+    height: min-content;
 }
+.ws-articles-page-main {
+    flex: 4;
+    width:1250px;
+
+}
+
 
 .article-category .root-category a {
     text-decoration: none;

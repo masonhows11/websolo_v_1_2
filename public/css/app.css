@@ -11229,9 +11229,23 @@ body {
   font-size: 1.1rem;
 }
 
+.ws-articles-wrapper {
+  display: flex;
+}
+
+.ws-article-card {
+  width: 320px;
+}
+
 .article-category {
-  max-height: -moz-max-content;
-  max-height: max-content;
+  flex: 1;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.ws-articles-page-main {
+  flex: 4;
+  width: 1250px;
 }
 
 .article-category .root-category a {
