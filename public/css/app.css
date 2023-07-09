@@ -11229,6 +11229,11 @@ body {
   font-size: 1.1rem;
 }
 
+.article-category {
+  height: auto;
+  max-height: 650px;
+}
+
 .article-category .root-category a {
   text-decoration: none;
   color: #4a5562;

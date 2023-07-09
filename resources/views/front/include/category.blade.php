@@ -1,5 +1,5 @@
 @foreach ($categories as $category)
-    <div class="py-1 root-category mt-2 px-3">
+    <div class="px-3 mt-2 root-category ">
         <a  href="{{ route('article.category',[$category]) }}"   >{{ $category->title_persian }}</a>
     </div>
     <ul class="mt-2">

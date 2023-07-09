@@ -7,7 +7,7 @@
 
         <div class="row mt-5">
 
-            <div class="col-md-2 article-category mt-2 w3-flat-clouds rounded-3 h-auto">
+            <div class="col-md-2 article-category mt-2 py-1 w3-flat-clouds rounded-3 ">
                 @include('front.include.category')
             </div>
 

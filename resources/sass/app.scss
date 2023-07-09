@@ -960,7 +960,10 @@ body {
 
 ////// articles samples style
 .article-category{
-
+ //height: 100%;
+    height: auto;
+    // height: 500px;
+    max-height:650px;
 }
 .article-category .root-category a {
     text-decoration: none;
