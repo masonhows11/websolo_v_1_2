@@ -5,7 +5,7 @@
 @section('main_content')
     <div class="container">
 
-        <div class="article-wrapper d-flex justify-content-evenly mt-5">
+        <div class="ws-article-wrapper d-flex justify-content-evenly mt-5">
 
             <div class="article-category mt-2 w3-flat-clouds rounded-3" style="width:300px">
                 @include('front.include.category')

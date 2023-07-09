@@ -11263,21 +11263,25 @@ body {
   font-size: 15px;
 }
 
+.ws-sample-img-card,
 .ws-article-img-card {
   width: 100%;
 }
 
+.ws-sample-img-card img,
 .ws-article-img-card img {
   width: 100%;
   height: 260px;
 }
 
+.ws-sample-card-body,
 .ws-article-card-body {
   background: #ecf0f1;
   border: 2px solid #ecf0f1;
   border-radius: 8px;
 }
 
+.ws-sample-card-title h5,
 .ws-article-card-title h5 {
   margin-right: 5px;
 }
@@ -11296,7 +11300,7 @@ body {
 }
 
 .ws-article-card-title,
-.ws-article-card-text .desc,
+.ws-sample-card-text .desc,
 .ws-article-date,
 .ws-article-page-main,
 .ws-samples-page-main,
@@ -11329,7 +11333,7 @@ body {
   font-size: 1rem;
 }
 
-.ws-article-card-text .desc,
+.ws-sample-card-text .desc,
 .ws-sample-short-description,
 .ws-sample-full-description {
   line-height: 1.7rem;
