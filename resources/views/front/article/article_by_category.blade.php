@@ -7,7 +7,7 @@
 
         <div class="row mt-5">
 
-            <div class="col-md-2 article-category mt-2 py-1 w3-flat-clouds rounded-3 ">
+            <div class="col-md-2 article-category mt-2 py-1 w3-flat-clouds rounded-3 " style=" max-height: max-content;">
                 @include('front.include.category')
             </div>
 
@@ -41,13 +41,14 @@
                         @endforeach
                     @endif
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
-                        {{ $articles->links() }}
-                    </div>
-                </div>
             </div>
         </div>
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
+                {{ $articles->links() }}
+            </div>
+        </div>
+
     </div>
 @endsection
 
