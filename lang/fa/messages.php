@@ -17,4 +17,6 @@ return [
     'login_first_to_post_your_comment'=>'برای ارسال نظر خود ابتدا وارد شوید.',
     'views' => 'بازدید',
     'dashboard' => 'پنل کاربری',
+    'Next' => 'بعدی',
+    'Previous' => 'قبلی',
 ];

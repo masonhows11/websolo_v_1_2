@@ -11229,9 +11229,9 @@ body {
   font-size: 1.1rem;
 }
 
-.article-category {
-  height: auto;
-  max-height: 650px;
+.ws-article-card {
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 
 .article-category .root-category a {

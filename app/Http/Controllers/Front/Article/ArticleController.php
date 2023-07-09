@@ -13,7 +13,7 @@ class ArticleController extends Controller
     public function index(){
 
         return view('front.article.index')
-            ->with(['articles' => Article::where('approved', 1)->paginate(12),
+            ->with(['articles' => Article::where('approved', 1)->paginate(9),
                 'categories' => Category::tree()->get()->toTree()]);
     }
 

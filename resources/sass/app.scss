@@ -961,11 +961,20 @@ body {
 }
 
 
-//// article category styles ////
+//// article category layout styles ////
 
+.ws-article-card{
+  //  width: 320px;
+    max-height: max-content;
+}
+.ws-articles-page-main {
+   // width:1250px;
+   // height: auto;
+}
 .article-category{
-    height: auto;
-    max-height:650px;
+   // height: auto;
+
+  //  width:250px;
 }
 
 .article-category .root-category a {
@@ -1082,6 +1091,9 @@ body {
     width: 65px;
     height: 65px;
 }
+
+
+
 
 // media query
 @media screen and (max-width: 576px) {
