@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row mt-5">
 
-            <div class="col-md-2 article-category mt-2 pt-2 w3-flat-clouds rounded-3" style=" max-height: max-content;">
+            <div class="col-md-2 article-category  w3-flat-clouds rounded-3" style=" max-height: max-content;">
                 @include('front.include.category')
             </div>
 
@@ -20,7 +20,8 @@
                                         <img src="{{ asset('storage/articles/' . $article->image) }}"
                                              class="img-fluid rounded" alt="article-image"/>
                                     </div>
-                                    <div class="ws-article-card-body">
+
+                                    <div class="ws-article-card-body my-3">
                                         <div class="ws-article-card-title pt-3"><h5
                                                 class="h5">{{ $article->title_persian }}</h5></div>
                                         <div class="ws-article-card-text my-1">
@@ -44,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-center mt5">
+        <div class="row d-flex justify-content-center mt-5">
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
                 {{ $articles->links('front.paginate.paginate') }}
             </div>
