@@ -11,7 +11,7 @@
                 @include('front.include.category')
             </div>
 
-            <div class="d-flex flex-wrap mx-3 ws-articles-page-main">
+            <div class="d-flex flex-wrap ws-articles-page-main">
                 @if ($articles->count())
                     @foreach ($articles as $article)
                         <div class="ws-article-card mx-2 my-2">

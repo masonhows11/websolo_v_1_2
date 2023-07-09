@@ -11368,16 +11368,16 @@ body {
   .ws-articles-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
   }
   .article-category {
     margin: 0 auto;
   }
-  .ws-articles-page-main {
+  .ws-articles-page-main .ws-article-card {
     width: auto;
     display: flex;
     flex-direction: column;
-    margin: 0 auto !important;
   }
   .root-category {
     margin: 5px auto 5px auto;
