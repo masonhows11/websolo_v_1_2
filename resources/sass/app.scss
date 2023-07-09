@@ -302,8 +302,8 @@ body {
     color: black;
 }
 
-.auth-link li i.fa-user ,
-.auth-link li i.fa-sign-out{
+.auth-link li i.fa-user,
+.auth-link li i.fa-sign-out {
     font-size: 1.3rem;
 }
 
@@ -962,22 +962,6 @@ body {
 
 
 //// article category layout styles ////
-.ws-articles-wrapper{
-    display: flex;
-}
-.ws-article-card{
-    width: 320px;
-}
-.article-category{
-    flex: 1;
-    height: min-content;
-}
-.ws-articles-page-main {
-    flex: 4;
-    width:1250px;
-
-}
-
 
 .article-category .root-category a {
     text-decoration: none;
@@ -1033,10 +1017,12 @@ body {
     color: #0b0e18;
     border: none;
 }
+
 .ws-article-continue-btn:hover,
 .ws-sample-continue-btn:hover {
     color: #0b0e18;
 }
+
 .ws-sample-card-body .desc,
 .ws-article-card-body .desc {
     text-align: justify;
@@ -1066,6 +1052,7 @@ body {
 .ws-sample-like-count .fa-heart {
     font-size: 1.2rem;
 }
+
 .ws-sample-like-count .fa-heart {
     color: tomato;
 }
@@ -1081,6 +1068,7 @@ body {
     font-family: "iransans_num", sans-serif;
     font-size: 1rem;
 }
+
 .ws-article-card-text .desc,
 .ws-sample-card-text .desc,
 .ws-sample-short-description,
@@ -1094,30 +1082,62 @@ body {
     height: 65px;
 }
 
+.ws-articles-wrapper {
+    display: flex;
+}
 
+.ws-article-card {
+    width: 320px;
+}
 
+.article-category {
+    width: 250px;
+    height: max-content;
+}
+
+.ws-articles-page-main {
+    width:1250px;
+}
 
 // media query
 @media screen and (max-width: 576px) {
 
+    .ws-articles-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .article-category {
+      margin: 0 auto;
+    }
+    .ws-articles-page-main {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto !important;
+    }
+
+    .root-category {
+        margin: 5px auto 5px auto;
+    }
     .contact .contact-header p {
         line-height: 25px;
         font-size: 1rem;
         text-align: justify;
 
     }
-    .contact-infor .item {
+    .contact-info .item {
         display: flex;
         flex-direction: column;
         align-items: center;
 
     }
-    .contact-infor .item div {
+    .contact-info .item div {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .contact-infor .item div h5 {
+    .contact-info .item div h5 {
         margin: 20px 0 20px 0;
         padding: 5px 0 5px 0;
     }
@@ -1180,6 +1200,22 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+
+    .ws-articles-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .article-category {
+        margin: 0 auto;
+    }
+    .ws-articles-page-main {
+        width: auto;
+        display: flex;
+        flex-flow:wrap;
+       // flex-direction: column;
+        margin: 0 auto !important;
+    }
 
     .about .about-introduce {
         display: flex;

@@ -7,7 +7,7 @@
 
         <div class="ws-articles-wrapper mt-5">
 
-            <div class="article-category mt-3 w3-flat-clouds rounded-3" >
+            <div class="article-category my-3 w3-flat-clouds rounded-3" >
                 @include('front.include.category')
             </div>
 
