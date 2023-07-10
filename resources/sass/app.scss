@@ -1278,4 +1278,22 @@ body {
     }
 
 }
+@media screen and (max-width: 1199.98px) {
+    
+    .ws-articles-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .article-category {
+        margin: 0 auto;
+    }
+    .ws-articles-page-main {
+        width: auto;
+        display: flex;
+        flex-flow:wrap;
+        // flex-direction: column;
+        margin: 0 auto !important;
+    }
 
+}
