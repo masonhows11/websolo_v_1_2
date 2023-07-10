@@ -33,7 +33,7 @@
 
                             <div class="mb-3">
                                 <label for="pwd" class="form-label">رمز عبور</label>
-                                <input type="password" class="@error('password') is-invalid @enderror form-control"
+                                <input type="password"  class="@error('password') is-invalid @enderror form-control"
                                        id="pwd" name="password">
                             </div>
                             @error('password')

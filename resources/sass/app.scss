@@ -795,7 +795,10 @@ body {
     color: #ffffff;
     font-weight: lighter !important;
 }
-
+.login-form #pwd{
+    direction:ltr;
+    text-align: left;
+}
 .login-form,
 .register-form,
 .login-form-title,
