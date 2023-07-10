@@ -127,20 +127,16 @@
                         <button type="submit" class="btn btn-success">ذخیره</button>
                         <a href="{{ route('admin.article.index') }}" class="btn btn-secondary">بازگشت</a>
                     </div>
-
-
                 </form>
-
             </div>
         </div>
-
     </div>
 @endsection
 @push('dash_custom_scripts')
     <link rel="stylesheet" href="{{ asset('assets/admin/plugins/chosen/chosen.min.css') }}">
-    <script type="text/javascript" src="{{ asset('assets/admin/plugins/chosen/chosen.jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/admin/plugins/ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+    <script  type="text/javascript" src="{{ asset('assets/admin/plugins/chosen/chosen.jquery.min.js') }}"></script>
+    <script  type="text/javascript" src="{{ asset('assets/admin/plugins/ckeditor/ckeditor.js') }}"></script>
+    <script  src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
     <script>
         // ckeditor
         CKEDITOR.replace('description-editor-text', {
