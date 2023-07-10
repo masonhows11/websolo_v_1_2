@@ -987,6 +987,10 @@ body {
 
 //// common styles of articles and samples ////
 
+.article-category {
+    height: max-content;
+}
+
 .ws-sample-img-card,
 .ws-article-img-card {
     width: 100%;
@@ -1082,12 +1086,6 @@ body {
     height: 65px;
 }
 
-// articles important layout
-.article-category {
-    height: max-content;
-}
-
-
 
 
 
@@ -1103,7 +1101,6 @@ body {
         justify-content: center;
 
     }
-
     .contact .contact-header p {
         line-height: 25px;
         font-size: 1rem;
