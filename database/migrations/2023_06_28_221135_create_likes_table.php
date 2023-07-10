@@ -34,8 +34,6 @@ return new class extends Migration
                 ->on('samples')
                 ->onDelete('cascade');
 
-
-            $table->boolean('like');
             $table->timestamps();
         });
     }

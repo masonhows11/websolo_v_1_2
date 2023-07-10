@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Front\Samples;
 use App\Models\Comment;
 use App\Models\Like;
 use App\Models\Sample;
-use App\Models\view;
+use App\Models\View;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 

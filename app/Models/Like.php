@@ -12,7 +12,6 @@ class Like extends Model
     protected $table = 'likes';
     protected $guarded = [
         /*'user_id',
-        'like',
         'article_id',
         'sample_id'*/
     ];
