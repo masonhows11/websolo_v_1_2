@@ -11453,11 +11453,14 @@ body {
     line-height: 34px;
   }
 }
+@media screen and (max-width: 768px) {
+  .ws-articles-wrapper {
+    display: flex;
+  }
+}
 @media screen and (max-width: 992px) {
   .ws-articles-wrapper {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
   }
   .article-category {
     margin: 0 auto;
@@ -11466,6 +11469,7 @@ body {
     width: auto;
     display: flex;
     flex-flow: wrap;
+    width: auto;
     margin: 0 auto !important;
   }
   .about .about-introduce {
