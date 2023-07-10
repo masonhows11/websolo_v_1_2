@@ -11352,8 +11352,12 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-  .article-category .root-category a {
-    margin: 0 auto;
+  .root-category {
+    text-align: center;
+  }
+  .child-category {
+    display: flex;
+    justify-content: center;
   }
   .contact .contact-header p {
     line-height: 25px;

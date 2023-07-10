@@ -1084,9 +1084,7 @@ body {
 
 // articles important layout
 .article-category {
-
     height: max-content;
-
 }
 
 
@@ -1096,8 +1094,14 @@ body {
 // media query
 @media screen and (max-width: 576px) {
 
-    .article-category .root-category a{
-        margin: 0 auto;
+    .root-category{
+        text-align: center;
+    }
+
+    .child-category{
+        display: flex;
+        justify-content: center;
+
     }
 
     .contact .contact-header p {
