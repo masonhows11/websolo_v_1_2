@@ -1,5 +1,4 @@
 
-{{--
 <div>
     @section('page_title')
         تماس با ما
@@ -21,7 +20,7 @@
 
                     <div class="mb-3 mt-3">
                         <input type="email" wire:model.defer="email" class="form-control" id="Email" dir="rtl"
-                               placeholder="ایمیل" autocomplete="on" required="required"/>
+                               placeholder="ایمیل" autocomplete="on" />
                     </div>
 
                     @error('email')
@@ -32,7 +31,7 @@
 
                     <div class="mb-3 mt-3">
                         <input type="text" wire:model.defer="name" class="form-control" id="Username"
-                               placeholder="نام کاربری" autocomplete="on" required="required"/>
+                               placeholder="نام کاربری" autocomplete="on" />
                     </div>
                     @error('name')
                     <div class="alert alert-danger mt-3">
@@ -42,7 +41,7 @@
 
                     <div class="mb-3 mt-3">
                         <textarea wire:model.defer="message" id="" cols="30" rows="5" class="form-control"
-                                  placeholder="متن پیام" autocomplete="on" required="required"></textarea>
+                                  placeholder="متن پیام" autocomplete="on" ></textarea>
                     </div>
 
                     @error('message')
@@ -111,4 +110,3 @@
         })
     </script>
 @endpush
---}}

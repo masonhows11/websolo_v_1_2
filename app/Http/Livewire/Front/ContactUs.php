@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Front;
 use Livewire\Component;
 use App\Models\Contact;
 
-class ContactForm extends Component
+class ContactUs extends Component
 {
 
     public $name;
@@ -15,8 +15,8 @@ class ContactForm extends Component
     protected function rules()
     {
         return [
-            'name' => ['required', 'unique:users,name', 'min:2', 'max:30'],
-            'email' => ['required', 'unique:users,email'],
+            'name' => ['required', 'min:2', 'max:30'],
+            'email' => ['required', 'unique:contacts,email'],
             'message' => ['required', 'min:10', 'max:500']
         ];
     }
@@ -60,6 +60,6 @@ class ContactForm extends Component
     }
     public function render()
     {
-        return view('livewire.front.contact-form');
+        return view('livewire.front.contact-us');
     }
 }
