@@ -20,15 +20,33 @@
                                placeholder="ایمیل" autocomplete="on" required="required"/>
                     </div>
 
+                    @error('email')
+                    <div class="alert alert-danger mt-3">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
                     <div class="mb-3 mt-3">
                         <input type="text" wire:model.defer="name" class="form-control" id="Username"
                                placeholder="نام کاربری" autocomplete="on" required="required"/>
                     </div>
 
+                    @error('name')
+                    <div class="alert alert-danger mt-3">
+                        {{ $message }}
+                    </div>
+                    @enderror
+
                     <div class="mb-3 mt-3">
                         <textarea wire:model.defer="message" id="" cols="30" rows="5" class="form-control"
                                   placeholder="متن پیام" autocomplete="on" required="required"></textarea>
                     </div>
+
+                    @error('message')
+                    <div class="alert alert-danger mt-3">
+                        {{ $message }}
+                    </div>
+                    @enderror
 
                     <button type="submit" class="btn btn-custom-primary btn-block rounded w-lg">
                         ارسال پیام
