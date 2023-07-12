@@ -10,7 +10,7 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-            <div class="col-xl-5 col-lg-5 col-md-5 border border-2 rounded-3 my-5">
+            <div class="col-xl-5 col-lg-5 col-md-5 border border-2 verify-email-form rounded-3 my-5">
 
                 <form action="{{ route('verify') }}" method="post" class="d-flex flex-column py-4">
                     @csrf
