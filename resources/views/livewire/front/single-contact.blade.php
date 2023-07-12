@@ -1,6 +1,6 @@
 <div>
     @section('page_title')
-       تماس با ما
+        تماس با ما
     @endsection
     <section class="container contact mt-5">
         <div class="row contact-header text-center">
@@ -18,15 +18,18 @@
                 <form wire:submit.prevent="save">
 
                     <div class="mb-3 mt-3">
-                        <input type="email" wire:model.defer="email"  class="form-control" id="Email" dir="rtl" placeholder="ایمیل" autocomplete="on" required="required"/>
+                        <input type="email" wire:model.defer="email" class="form-control" id="Email" dir="rtl"
+                               placeholder="ایمیل" autocomplete="on" required="required"/>
                     </div>
 
                     <div class="mb-3 mt-3">
-                        <input type="text" wire:model.defer="name" class="form-control" id="Username" placeholder="نام کاربری" autocomplete="on" required="required"/>
+                        <input type="text" wire:model.defer="name" class="form-control" id="Username"
+                               placeholder="نام کاربری" autocomplete="on" required="required"/>
                     </div>
 
                     <div class="mb-3 mt-3">
-                         <textarea wire:model.defer="message" id="" cols="30" rows="5" class="form-control" placeholder="متن پیام" autocomplete="on" required="required"></textarea>
+                        <textarea wire:model.defer="message" id="" cols="30" rows="5" class="form-control"
+                                  placeholder="متن پیام" autocomplete="on" required="required"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-custom-primary btn-block rounded w-lg">
@@ -67,3 +70,26 @@
         </div>
     </section>
 </div>
+@push('front_custom_scripts')
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        window.addEventListener('show-result', ({detail: {type, message}}) => {
+            Toast.fire({
+                icon: type,
+                title: message
+            })
+        })
+
+    </script>
+@endpush

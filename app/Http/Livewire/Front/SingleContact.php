@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
+use App\Models\Contact;
 
 class SingleContact extends Component
 {
@@ -35,8 +36,32 @@ class SingleContact extends Component
 
     ];
 
-    public function save(){
+    public function save()
+    {
 
+        $this->validate();
+
+        try {
+
+            Contact::create([
+                'name' => $this->name,
+                'email' => $this->email,
+                'message' => $this->message
+            ]);
+
+            $this->name = '';
+            $this->email = '';
+            $this->message = '';
+
+            $this->dispatchBrowserEvent('show-result',
+                ['type' => 'success',
+                    'message' => 'پیام شما با موفقیت ارسال شد.']);
+
+        } catch (\Exception $ex) {
+            return view('errors_custom.model_store_error');
+        }
+
+        return null;
     }
 
     public function render()
