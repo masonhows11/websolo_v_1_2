@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Front\Article;
 
 use App\Http\Controllers\Controller;
-use App\Models\Article;
 use App\Models\Category;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -13,7 +12,7 @@ class ArticleController extends Controller
     public function index(){
 
         return view('front.article.index')
-            ->with(['articles' => Article::where('approved', 1)->paginate(9),
+            ->with(['articles' => DB::table('articles')->where('approved',1)->paginate(9),
                 'categories' => Category::tree()->get()->toTree()]);
     }
 
