@@ -29,16 +29,13 @@ class ContactUs extends Component
         'email.required' => 'ایمیل الزامی است',
         'email.unique' => 'ایمیل تکراری است',
 
-
-        'message.required' => 'نام مجوز الزامی است',
+        'message.required' => 'متن پیام الزامی است',
         'message.min' => 'حداقل ۱۰ کاراکتر وارد کنید',
         'message.max' => 'حداکثر تعداد کاراکتر مجاز',
-
     ];
 
     public function save()
     {
-        dd($this->validate());
         $this->validate();
         try {
             Contact::create([
