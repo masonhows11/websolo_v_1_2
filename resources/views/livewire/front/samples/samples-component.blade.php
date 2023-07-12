@@ -3,7 +3,7 @@
         نمونه کارها
     @endsection
     <div class="container">
-        <div class="row row-cols-xxl-3 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 my-3 py-4 px-4  ws-samples-page-main">
+        <div class="row row-cols-xxl-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 my-3 py-4 px-4  ws-samples-page-main">
             @if ($samples->count())
                 @foreach ($samples as $sample)
                     <div class="col my-2">
@@ -40,9 +40,9 @@
                 @endforeach
             @endif
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center mt-5">
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
-                {{ $samples->links() }}
+                {{ $samples->links('front.paginate.paginate') }}
             </div>
         </div>
     </div>
