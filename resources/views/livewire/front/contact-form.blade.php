@@ -16,8 +16,8 @@
                 <form wire:submit.prevent="save">
 
                     <div class="mb-3 mt-3">
-                        <input type="email" wire:model.defer="email" class="form-control" id="Email" dir="rtl"
-                               placeholder="ایمیل" autocomplete="on" required="required"/>
+                        <input type="email" wire:model.defer="email" class="form-control" dir="rtl"
+                               placeholder="ایمیل" autocomplete="on" />
                     </div>
 
                     @error('email')
@@ -27,8 +27,8 @@
                     @enderror
 
                     <div class="mb-3 mt-3">
-                        <input type="text" wire:model.defer="name" class="form-control" id="Username"
-                               placeholder="نام کاربری" autocomplete="on" required="required"/>
+                        <input type="text" wire:model.defer="name" class="form-control"
+                               placeholder="نام کاربری" autocomplete="on" />
                     </div>
 
                     @error('name')
@@ -38,8 +38,8 @@
                     @enderror
 
                     <div class="mb-3 mt-3">
-                        <textarea wire:model.defer="message" id="" cols="30" rows="5" class="form-control"
-                                  placeholder="متن پیام" autocomplete="on" required="required"></textarea>
+                        <textarea wire:model.defer="message"  cols="30" rows="5" class="form-control"
+                                  placeholder="متن پیام" autocomplete="on" ></textarea>
                     </div>
 
                     @error('message')
@@ -106,6 +106,5 @@
                 title: message
             })
         })
-
     </script>
 @endpush

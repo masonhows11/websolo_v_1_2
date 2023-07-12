@@ -26,12 +26,12 @@ class SingleContact extends Component
         'name.min' => 'حداقل ۲ کاراکتر وارد کنید',
         'name.max' => 'حداکثر تعداد کاراکتر مجاز',
 
-        'email.required' => 'نام مجوز الزامی است',
+        'email.required' => 'ایمیل الزامی است',
         'email.unique' => 'ایمیل تکراری است',
 
 
-        'message.required' => 'نام مجوز الزامی است',
-        'message.min' => 'حداقل ۲ کاراکتر وارد کنید',
+        'message.required' => 'متن پیام الزامی است',
+        'message.min' => 'حداقل ۱۰ کاراکتر وارد کنید',
         'message.max' => 'حداکثر تعداد کاراکتر مجاز',
 
     ];

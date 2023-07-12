@@ -1,3 +1,5 @@
+
+{{--
 <div>
     @section('page_title')
         تماس با ما
@@ -107,6 +109,6 @@
                 title: message
             })
         })
-
     </script>
 @endpush
+--}}

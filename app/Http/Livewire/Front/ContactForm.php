@@ -3,8 +3,9 @@
 namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
+use App\Models\Contact;
 
-class Contact extends Component
+class ContactForm extends Component
 {
 
     public $name;
@@ -25,33 +26,28 @@ class Contact extends Component
         'name.min' => 'حداقل ۲ کاراکتر وارد کنید',
         'name.max' => 'حداکثر تعداد کاراکتر مجاز',
 
-        'email.required' => 'نام مجوز الزامی است',
+        'email.required' => 'ایمیل الزامی است',
         'email.unique' => 'ایمیل تکراری است',
 
 
         'message.required' => 'نام مجوز الزامی است',
-        'message.min' => 'حداقل ۲ کاراکتر وارد کنید',
+        'message.min' => 'حداقل ۱۰ کاراکتر وارد کنید',
         'message.max' => 'حداکثر تعداد کاراکتر مجاز',
 
     ];
 
     public function save()
     {
-
         $this->validate();
-
         try {
-
-            \App\Models\Contact::create([
+            Contact::create([
                 'name' => $this->name,
                 'email' => $this->email,
                 'message' => $this->message
             ]);
-
             $this->name = '';
             $this->email = '';
             $this->message = '';
-
             $this->dispatchBrowserEvent('show-result',
                 ['type' => 'success',
                     'message' => 'پیام شما با موفقیت ارسال شد.']);
@@ -60,10 +56,10 @@ class Contact extends Component
             return view('errors_custom.model_store_error');
         }
 
-        return null;
+       return null;
     }
     public function render()
     {
-        return view('livewire.front.contact');
+        return view('livewire.front.contact-form');
     }
 }
