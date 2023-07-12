@@ -11338,6 +11338,7 @@ body {
 .ws-article-created-date,
 .ws-sample-view-count,
 .ws-sample-like-count,
+.ws-sample-date,
 .ws-article-date,
 .ws-sample-created_at_date {
   font-family: "iransans_num", sans-serif;
