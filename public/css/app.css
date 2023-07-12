@@ -11033,6 +11033,11 @@ body {
   font-size: 1rem;
 }
 
+.contact-info .phone-number p {
+  direction: rtl;
+  font-family: "iransans_num", sans-serif;
+}
+
 .btn-custom-primary {
   color: #fff;
   background-color: #ff7a57;

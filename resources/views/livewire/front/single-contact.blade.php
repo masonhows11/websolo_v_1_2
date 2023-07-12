@@ -36,28 +36,33 @@
 
             <!-- contact info -->
             <div class="contact-info col-sm-6 align-self-center">
+
                 <div class="item d-flex flex-wrap">
                     <i class="fa fa-map-marked"></i>
                     <div class="mx-2">
                         <h5>آدرس</h5>
-                        <p>کشور ایران</p>
+                        <p>{{ env('CONTACT_ADDRESS')  }}</p>
                     </div>
                 </div>
+
                 <div class="item d-flex flex-wrap">
                     <i class="fa fa-phone"></i>
-                    <div class="mx-2">
-                        <h5>شماره تلفن</h5>
-                        <p>0917 289 0423</p>
+                    <div class="mx-2 phone-number">
+                        <h5>شماره تماس</h5>
+                        <p>{{  env('CONTACT_PHONE') }}</p>
                     </div>
                 </div>
+
                 <div class="item d-flex flex-wrap">
                     <i class="fa fa-envelope"></i>
                     <div class="mx-2">
                         <h5>آدرس ایمیل</h5>
-                        <p>mason.hows11@gmail.com</p>
+                        <p>{{  env('CONTACT_EMAIL') }}</p>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 </div>

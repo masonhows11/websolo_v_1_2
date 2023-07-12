@@ -741,7 +741,10 @@ body {
     font-size: 1rem;
 
 }
-
+.contact-info .phone-number p{
+    direction: rtl;
+    font-family:"iransans_num",sans-serif;
+}
 
 // btn component
 .btn-custom-primary {
