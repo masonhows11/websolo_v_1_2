@@ -38,6 +38,7 @@ class ContactUs extends Component
 
     public function save()
     {
+        dd($this->validate());
         $this->validate();
         try {
             Contact::create([

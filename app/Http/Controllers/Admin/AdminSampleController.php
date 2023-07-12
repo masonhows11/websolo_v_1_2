@@ -166,7 +166,7 @@ class AdminSampleController extends Controller
         try {
 
             $image_samples = GetImageName::sampleMultiImage($request);
-            $main_image = GetImageName::sampleMainImage($request->main_image);
+             $main_image = GetImageName::sampleMainImage($request->main_image);
 
             DB::transaction(function () use ($request,$main_image,$image_samples) {
 

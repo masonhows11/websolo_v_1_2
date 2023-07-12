@@ -10,21 +10,19 @@ class GetImageName
 {
     const ARTICLE_STORAGE_PATH = "/storage/articles/";
     const SAMPLE_STORAGE_PATH = "/storage/samples/";
+    const APP_URL = 'http://websolo.test';
 
     public static function articleImage($imagePath)
     {
-
-
-        $path = env('APP_URL') . self::ARTICLE_STORAGE_PATH;
+        $path = self::APP_URL . self::ARTICLE_STORAGE_PATH;
         return $image = str_replace($path, '', $imagePath);
     }
 
 
-    public static function sampleMainImage($imagePath)
+    public static function sampleMainImage($main_image)
     {
-
-        $path = env('APP_URL') .self::SAMPLE_STORAGE_PATH;
-        return $image = str_replace($path, '', $imagePath);
+        $path = self::APP_URL . self::SAMPLE_STORAGE_PATH;
+        return $image = str_replace($path, '', $main_image);
     }
 
     public static function sampleMultiImage($images)
@@ -39,7 +37,7 @@ class GetImageName
             $images->input('image4'));
 
 
-        $path = env('APP_URL') . self::SAMPLE_STORAGE_PATH;
+        $path = self::APP_URL . self::SAMPLE_STORAGE_PATH;
         $array_count = count($img_array);
         for ($i = 0; $i < $array_count; $i++) {
             array_push($image_name_array, str_replace($path, '', $img_array[$i]));
