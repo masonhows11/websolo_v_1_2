@@ -42,7 +42,7 @@
         </div>
         <div class="row d-flex justify-content-center mt-5">
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 d-flex justify-content-center">
-                {{ $samples->links('front.paginate.paginate') }}
+                {{ $samples->links() }}
             </div>
         </div>
     </div>
