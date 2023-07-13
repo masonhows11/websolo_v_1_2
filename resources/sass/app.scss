@@ -285,7 +285,7 @@ body {
     display: flex;
     height: 100%;
     flex-direction: column;
-    font-family: iransansdn, "sans-serif";
+    font-family: "vazirRegular", Sans-Serif;
 }
 
 .navbar-nav .dropdown .nav-link {
@@ -625,7 +625,7 @@ body {
     box-shadow: 2px 3px 10px rgba(206, 212, 218, 0.3);
 }
 
-.blog .card .post-details {
+.blog .card .blog-details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -634,11 +634,11 @@ body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    max-width: 250px;
+    //max-width: 250px;
     margin-bottom: 15px;
 }
 
-.blog .card .post-details a {
+.blog .card .blog-details a {
     opacity: .6;
     color: #444;
     font-size: 15px;
@@ -741,9 +741,10 @@ body {
     font-size: 1rem;
 
 }
-.contact-info .phone-number p{
+
+.contact-info .phone-number p {
     direction: rtl;
-    font-family:"iransans_num",sans-serif;
+    font-family: "iransans_num", sans-serif;
 }
 
 // btn component
@@ -798,11 +799,13 @@ body {
     color: #ffffff;
     font-weight: lighter !important;
 }
+
 .verify-email-form #code,
-.login-form #pwd{
-    direction:ltr;
+.login-form #pwd {
+    direction: ltr;
     text-align: left;
 }
+
 .login-form,
 .register-form,
 .login-form-title,
@@ -1095,16 +1098,14 @@ body {
 }
 
 
-
-
 // media query
 @media screen and (max-width: 576px) {
 
-    .root-category{
+    .root-category {
         text-align: center;
     }
 
-    .child-category{
+    .child-category {
         display: flex;
         justify-content: center;
 
@@ -1191,8 +1192,7 @@ body {
 @media screen and (max-width: 768px) {
 
 
-
- }
+}
 
 @media screen and (max-width: 992px) {
 

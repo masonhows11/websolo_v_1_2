@@ -10627,7 +10627,7 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  font-family: iransansdn, "sans-serif";
+  font-family: "vazirRegular", Sans-Serif;
 }
 
 .navbar-nav .dropdown .nav-link {
@@ -10933,14 +10933,13 @@ body {
   box-shadow: 2px 3px 10px rgba(206, 212, 218, 0.3);
 }
 
-.blog .card .post-details {
+.blog .card .blog-details {
   display: flex;
   justify-content: space-between;
-  max-width: 250px;
   margin-bottom: 15px;
 }
 
-.blog .card .post-details a {
+.blog .card .blog-details a {
   opacity: 0.6;
   color: #444;
   font-size: 15px;

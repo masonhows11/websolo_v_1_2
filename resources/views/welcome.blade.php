@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ env('APP_NAME') }}</title>
     @include('front.include.styles')
-   
+
 </head>
 <body>
 {{-- navbar --}}

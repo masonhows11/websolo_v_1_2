@@ -12,12 +12,16 @@
                             alt=""
                             class="card-img-top w-100"/>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Bootstrap Framework</h5>
+                            <div><h5 class="card-title">Bootstrap Framework</h5></div>
 
-                            <div class="post-details p-2">
-                                <a href="javascript:void(0)">توسط: Admin</a>
-                                <a href="javascript:void(0)"><i class="fa-regular fa-thumbs-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="fa-regular fa-comment"></i> 123</a>
+                            <div class="blog-details  p-2">
+
+                                    <a href="javascript:void(0)">توسط: Admin</a>
+
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-thumbs-up"></i> 456</a>
+
+                                    <a href="javascript:void(0)"><i class="fa-regular fa-comment"></i> 123</a>
+
                             </div>
 
                             <p class="py-2">
@@ -37,7 +41,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Bootstrap Framework</h5>
 
-                            <div class="post-details p-2">
+                            <div class="blog-details p-2">
                                 <a href="javascript:void(0)">توسط: Admin</a>
                                 <a href="javascript:void(0)"><i class="fa-regular fa-thumbs-up"></i> 456</a>
                                 <a href="javascript:void(0)"><i class="fa-regular fa-comment"></i> 123</a>
@@ -60,7 +64,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Bootstrap Framework</h5>
 
-                            <div class="post-details p-2">
+                            <div class="blog-details p-2">
                                 <a href="javascript:void(0)">توسط: Admin</a>
                                 <a href="javascript:void(0)"><i class="fa-regular fa-thumbs-up"></i> 456</a>
                                 <a href="javascript:void(0)"><i class="fa-regular fa-comment"></i> 123</a>
