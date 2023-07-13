@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Contact;
+
 class SingleContact extends Component
 {
     public $name;

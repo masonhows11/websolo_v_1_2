@@ -16,6 +16,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Front\Article\ArticleController;
+use App\Http\Controllers\Front\CustomersController;
+use App\Http\Controllers\Front\ServicesController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Livewire\Admin\AdminAdmins;
@@ -124,6 +126,20 @@ Route::middleware(['web'])->group(function(){
     Route::get('/articles',[ArticleController::class,'index'])->name('articles');
     Route::get('/articles/{category}',[ArticleController::class,'articleCategory'])->name('article.category');
     Route::get('/article/{article}',ArticleComponent::class)->name('article');
+
+});
+
+Route::middleware(['web'])->group(function(){
+
+    Route::get('/services',[ServicesController::class,'index'])->name('services');
+
+
+});
+
+Route::middleware(['web'])->group(function(){
+
+    Route::get('/customers',[CustomersController::class,'index'])->name('customers');
+
 
 });
 

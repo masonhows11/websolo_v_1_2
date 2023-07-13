@@ -25,10 +25,10 @@
                     <a class="nav-link" href="{{  route('articles') }}">مقالات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">خدمات</a>
+                    <a class="nav-link" href="{{ route('services') }}">خدمات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">مشتریان</a>
+                    <a class="nav-link" href="{{ route('customers') }}">مشتریان</a>
                 </li>
 
                 <li class="nav-item">
