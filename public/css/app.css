@@ -10954,6 +10954,24 @@ body {
   line-height: 27px;
 }
 
+.blog .card .continue-link {
+  text-align: left;
+}
+
+.blog .card .continue-link:after {
+  content: "";
+  display: block;
+  margin: 5px 0 5px 0;
+  width: 0;
+  height: 2px;
+  background: #ff7a57;
+  transition: width 0.3s;
+}
+
+.blog .card .continue-link:hover::after {
+  width: 100%;
+}
+
 .bg-custom-primary {
   background-color: #ff7a57 !important;
 }

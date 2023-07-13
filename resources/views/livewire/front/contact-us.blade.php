@@ -64,7 +64,6 @@
                         <p>{{ env('CONTACT_ADDRESS')  }}</p>
                     </div>
                 </div>
-
                 <div class="item d-flex flex-wrap">
                     <i class="fa fa-phone"></i>
                     <div class="mx-2 phone-number">
@@ -72,7 +71,6 @@
                         <p>{{  env('CONTACT_PHONE') }}</p>
                     </div>
                 </div>
-
                 <div class="item d-flex flex-wrap">
                     <i class="fa fa-envelope"></i>
                     <div class="mx-2">
@@ -80,8 +78,6 @@
                         <p>{{  env('CONTACT_EMAIL') }}</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>

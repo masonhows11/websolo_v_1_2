@@ -15,20 +15,18 @@
                             <div><h5 class="card-title">Bootstrap Framework</h5></div>
 
                             <div class="blog-details  p-2">
-
                                     <a href="javascript:void(0)">توسط: Admin</a>
-
                                     <a href="javascript:void(0)"><i class="fa-regular fa-thumbs-up"></i> 456</a>
-
                                     <a href="javascript:void(0)"><i class="fa-regular fa-comment"></i> 123</a>
-
                             </div>
 
                             <p class="py-2">
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                 استفاده از طراحان گرافیک است.
                             </p>
-                            <a class="pt-4" href="javascript:void(0)">ادامه مطلب...</a>
+                           <div class="d-flex justify-content-end">
+                               <a class="pt-4 continue-link" href="javascript:void(0)">ادامه مطلب...</a>
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -51,7 +49,9 @@
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                 استفاده از طراحان گرافیک است.
                             </p>
-                            <a class="pt-4" href="javascript:void(0)">ادامه مطلب...</a>
+                           <div class="d-flex justify-content-end">
+                               <a class="pt-4 continue-link" href="javascript:void(0)">ادامه مطلب...</a>
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,9 @@
                                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                                 استفاده از طراحان گرافیک است.
                             </p>
-                            <a class="pt-4" href="javascript:void(0)">ادامه مطلب...</a>
+                           <div class="d-flex justify-content-end">
+                               <a class="pt-4 continue-link " href="javascript:void(0)">ادامه مطلب...</a>
+                           </div>
                         </div>
                     </div>
                 </div>
