@@ -37,6 +37,7 @@ class ContactUs extends Component
     public function save()
     {
         $this->validate();
+        
         try {
             Contact::create([
                 'name' => $this->name,
@@ -46,6 +47,7 @@ class ContactUs extends Component
             $this->name = '';
             $this->email = '';
             $this->message = '';
+            
             $this->dispatchBrowserEvent('show-result',
                 ['type' => 'success',
                     'message' => 'پیام شما با موفقیت ارسال شد.']);
