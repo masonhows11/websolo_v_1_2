@@ -48,17 +48,6 @@ class AdminValidateController extends Controller
     public function resendEmail(Request $request)
     {
 
-        try {
-            $admin = Admin::where('mobile', $request->number)->first();
-            $token = GenerateToken::generateToken();
-            $admin->code = $token;
-            $admin->save();
-            // for send code
-            //  $admin->notify(new AdminAuthNotification($admin));
-            return response()->json(['message' => 'کد فعال سازی مجددا ارسال شد.', 'status' => 200], 200);
-        } catch (\Exception $ex) {
-            return response()->json(['message' => $ex->getMessage(), 'status' => 500], 500);
-        }
     }
 
 }

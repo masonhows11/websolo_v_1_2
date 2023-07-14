@@ -155,7 +155,6 @@ Route::prefix('admin')->group(function () {
     Route::get('/validate-email', [AdminValidateController::class, 'validateEmailForm'])->name('admin.validate.email.form');
     Route::post('/validate-email', [AdminValidateController::class, 'validateEmail'])->name('admin.validate.email');
 
-    Route::post('/resend-email', [AdminValidateController::class, 'resendEmail'])->name('admin.resend.email');
 });
 
 
