@@ -11,10 +11,6 @@ class CheckValidateEmail
 
     public static function validateCode($email,$code)
     {
-
-
-
-
         $status = null;
         try {
             $user = User::where(['code'=>$code,'email'=>$email])->first();

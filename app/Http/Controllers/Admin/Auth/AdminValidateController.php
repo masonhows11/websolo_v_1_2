@@ -13,12 +13,12 @@ class AdminValidateController extends Controller
 {
     //
 
-    public function validateMobileForm()
+    public function validateEmailForm()
     {
         return view('admin.auth_admin.validate');
     }
 
-    public function validateMobile(Request $request)
+    public function validateEmail(Request $request)
     {
 
         $request->validate([
@@ -45,7 +45,7 @@ class AdminValidateController extends Controller
         return redirect()->route('admin.login.form');
     }
 
-    public function resendCode(Request $request)
+    public function resendEmail(Request $request)
     {
 
         try {
