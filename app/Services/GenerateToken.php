@@ -8,19 +8,37 @@ use App\Models\Admin;
 
 class GenerateToken
 {
-    public static function generateToken()
+    public static function generateUserToken()
     {
-        $code = mt_rand(111111, 999999);
-        if (self::existToken($code))
-        {
+        $activation_token = mt_rand(111111, 999999);
+
+        if (self::userToken($activation_token)) {
+
             return mt_rand(111111, 999999);
         }
-        return $code;
+        return $activation_token;
 
     }
 
-    public static function existToken($code)
+    public static function generateAdminToken()
     {
-        return Admin::where('code',$code)->exists();
+        $activation_token = mt_rand(111111, 999999);
+
+        if (self::adminToken($activation_token)) {
+
+            return mt_rand(111111, 999999);
+        }
+        return $activation_token;
+
+    }
+
+    public static function adminToken($code)
+    {
+        return Admin::where('code', $code)->exists();
+    }
+
+    public static function userToken($code)
+    {
+        return User::where('code', $code)->exists();
     }
 }
